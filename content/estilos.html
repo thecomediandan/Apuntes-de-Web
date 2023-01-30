@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../app.css">
+    <link rel="stylesheet" href="estilos-style.css">
+    <title>Apuntes de CSS</title>
+</head>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <article>
+        <section>
+            <p>El selector universal es <b>*{}</b> con el cual las modificaciones afectan a toda la página.</p>
+            <p>El selector por clase es cuando una etiqueta tiene el atributo <i>class="nombreClase"</i> podemos modificar la etiqueta con el nombre de la clase con un punto por delante <i>.nombreClase{}</i>.</p>
+            <p>El selector por identificador es cuando una etiqueta tiene el atributo <i>id="nombreID"</i> podemos modificar la etiqueta con el nombre de la clase con un # por delante <i>#nombreClase{}</i>. El identificador es único y no puede haber dos iguales.</p>
+            <p>El selector por atributo de etiqueta se pone entre corchetes el atributo y su valor <i>[atributo="nombreAtributo"]{}</i>.</p>
+            <p>El selector por elemento es cuando introducimos el nombre de la etiqueta <i>nombreEtiqueta{}</i>.</p>
+            <p>Selector por orden descendiente es cuando anteponemos un atributo o nombre de clase y especificamos otros elementos dentro para ser más específicos <i>elementoPadre elementoHijo ...{}</i>.</p>
+            <p>La pseudo-clases se activan poniendo ':' y el nombre de la pseudo-clase <i>nombreElemento:nombrePseudoClase{}</i>.</p>
+
+            <p>La especifidad es la forma que podemos cambiar los elementos sin a afectar a otros, los selectores que pertenecen a un mismo grupo de jerarquía, se establece la dinámica de CSS para realizar los cambios en cascada, pero en caso se difiera por elementos superiores en jerarquía entonces se establecerá los cambios por orden de jerarquía. Los estilos en línea son aquellos atributos <i>style="color=red" que se ponen dentro de los atributos de un elemento. El <i>!important</i> va al lado de un atributo en la hoja de estilos <i>*{color: red; !important}</i></i></p>
+            <img class="img-1" src="../img/css1.png" title="Jerarquía en especificidad" alt="No se encontró la imagen">
+            <p>La metodología BEM es una convención para poder identificar elementos de la página HTML para tener una manera más ordenada al momento de usar los selectores en CSS. Algo importante es que se identifican los elementos por clases, entonces el nombre de clase del contenedor padre por ejemplo <i>class="contenedor-padre"</i> sería algo asi, en cambio del hijo sería algo asi <i>class="contenedor-padre__contendor-hijo"</i>, si nos basamos en esta lógica los contenedores "nietos" y los que le siguen sería algo asi <i>class="contenedor-padre__contendor-hijo-nieto"</i>, ahora si queremos diferenciar un grupo de elementos que llevan el mismo nombre de clase por ejemplo este <i>class="contenedor-padre__contendor-hijo-nieto"</i>, tenemos cuatro elementos igual y queremos seleccionar solo el primero entonces lo nombraríamos algo así <i>class="contenedor-padre__contendor-hijo-nieto--active"</i>, tambien hay otra manera, pero en la hoja de estilos <i>contenedor-padre__contendor-hijo-nieto:first-child{}</i>.</p>
+        </section>
+        <section>
+            <p>La unidades de medidas que pueden ser en <b>%, cm, mm, rem, em, px, etc.</b> En este caso trataremos algunas, por ejemplo la medida relativa <b>em</b>, por defecto la mayoría de navegadores le da el valor de <b>16px</b> a una unidad <b>em</b>, pero este a su vez puede ser modificado si es parte de un contenedor padre que modifique en pixeles o cualquier unidad estática al atributo deseado, la unidad en <b>em</b> del atributo será igual a la unidad puesta en el contenedor padre del mismo atributo.</p>
+        </section>
+        <section>
+            <p>El atributo <b>font-size</b> tamaño de letra, <b>font-family</b> es el tipo de letra si queremos personalizar otro tipo de fuentes podemos usar Google Fonts, se puede poner fuentes de respaldo usando comas y poniendo todos los tipos de fuentes posibles hasta que uno pueda encontrarse, <b>line-height</b> es la unidad del tamaño de letra, <b>font-weight</b> es el grosor del tipo de letra, algo como un bold.</p>
+            <p>Para el Reset de CSS, es decir poner todo completamente por defecto se pueden utilizar algunas hojas de estilo predefinidas como el Normalize, existen otras maneras de poner todo por defecto, como el archivo <a href="https://github.com/eduardofierropro/Reset-CSS">https://github.com/eduardofierropro/Reset-CSS</a>, del video de YouTube <a href="https://www.youtube.com/watch?v=Foieq2jTajE">https://www.youtube.com/watch?v=Foieq2jTajE</a>, del canal de <i>Eduardo Fierro</i>, que es el que utilizaremos, dentro del archivo podemos ver que tipo de modificaciones son las que haremos, hay algunas que no nos convendrían, todo depende de hasta donde queremos llegar y como lo queremos hacer.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Foieq2jTajE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>           
+        </section>
+        <section>
+            <p>Elementos en <b>línea</b> y en <b>bloque</b>, el elemento en <b>línea</b> es aquel elemento que ocupa el espacio del contenido en cambio el elemento en <b>bloque</b> ocupa todo el ancho con salto de línea, en los elementos en <b>línea</b> pueden ir de manera seguida en una línea hasta que la anchura lo permita.</p>
+            <p>Todo esto puede modificarse, por ejemplo podemos modificar un elemento en bloque en <b>línea</b> con CSS con la propiedad <i>h2{display: inline-block;}</i>, pero tambien hay propiedades que no se aplican, como por ejemplo en elementos en <b>bloque</b> propiedades como <i>height</i> o <i>width</i>.</p>
+            <p>Las propiedades de caja son importantes para el diseño, algunas de ellas son: <i>background-color</i> cambia el fondo del elemento, <i>display</i> cambia el tipo de elemento a bloque o en línea, <i>padding</i> son cuatro y cambia el margen interno del elemento, <i>height</i> es el alto del elemento, <i>width</i> es el ancho del elemento, <i>box-sizing</i> con sus propiedades <b>border-content</b> que admite los cambios del padding con los de height y width, <b>border-box</b> que ignora el padding y solo toma en cuenta los cambios en el height y width, esto puede dejar el contenido del elemento fuera visualmente, <i>text-align</i> modifica el alineamiento del texto dentro del elemento,  <i>margin</i> es casi igual que el padding, tambien son cuatro, la diferencia es que es el margen externo del elemento, <i>border-radius</i> permite redondear los bordes del elemento, <i>border-style</i> modifica el estilo del borde, <i>border-color</i> modifica el color del borde, el estilo del borde puede ser modificado usando solo <i>border</i> y podemos modificar el tamaño  seguido del estilo y el color.</p>
+            <img src="../img/css2.png" alt="" title="Jerarquía Box-Model">
+            <p><i>box-shadow</i> modificamos la sombra del elemento.</p>
+            <img src="../img/css3.png" alt="" title="box-shadow">
+            <p><i>text-shadow</i> modificamos la sombra del elemento de texto.</p>
+            <img src="../img/css4.png" alt="" title="text-shadow">
+            <p>El <b>outline</b> es una propiedad parecida al border pero no afecta a otros elementos ni al propio elemento como lo hace border reduciendo el tamaño de del elemento, su sintaxis es resumida <i>outline: 5px solid red;</i>, y tiene mucho que ver el <b>z-index</b> por el orden en pila de los elementos.</p>
+            <p>La posición  de los elementos puede modificarse con las siguientes propiedades: STATIC, RELATIVE, ABSOLUTE, FIXED y STICKY. Siendo la posición <b>static</b> la por defecto.<br>
+            Al introducir el atributo de posición relativa <i>position: relative;</i> por defecto se activa el atributo <i>z-index</i> el cual nos pone un nivel sobre todos los otros elementos en el eje-z, el cual con los atributos <i>top, bottom, right y left</i> podemos mover el elemento sin que afecte a sus espacio asignado, es decir podremos mover todo el elemento por encima de los demás pero su espacio seguirá en su lugar.<br>
+            Al introducir el atributo de posición absoluta <i>position: absolute;</i> por defecto se activa el atributo <i>z-index</i> el cual nos pone un nivel sobre todos los otros elementos en el eje-z, el cual con los atributos <i>top, bottom, right y left</i> podemos mover el elemento afectando su espacio asignado, es decir podremos mover todo el elemento por encima de los demás pero su espacio perderá su lugar, en caso de que el elemento no se defina su ancho y altura, este se ajustara al contenido sin importar que sea un elemento en bloque. Si no se define <i>top, bottom, left o right</i> o el contenedor del elemento no esta posicionado entonces se tomará como punto de referencia el <b>viewport</b> para poder desplazar el elemento. <span>NOTA: para centrar horizontalmente podemos utilizar el atributo <i>margin: 50px auto;</i> por ejemplo, la transparencia podemos modificarla con el atributo <i>opacity</i> el cual se puede modificar a partir de 0 a 1.</span><br>
+            El atributo de posicion <i>fixed</i> sirve para fijar el contenedor y su sintaxis es <i>position: fixed;</i> y es parecido al posicionamiento <i>absolute</i> que pierde su espacio pero a su vez este que fijado en la pantalla.<br>
+            El atributo de posición <i>sticky</i> es como una mezcla del <b>relative</b> y <b>fixed</b>, porque puede conservar su espacio como el <b>relative</b> pero cuando pasa por el scroll este queda fijado como el <b>fixed</b>.</p>
+            <p>El atributo <i>display</i> es muy importante tambien para darle forma a los elementos de los cuales vimos <i>display: block;</i> que hace que el elemento se comporte como bloque, <i>display: inline;</i> que hace que los elementos se comporten como elementos en línea y solo se muestra el contenido y no el espacio del contenedor, <i>display: inline-block</i> que hace que un elemento sea como un bloque pero pueda estar en línea. Tambien tenemos los más importantes como el <b>flex</b> y <b>grid</b> que los veremos más adelante.</p>
+            <p>El atributo <i>overflow</i> nos ayuda a controlar el desbordamiento de texto de los contenedores o elementos con una barra de scroll, los valores son: <i>inherit</i> que es el valor por defecto que nos muestra el texto desbordado, <i>hidden</i> que nos oculta el valor desbordado, <i>auto</i> que nos oculta el texto desbordado pero además nos pone barras de scroll por si es necesario, <i>scroll</i> que nos pone la barra de scroll aunque no sea necesario.</p>
+            <p>El atributo <i>float</i> sirve para poder poner un elemento flotante y poder ajustarlo a uno de los lados, generalmente se utiliza para poder poner imágenes al lado de textos para que el texto se auto-ajuste a la imágen.</p>
+        </section>
+        <section>
+            <p>Los <b>Pseudo-elementos</b> son como funciones que podemos aplicar a lso elementos. Por ejemplo tenemos a <i>::first-line</i> que selecciona la primera linea de un elemento en bloque, <i>first-letter</i> que selecciona a la primera letra de un texto de un elemento, <i>::placeholder</i> que es un atributo generalmente en elementos del tipo <i>input</i> que nos permite personalizar el <i>placeholder</i> tomando en cuenta que son elementos en línea, <i>::selection</i> que personaliza la seleccion de los textos con el mouse, es decir el fondo o color del texto seleccionado, <i>elemento::before{}</i> es un pseudo-elemento en línea que modifica al elemento seleccionado y con el atributo <b>content</b> escribimos el texto que queramos que este antes del elemento seleccionado y <i>elemento::after{}</i> es lo mismo que <i>elemento::before{}</i> solo que funciona para modificar al final del elemento seleccionado.</p>
+        </section>
+        <section>
+            <p>Las <b>Pseudo-clases</b> son como funciones que escuchan ciertos eventos, algunos de ellos son: <i>::hover</i> que funciona cuando posicionamos el cursor del mouse encima del elemento seleccionado, <i>::visited</i> funciona cuando se visite links, <i>::active</i> funciona cuando mantenemos presionado o activo el elemento seleccionado</p>
+        </section>
+        <section>
+            <p>La propiedad <i>Object-Fit</i> sirve mas que todo para imágenes, el atributo <i>width</i> en las imágenes redimensiona toda la imagen a través de ese parámetro.</p>
+            
+            <div class="ejemplo-aplicado-1">
+                <div class="ejemplo-object-fit__img-1">
+                    <img src="../img/css12.png" alt="">
+                </div>               
+                <div class="ejemplo-object-fit img1">
+                    <img src="../img/no-image.png" alt="" title="Ejemplo">
+                </div>
+                <div class="ejemplo-object-fit__img-2">
+                    <img src="../img/css6.png" alt="">
+                </div>
+            </div>
+            <div class="ejemplo-aplicado-1">
+                <div class="ejemplo-object-fit__img-1">
+                    <img src="../img/css13.png" alt="">
+                </div>
+                <div class="ejemplo-object-fit img2">
+                    <img src="../img/no-image.png" alt="" title="Ejemplo">
+                </div>
+                <div class="ejemplo-object-fit__img-2">
+                    <img src="../img/css7.png" alt="">
+                </div>
+            </div>
+            <div class="ejemplo-aplicado-1">
+                <div class="ejemplo-object-fit__img-1">
+                    <img src="../img/css14.png" alt="">
+                </div>
+                <div class="ejemplo-object-fit img3">
+                    <img src="../img/no-image.png" alt="" title="Ejemplo">
+                </div>
+                <div class="ejemplo-object-fit__img-2">
+                    <img src="../img/css8.png" alt="">
+                </div>
+            </div>
+            <div class="ejemplo-aplicado-1">
+                <div class="ejemplo-object-fit__img-1">
+                    <img src="../img/css15.png" alt="">
+                </div>
+                <div class="ejemplo-object-fit img4">
+                    <img src="../img/no-image.png" alt="" title="Ejemplo">
+                </div>
+                <div class="ejemplo-object-fit__img-2">
+                    <img src="../img/css9.png" alt="">
+                </div>
+            </div>
+            <div class="ejemplo-aplicado-1">
+                <div class="ejemplo-object-fit__img-1">
+                    <img src="../img/css16.png" alt="">
+                </div>
+                <div class="ejemplo-object-fit img5">
+                    <img src="../img/no-image.png" alt="" title="Ejemplo">
+                </div>
+                <div class="ejemplo-object-fit__img-2">
+                    <img src="../img/css10.png" alt="">
+                </div>
+            </div>
+            <div class="ejemplo-aplicado-1">
+                <div class="ejemplo-object-fit__img-1">
+                    <img src="../img/css17.png" alt="">
+                </div>
+                <div class="ejemplo-object-fit img6">
+                    <img src="../img/no-image.png" alt="" title="Ejemplo">
+                </div>
+                <div class="ejemplo-object-fit__img-2">
+                    <img src="../img/css11.png" alt="">
+                </div>
+            </div>
+            
+            <img src="../img/css5.png" alt="">
+        </section>
+    </article>
+    <aside>
+
+    </aside>
+    <footer>
+
+    </footer>
+</body>
+</html>

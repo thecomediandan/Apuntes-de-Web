@@ -1,0 +1,76 @@
+*{
+    color: black;
+}
+
+i{
+    font-weight: bold;
+}
+
+p{
+    text-align: justify;
+}
+
+a{
+  color: blue;  
+}
+
+.ejemplo-aplicado-1{
+    margin: 40px auto;
+    width: 60%;
+    background-color: #A9B6C1;
+    border-radius: 60px;
+    border: 30px solid #A9B6C1;
+    border-style: outset;
+    box-shadow: 10px 10px 20px 10px #464647;
+}
+.ejemplo-object-fit{
+    width: 200px;
+    height: 200px;
+    margin: 12px auto;
+    outline: 5px solid #e93a57;
+    border-style: groove;
+}
+.ejemplo-object-fit__img-1{
+    width: 100%;
+    margin: auto;
+    border-radius: 60px;
+}
+.ejemplo-object-fit__img-2{
+    width: 50%;
+    margin: auto;
+    border-radius: 60px;
+}
+.img1 img{
+    width: 100%;
+    height: 100%;
+}
+.img2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.img3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.img5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+}
+.img6 img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+*::selection{
+    background-color: black;
+    color: white;
+}
