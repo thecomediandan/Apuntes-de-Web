@@ -14,9 +14,21 @@ a{
   color: blue;  
 }
 
+/* Aquí va el diseño del ejemplo numero uno*/
+.ejemplo-numero-1{
+    margin: auto;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
 .ejemplo-aplicado-1{
     margin: 40px auto;
-    width: 60%;
+    min-width: 277px;
+    width: 400px;
     background-color: #A9B6C1;
     border-radius: 60px;
     border: 30px solid #A9B6C1;
@@ -39,6 +51,7 @@ a{
     width: 50%;
     margin: auto;
     border-radius: 60px;
+    text-align: center;
 }
 .img1 img{
     width: 100%;
@@ -69,6 +82,55 @@ a{
     height: 100%;
     object-fit: scale-down;
 }
+
+/* Aquí va el diseño del ejemplo numero dos*/
+.ejemplo-dos{
+    margin: 50px auto;
+}
+.ejemplo-grilla{
+    margin: 10px auto;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 4px;
+    column-gap: 4px;
+    /*gap: 4px; acortador*/
+}
+.ejemplo-grilla_item b{
+    margin: auto;
+    font-size: 2em;
+}
+.ejemplo-grilla_item {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    background-color: #e93a57;
+}
+/* En vez de utilizar nth-child podiamos 
+usar first-child */
+.ejemplo-grilla_item:nth-child(1){
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    background-color: blueviolet;
+}
+.imagenes-ejemplo-dos{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.imagenes-ejemplo-dos img{
+    width: 400px;
+    min-width: 200px;
+    margin: 20px auto;
+}
+
 
 *::selection{
     background-color: black;
