@@ -8,16 +8,107 @@
 </head>
 <body>
     <p>
+        Los tipos de variables más comunes son: <b>String, Number, Boolean, Symbol</b>. Y las declaraciones de variables es decir los alcances pueden ser: <b>var, let y const</b>, var es del tipo de alcance global que afecta a todo el archivo Javascript es to tambien puede ser definido como el <b>scope</b> el ámbito del programa, let solo afecta a un bloque de código y const es un valor constante durante toda la ejecución del programa y debe ser inicializada al declarar.
+    </p>
+    <p>
+        algunos errores comunes con las variables pueden ser: <b>undefined</b> que significa que existe una variable que no tiene ningún valor o no esta inicializado, <b>null</b> es un valor inicializado a una variable del tipo vacio o nulo, <b>NaN</b> indica que se operó datos numéricos con otros tipos de datos distintos a un número.
+    </p>
+    <p>
+        El <b>prompt</b> es una función que guarda un dato de entrada através de un mensaje en el navegador, el cual recibe como parámetro el mensaje que queremos que apoye al dato de entrada deseado.
+    </p>
+    <p>
+        Los <b>operadores de asignación</b> son aquellos operadores que sirven para darle valores a una variable y tenemos una variedad.
+
+        <table>
+            <tr>
+                <td>Nombres</td>
+                <td>Abreviaciones</td>
+                <td>Significado</td>
+            </tr>
+            <tr>
+                <td>Asignación</td>
+                <td>x = y</td>
+                <td>x = y</td>
+            </tr>
+            <tr>
+                <td>Asignación de adición</td>
+                <td>x += y</td>
+                <td>x = x + y</td>
+            </tr>
+            <tr>
+                <td>Asignación de sustracción</td>
+                <td>x -= y</td>
+                <td>x = x - y</td>
+            </tr>
+            <tr>
+                <td>Asignación de multiplicación</td>
+                <td>x *= y</td>
+                <td>x = x * y</td>
+            </tr>
+            <tr>
+                <td>Asignación de división</td>
+                <td>x /= y</td>
+                <td>x = x / y</td>
+            </tr>
+            <tr>
+                <td>Asignación de resto</td>
+                <td>x %= y</td>
+                <td>x = x % y</td>
+            </tr>
+            <tr>
+                <td>Asignación de exponenciación</td>
+                <td>x **= y</td>
+                <td>x = x ** y</td>
+            </tr>
+            <tr>
+                <td>Asignación de desplazamiento a la izquierda</td>
+                <td>x &lt;&lt;= y</td>
+                <td>x = x &lt;&lt; y</td>
+            </tr>
+            <tr>
+                <td>Asignación de desplazamiento a la derecha</td>
+                <td>x &gt;&gt;= y</td>
+                <td>x = x &gt;&gt; y</td>
+            </tr>
+            <tr>
+                <td>Asignación sin signo de desplazamiento a la derecha</td>
+                <td>x &gt;&gt;&gt;= y</td>
+                <td>x = x &gt;&gt;&gt; y</td>
+            </tr>
+            <tr>
+                <td>Asignación AND</td>
+                <td>x &= y</td>
+                <td>x = x & y</td>
+            </tr>
+            <tr>
+                <td>Asignación XOR</td>
+                <td>x ^= y</td>
+                <td>x = x ^ y</td>
+            </tr>
+            <tr>
+                <td>Asignación OR</td>
+                <td>x |= y</td>
+                <td>x = x | y</td>
+            </tr>
+        </table>
+    </p>
+    <p>
         Los operadores logicos nos permite hacer cumplir ciertas condiciones que son importantes para la logica de los programas por ejemplo: 
     </p>
     <p>
         Los operadores <b>===</b> y <b>!===</b> tienen una aplicacion diferente a los operadores <b>==</b> y <b>!==</b>, con la diferencia que los primeros comparan el tipo de dato ademas del valor.
     </p>
     <p>
-        Los condicionales nos permite eecutar bloques si se cumplen alguas condiciones.
+        Los condicionales nos permite eecutar bloques si se cumplen ciertas condiciones.
     </p>
     <p>
-        
+        Los <b>arrays</b> comunmente los arrays se escriben en una variable entre llaves y dentro las llaves los elementos separados por comas, la posición de los elementos empieza por <b>0</b>, pero tambien tenemos los arrays asociativos que son arrays del tipo clave valor, que los elementos igual van entre las llaves y separadas por comas con la diferencia que al elemento le acompaña un identificador (clave) del tipo cadena (<b>clave: valor</b>), a diferencia de el array convencional estos elementos pueden ser llamados individualmente por el nombre de su identificador (clave).
+    </p>
+    <p>
+        <b>Bucles e Iteración</b> es la forma en que queremos repetir un bloque de instrucciones, de los cuales tenemos: <b>while</b> el cual es un bucle que permite repetir un bloque <b>mientras</b> una condición se cumpla <i>while(condición){bloque;}</i>, <b> do while</b> el cual es un bucle que permiterepetir un bloque <b>hasta</b> que se cumpla una condición <i>do{bloque;}while(condición)</i>, una característica es que la primera iteración se ejecuta antes de preguntar por la condición. la sentencia <b>break;</b> es una sentencia para bucles que permite detener la ejecución de un bloque. <b>for</b> es un bucle determinado a diferencia del <b>while</b> y <b>do while</b> que son indeterminados, al cual creamos una variable, una condición y un cambio de la variable que permita limitar la iteración hasta que no cumpla la condición <i>for(declaración_e_inicialización ; condición ; aumento_decremento){bloque;}</i>, generalmente la variable declarada e inicializada aumenta o decrementa hasta que no cumpla la condición, con esto generamos la iteración y la controlamos en base a la condición. La sentencia <b>continue;</b> salta una iteración dentro de un bucle desde donde se encuentra dicha sentencia. el bucle <b>for in</b> es un bucle <b>for</b> en el cual recibe como parametros una variable seguido de la palabra reservada <b>in</b> y despues generalmente un arrglo, esto lo que hace es que la variable toma como valores los indices del arreglo mediante la iteración, además de los índices nos muestra el nombre de las propiedades si es que se trata de un objeto, <b>for of</b> es casi igual que <b>for in</b> solo que este en vez de tomar los índices recupera los valores del arreglo. <b>label</b> es un puntero que podemos poner por encima de talvez varios bloques encima del actual para poder utilizar <b>break nombreLabel;</b> o <b>continue nombreLabel;</b> y ponemos el label como <b>nombreLabel:</b> encima de otro <b>for</b> o bloque para poner el puntero en ese punto.
+    </p>
+    <p>
+        <b>Funciones</b>
     </p>
 </body>
 </html>
