@@ -12,7 +12,12 @@ body{
     background-image: linear-gradient(95deg, #fff, #9d6a96);
     box-sizing: border-box;
 }
-
+h3{
+    color: var(--color-secundario-two);
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 /* Estilos del Header */
 header{
     display: flex;
@@ -153,14 +158,14 @@ nav{
     text-shadow: 0 0 15px #e790bf;
 }
 .nav li{
-    background:rgba(#fff, #fff, #fff, 0.5);
+    background: #0a2661;
+    opacity: 0.8;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     transition: all 0.5s;
 }
 .nav li:hover{
     background: linear-gradient(180deg,#9d6a96,#000);
-    border-bottom: 3px solid#e790bf;
 }
 .nav li:nth-child(3){
     background: linear-gradient(180deg,#654d72,#000);
@@ -179,14 +184,24 @@ nav{
     padding: 50px;
     margin-top: 25px;
 }
+.list {
+    position: sticky;
+    top: 0;
+}
+.focus-menu{
+    width: 250px;
+    background-color: #654d72;
+    border-top-left-radius: 25px;
+    padding: 50px;
+    margin-top: 25px;
+}
 article{
     background-color: rgba(#fff, #fff, #fff, 0.5);
     color: #242a40;
     font-family: 'Source Code Pro', monospace;
     display: flex;
     flex-direction: column;
-    max-width: 70%;
-    margin-right: 3%;
+    max-width: 55%;
 }
 section{
     background-color: #fff;

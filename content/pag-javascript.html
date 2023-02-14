@@ -9,13 +9,33 @@
 <body>
     <p>
         Los tipos de variables más comunes son: <b>String, Number, Boolean, Symbol</b>. Y las declaraciones de variables es decir los alcances pueden ser: <b>var, let y const</b>, var es del tipo de alcance global que afecta a todo el archivo Javascript es to tambien puede ser definido como el <b>scope</b> el ámbito del programa, let solo afecta a un bloque de código y const es un valor constante durante toda la ejecución del programa y debe ser inicializada al declarar.
+        <table>
+            <tr>
+                <td>Tipos de variables</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td>Variable del tipo cadena de texto.</td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>variable del tipo numérico.</td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td>Variable del tipo boleana (true/false).</td>
+            </tr>
+        </table>
     </p>
     <p>
         algunos errores comunes con las variables pueden ser: <b>undefined</b> que significa que existe una variable que no tiene ningún valor o no esta inicializado, <b>null</b> es un valor inicializado a una variable del tipo vacio o nulo, <b>NaN</b> indica que se operó datos numéricos con otros tipos de datos distintos a un número.
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
     <p>
         El <b>prompt</b> es una función que guarda un dato de entrada através de un mensaje en el navegador, el cual recibe como parámetro el mensaje que queremos que apoye al dato de entrada deseado.
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
     <p>
         Los <b>operadores de asignación</b> son aquellos operadores que sirven para darle valores a una variable y tenemos una variedad.
 
@@ -93,22 +113,644 @@
         </table>
     </p>
     <p>
-        Los operadores logicos nos permite hacer cumplir ciertas condiciones que son importantes para la logica de los programas por ejemplo: 
+        Los operadores logicos nos permite hacer cumplir ciertas condiciones que son importantes para la logica de los programas por ejemplo: <br>
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
     <p>
         Los operadores <b>===</b> y <b>!===</b> tienen una aplicacion diferente a los operadores <b>==</b> y <b>!==</b>, con la diferencia que los primeros comparan el tipo de dato ademas del valor.
     </p>
     <p>
         Los condicionales nos permite eecutar bloques si se cumplen ciertas condiciones.
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
     <p>
         Los <b>arrays</b> comunmente los arrays se escriben en una variable entre llaves y dentro las llaves los elementos separados por comas, la posición de los elementos empieza por <b>0</b>, pero tambien tenemos los arrays asociativos que son arrays del tipo clave valor, que los elementos igual van entre las llaves y separadas por comas con la diferencia que al elemento le acompaña un identificador (clave) del tipo cadena (<b>clave: valor</b>), a diferencia de el array convencional estos elementos pueden ser llamados individualmente por el nombre de su identificador (clave).
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
     <p>
         <b>Bucles e Iteración</b> es la forma en que queremos repetir un bloque de instrucciones, de los cuales tenemos: <b>while</b> el cual es un bucle que permite repetir un bloque <b>mientras</b> una condición se cumpla <i>while(condición){bloque;}</i>, <b> do while</b> el cual es un bucle que permiterepetir un bloque <b>hasta</b> que se cumpla una condición <i>do{bloque;}while(condición)</i>, una característica es que la primera iteración se ejecuta antes de preguntar por la condición. la sentencia <b>break;</b> es una sentencia para bucles que permite detener la ejecución de un bloque. <b>for</b> es un bucle determinado a diferencia del <b>while</b> y <b>do while</b> que son indeterminados, al cual creamos una variable, una condición y un cambio de la variable que permita limitar la iteración hasta que no cumpla la condición <i>for(declaración_e_inicialización ; condición ; aumento_decremento){bloque;}</i>, generalmente la variable declarada e inicializada aumenta o decrementa hasta que no cumpla la condición, con esto generamos la iteración y la controlamos en base a la condición. La sentencia <b>continue;</b> salta una iteración dentro de un bucle desde donde se encuentra dicha sentencia. el bucle <b>for in</b> es un bucle <b>for</b> en el cual recibe como parametros una variable seguido de la palabra reservada <b>in</b> y despues generalmente un arrglo, esto lo que hace es que la variable toma como valores los indices del arreglo mediante la iteración, además de los índices nos muestra el nombre de las propiedades si es que se trata de un objeto, <b>for of</b> es casi igual que <b>for in</b> solo que este en vez de tomar los índices recupera los valores del arreglo. <b>label</b> es un puntero que podemos poner por encima de talvez varios bloques encima del actual para poder utilizar <b>break nombreLabel;</b> o <b>continue nombreLabel;</b> y ponemos el label como <b>nombreLabel:</b> encima de otro <b>for</b> o bloque para poner el puntero en ese punto.
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
     <p>
-        <b>Funciones</b>
+        Las <b>funciones</b> en Javascript se pueden representar de dos maneras diferentes y sirven para optimizar el código. La forma de usar las funciones es por ejemplo <i><b>function</b> nombre_de_la_funcion(parametros_si_se_quiere){código; <b>return</b> valor_de_retorno_si_se_quiere;}</i> y se puede llamar a ala función de la siguiente manera <i><b>nombre_de_la_funcion(parametros_si_se_necesita);</b></i>, otra manera de crear una función es creando una variable <i><b>const nombre_de_la_funcion = function(parametros_si_se_quiere){código; return valor_de_retorno_si_se_quiere;};</b></i> y se la llama de la misma manera. <i>Las funciones flechas</i> son otra manera de crear funciones como por ejemplo <b>const nombre_de_la_funcion = (parametros_si_se_necesita) -> {código; return valor_de_retorno_si_se_quiere;};</b>, algunas característicaespeciales pueden ser que si lleva un solo parámetro no necesita paréntesis, también si lleva una sola línea de código no es necesario las llaves y el valor de retorno es automático a la variable a la cual inicializamos como función.
     </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
+    <p>
+        La <b>programación orientada a objetos</b> es un paradigma de progrmación, el cual lleva las siguientes características: <b>clase, objeto, atributo, método, constructor e instanciación</b>.
+        <table>
+            <tr>
+                <td>Característica</td>
+                <td>Significado</td>
+            </tr>
+            <tr>
+                <td>clase</td>
+                <td>Es una plantilla de una entidad.</td>
+            </tr>
+            <tr>
+                <td>objeto</td>
+                <td>Es un elemento con las bases de la clase.</td>
+            </tr>
+            <tr>
+                <td>atributo</td>
+                <td>Son propiedades específicas de una clase.</td>
+            </tr>
+            <tr>
+                <td>método</td>
+                <td>Son funciones que lleva la clase dentro de su propio ámbito.</td>
+            </tr>
+            <tr>
+                <td>constructor</td>
+                <td>Es una función única para establecer valores por defecto de las propiedades de una clase.</td>
+            </tr>
+            <tr>
+                <td>instanciación</td>
+                <td>Es el momento de inicializar un objeto con base a la clase. Generalmente se utilza un dato del tipo <b>const</b>, pero este puede ser de otro tipo.</td>
+            </tr>
+        </table>
+    </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
+    <p>
+        Algunas características importantes son: para crear al constructor se usa la palabra reservada <b>constructor</b> que es una función de inicio, para la creación de métodos no se permite funciones flecha.
+    </p>
+    <p>
+        Algunas <b>características de la POO</b> son: <b>abstracción, modularidad, encapsulamiento y poliformismo</b>. <i>Abstracción</i> es la recolección de atributos de alguna entidad que las caractericen, es abstraer características. <i>Modularidad</i> es la creación de operaciones de ayuda, en otras palabras funciones que puedan ayudarnos a tratar los objetos con diferentes funcionalidades. <i>Encapsulamiento</i> es el alcance que los datos pueden tener, nos referimos a propiedades, métodos y clases, hasta donde pueden ser utilizados, pueden ser públicos, privados o protegidos como en Java. <i>Polimorfismo</i> es que un objetos de una misma clase en base a utilizar los mismos métodos pueden tener resultados o funcionalidades diferentes.
+    </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
+    <p>
+        La herencia, métodos estáticos, getters y setters pueden codificarse de la siguiente manera:
+    </p>
+    <img src="" alt="" style="width: 300px; height: 300px;">
+    <p>
+        <table>
+            <tr>
+                MÉTODOS DE CADENAS
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Característica</td>
+            </tr>
+            <tr>
+                <td>startsWith()</td>
+                <td>Busca una cadena desde el índice 0 al final de la cadena donde lo llamemos, por defecto empieza a buscar desde el índice 0 pero este puede ser desde otro índice que indiquemos, devuelve <b>true</b>, si no devuelve <b>false.</b></td>
+            </tr>
+            <tr>
+                <td>endsWwidth()</td>
+                <td>Busca una cadena desde el índice final al 0 de la cadena donde lo llamemos, por defecto empieza a buscar desde el índice final pero este puede ser desde otro índice que indiquemos, devuelve <b>true</b>, si no devuelve <b>false.</b></td>
+            </tr>
+            <tr>
+                <td>includes()</td>
+                <td>Busca una cadena desde el índice 0 al final de la cadena donde lo llamemos, por defecto empieza a buscar desde el índice 0 pero este puede ser desde otro índice que indiquemos, devuelve <b>true</b>, si no devuelve <b>false.</b></td>
+            </tr>
+            <tr>
+                <td>indexOf()</td>
+                <td>Nos devuele el índice donde empieza una cadena de la cadena principal donde llamamos a esta función, podemos indicar el índice desde donde queremos que empiece a buscar, la búsqueda es desde el índice 0 al final.</td>
+            </tr>
+            <tr>
+                <td>lastIndexOf()</td>
+                <td>Nos devuele el índice donde empieza una cadena de la cadena principal donde llamamos a esta función, podemos indicar el índice desde donde queremos que empiece a buscar, la búsqueda es desde el índice final al 0.</td>
+            </tr>
+            <tr>
+                <td>padStart()</td>
+                <td>Nos introduce una cadena por el principio a la cadena principal donde llamamos esta función,  en loa parámetros introducimos un numero que indica el tamaño que queremos que tenga esta cadena sumado con la cadena principal, si excedemos en su tamaño real, este se va repitiendo, luego introducimos la cadena que queremos que vaya al inicio de la cadena principal.</td>
+            </tr>
+            <tr>
+                <td>padEnd()</td>
+                <td>Nos introduce una cadena al final de la cadena principal donde llamamos esta función, en loa parámetros introducimos un numero que indica el tamaño que queremos que tenga esta cadena sumado con la cadena principal, si excedemos en su tamaño real, este se va repitiendo, luego introducimos la cadena que queremos que vaya al inicio de la cadena principal.</td>
+            </tr>
+            <tr>
+                <td>repeat()</td>
+                <td>Es una función que repite la cadena donde llamamos a esta función, en los parámetros se pone un número que indica la cantidad de veces que queremos que se repita.</td>
+            </tr>
+            <tr>
+                <td>split()</td>
+                <td>Devuelve un arreglo con todas las subcadenas separadas por la cadena especificada en los parámetros de la función.</td>
+            </tr>
+            <tr>
+                <td>substring()</td>
+                <td>Nos retorna un pedazo de la cadena principal donde llamamos a esta función, en los parámetros especificamos los indices inicio y final de la subcadena dentro de la cadena principal.</td>
+            </tr>
+            <tr>
+                <td>toLowerCase()</td>
+                <td>Convierte la cadena principal a minúsculas.</td>
+            </tr>
+            <tr>
+                <td>toUpperCase()</td>
+                <td>Convierte la cadeba principal a mayúsculas.</td>
+            </tr>
+            <tr>
+                <td>toString()</td>
+                <td>devuelve una cadena que representa al objeto especificado.</td>
+            </tr>
+            <tr>
+                <td>trim()</td>
+                <td>Elimina los espacios en blanco de la cadena principal.</td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <table>
+            <tr>
+                MÉTODOS DE ARREGLOS
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>pop()</td>
+                <td>Elimina el último elemento de un array y lo devuelve.</td>
+            </tr>
+            <tr>
+                <td>shift()</td>
+                <td>Elimina el primer elemento de un array y lo devuelve.</td>
+            </tr>
+            <tr>
+                <td>push()</td>
+                <td>Agrega un elemento al array al final de la lista.</td>
+            </tr>
+            <tr>
+                <td>reverse()</td>
+                <td>Invierte el orden de los elementos de un array.</td>
+            </tr>
+            <tr>
+                <td>unshift()</td>
+                <td>Agrega uno o más elementos al inicio del array y devuelve la nueva longitud del array.</td>
+            </tr>
+            <tr>
+                <td>sort()</td>
+                <td>Ordena los elementos de un arreglo localmente y devuelve el arreglo ordenado</td>
+            </tr>
+            <tr>
+                <td>splice()</td>
+                <td>Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.</td>
+            </tr>
+            <tr>
+                <td>join()</td>
+                <td>Une todos los elementos de una matriz u objeto.</td>
+            </tr>
+            <tr>
+                <td>slice()</td>
+                <td>Devuelve una parte del array dentro de uno nuevo.</td>
+            </tr>
+            <tr>
+                <td>Métodos ya vistos</td>
+                <td>toString(), indexOf(), lastIndexOf() y include(), que funcionan similar que con cadenas solo que con arreglos.</td>
+            </tr>
+            <tr>
+                <td>filter()</td>
+                <td>Crea un nuevo array con todos los elementos que coincidan con la descripción del parámetro. Es igual que el forEach() con la diferencia que se puede poner condiciones para hacer distintas operaciones (<b>arreglo.filter(elemento => condición);</b>)</td>
+            </tr>
+            <tr>
+                <td>forEach()</td>
+                <td>Recibe como parámetro a una función, esta puede ser una función flecha, generalmente de un solo parámetros que reperesenta a los elementos del arreglo.</td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <table>
+            <tr>
+                OBJETO MATH - BÁSICO
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>sqrt()</td>
+                <td>Devuelve la raíz cuadrada positiva de un número.</td>
+            </tr>
+            <tr>
+                <td>cbrt()</td>
+                <td>Devuelve la raíz cúbica de un número.</td>
+            </tr>
+            <tr>
+                <td>max()</td>
+                <td>Devuelve el número mayor de dos o más números.</td>
+            </tr>
+            <tr>
+                <td>min()</td>
+                <td>Devuelve el número menro de dos o más números.</td>
+            </tr>
+            <tr>
+                <td>random()</td>
+                <td>Devuelve un número pseudo-aleatorio entre 0 y 1.</td>
+            </tr>
+            <tr>
+                <td>round()</td>
+                <td>Devuelve el valor de un número redondeado al número entero más cercano.</td>
+            </tr>
+            <tr>
+                <td>fround()</td>
+                <td>Devuelve la representación flotante de precisión simple (4 bytes) más cercano.</td>
+            </tr>
+            <tr>
+                <td>floor()</td>
+                <td>Devuelve el mayor entero, menor que o igual a un número.</td>
+            </tr>
+            <tr>
+                <td>trunc()</td>
+                <td>Devuelve la parte entera del número x, la eliminación de los dígitos fraccionarios.</td>
+            </tr>
+            <tr>
+                <td>PI</td>
+                <td>Ratio de la circunferencia de un circulo a su diámetro.</td>
+            </tr>
+            <tr>
+                <td>SQRT1_2</td>
+                <td>Raíz cuadrada de 1/2.</td>
+            </tr>
+            <tr>
+                <td>SQRT2</td>
+                <td>Raíz cuadrada de 2, aproximadamente 1.414.</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>Constante de Euler, la base de los logaritmos naturales.</td>
+            </tr>
+            <tr>
+                <td>LN2</td>
+                <td>Logaritmo natural de 2, aproximadamente 0.693.</td>
+            </tr>
+            <tr>
+                <td>LN10</td>
+                <td>Logaritmo natural de 10, aproximadamente 2.303.</td>
+            </tr>
+            <tr>
+                <td>LOG2E</td>
+                <td>Logaritmo de E con base 2, aproximadamente 1.443.</td>
+            </tr>
+            <tr>
+                <td>LOG10E</td>
+                <td>Logaritmo de E con base 10, aproximadamente 0.434.</td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        <table>
+            <tr>
+                FUNCIONES DE REGISTRO
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>assert()</td>
+                <td>Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afirmación es verdadera, no aparecerá nada. (NO ESTANDAR)</td>
+            </tr>
+            <tr>
+                <td>clear()</td>
+                <td>Limpia la consola.</td>
+            </tr>
+            <tr>
+                <td>error()</td>
+                <td>Muestra un mensaje de error en la consola web.</td>
+            </tr>
+            <tr>
+                <td>info()</td>
+                <td>Emite un mensaje informativo a al consola web. En Firefox y chrome, se muestra un pequeño ícono "i" junto a estos elementos en el registro de la consola web.</td>
+            </tr>
+            <tr>
+                <td>log()</td>
+                <td>Muestra un mensaje en la consola web o del intérprete Javascript.</td>
+            </tr>
+            <tr>
+                <td>table()</td>
+                <td>Esta función toma un argumento obligatorio: data, que debe ser un array o un objeto y un parámetro adicional: columns y nos muestra una tabla en consola.</td>
+            </tr>
+            <tr>
+                <td>warn()</td>
+                <td>Imprime un mensaje de advertencia en la consola wweb.</td>
+            </tr>
+            <tr>
+                <td>dir()</td>
+                <td>Despliega una lista interactiva de las propiedades del objeto Javascript especificado. (NO ESTANDAR)</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                FUNCIONES DE CONTEO
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>count()</td>
+                <td>Registra el número de veces que se llama a count(). Esta función toma como argumento opcional una etiqueta.</td>
+            </tr>
+            <tr>
+                <td>countReset()</td>
+                <td>Resetea el contador <b>console.count();</b>.</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                FUNCIONES DE AGRUPACIÓN
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>group()</td>
+                <td>Crea un nuevo grupo en línea en el registro de la consola web.</td>
+            </tr>
+            <tr>
+                <td>groupEnd()</td>
+                <td>Remueve un grupo en línea en el registro de la consola web.</td>
+            </tr>
+            <tr>
+                <td>groupCollapsed()</td>
+                <td>Crea un grupo en línea pero contraido, el usuario debe expandirlo para verlo.</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                FUNCIONES DE TEMPORIZACIÓN
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>time()</td>
+                <td>inicia un temporizador. Se introduce un <i>label</i> como parámetro para diferenciarse de otros tiempos.</td>
+            </tr>
+            <tr>
+                <td>timeEnd()</td>
+                <td>Registra el valor actual de un temporizador. Se introduce un <i>label</i> como parámetro para diferenciarse de otros tiempos.</td>
+            </tr>
+            <tr>
+                <td>timeLog()</td>
+                <td>Detiene un temporizador. Se introduce un <i>label</i> como parámetro para diferenciarse de otros tiempos.</td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        El <b>DOM</b> (Document Object Model) es una interfaz que contiene todos los elementos de una página web el cual cuenta con ciertas características como los son los nodos que pueden ser cualquier etiqueta del cuerpo (body), como un párrafo (Etiqueta <i>p</i>), el mismo <i>body</i> o incluso las etiquetas de una lista.
+        <ul>
+            <li><b>Document:</b> El nodo document es el nodo raíz, a partir del cual derivan el resto de nodos.</li>
+            <li><b>Element:</b> Nodos definidos por etiquetas HTML.</li>
+            <li><b>Text:</b> El texto dentro de un nodo element se considera un nuevo nodo hijo de tipo text (texto).</li>
+            <li><b>Attribute:</b> Los atributos de las etiquetas definen nodos, (en Javascript no los veremos como nodos, sino como información asociada al nodo de tipo element)</li>
+            <li><b>Comentarios y otros:</b> los comentarios y otros elementos como las declaraciones doctype en cabecera de los documentos HTML generan nodos.</li>
+        </ul>
+        Los nodos no siempre son etiquetas, a veces pueden ser otro tipo de elementos.
+    </p>
+    <p>
+        <table>
+            <tr>
+                DOCUMENT - MÉTODOS DE SELECCIÓN DE ELEMENTOS
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Descripción</td>
+            </tr>
+            <tr>
+                <td>getElementById()</td>
+                <td>Selecciona un elemento por ID. <b>document.getElementById("#Identificador");</b></td>
+            </tr>
+            <tr>
+                <td>getElementsByTagName()</td>
+                <td>Selecciona todos los elementos que coincidan con el nombre de la etiqueta especificada. Cuando se selecciona varios elementos se genera un arreglo de los mismos. <b>document.getElementsByTagName("etiqueta");</b></td>
+            </tr>
+            <tr>
+                <td>querySelector()</td>
+                <td>Devuelve el primer elemento que coincida con el grupo especificado de selectores. <b>document.getElementById(".nombre_de_clase");</b></td>
+            </tr>
+            <tr>
+                <td>querySelectorAll()</td>
+                <td>Devuelve todos los elementos que coincidan con el grupo especificado de selectores. <b>document.getElementById(".nombre_de_clase");</b></td>
+            </tr>
+        </table>
+    </p>
+
+    <p>
+        <table>
+            <tr>
+                MÉTODOS PARA DEFINIR, OBTENER Y ELIMINAR VALORES DE ATRIBUTOS
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Característica</td>
+            </tr>
+            <tr>
+                <td>setAttribute()</td>
+                <td>Modifica el valor de un atributo. <b>elemento_seleccionado.setAttribute("nombre_de_atributo", "valor_a_modificar");</b></td>
+            </tr>
+            <tr>
+                <td>getAttribute()</td>
+                <td>Obtiene el valor de un atributo. <b>elemento_seleccionado.getAttribute("nombre_de_atributo");</b></td>
+            </tr>
+            <tr>
+                <td>removeAttribute()</td>
+                <td>Remueve el valor de un atributo. <b>elemento_seleccionado.removeAttribute("nombre_de_atributo");</b></td>
+            </tr>
+        </table>
+    </p>
+        <table>
+            <tr>
+                ATRIBUTOS GLOBALES
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Característica</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>Lista de clases del elemento separadas por espacios.</td>
+            </tr>
+            <tr>
+                <td>contenteditable</td>
+                <td>Indica si el elemento puede ser modificable por el usuario (bool).</td>
+            </tr>
+            <tr>
+                <td>dir</td>
+                <td>Indica la direccionalidad del texto. con valores <i>ltr</i> dirección izquierda, <i>rtl</i> dirección derecha.</td>
+            </tr>
+            <tr>
+                <td>hidden</td>
+                <td>Indica si el elemento aún no es, o ya no es relevante. sus valores son booleanas (true/false), desaparece o no dependiendo del valor al elemento.</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Define un identificador único.</td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>Contiene declaraciones de estilo CSS para ser aplicadas al elemento.</td>
+            </tr>
+            <tr>
+                <td>tabindex</td>
+                <td>Indica si el elemento puede obtener un focus de input. Su valor son número que indican el orden en que se irá dando el focus mientras presionemos la tecla TAB.</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Contiene un texto con información relacionada al elemento al que pertenece.</td>
+            </tr>
+        </table>
+    <p>
+        Algunos atributos de los inputs podemos utilizarlos directamente <b></b> como:
+        <ul>
+            <li>className: Nombre de clase de una etiqueta o elemento.</li>
+            <li>value: Valor, contenido de un input.</li>
+            <li>type: El tipo de un input.</li>
+            <li>accept: Generalmente atributo de un input de tipo <i>file</i> para seleccionar archivos de un tipo específico.</li>
+            <li>form: Generalmente atributo de un input de tipo <i>submit</i>, para referenciar un formulario por su identificador <i>id</i>, esto para poder enviar los datos del formulario aún cuando el <i>submit</i> este fuera del formulario (<i>form</i>).</li>
+            <li>minlength: Establece un minimo de caracteres aceptados dentro del input.</li>
+            <li>placeholder: Es un texto de fondo generalmente para inputs del tipo <i>text.</i></li>
+            <li>required: Es para definir campos requeridos, es decir que inpide el envío de los datos sin antes haber sido llenados con true/fasle.</li>
+        </ul>
+    </p>
+    <p>
+        La <b>propiedad style</b> es igual una propiedad que prescinde de métodos como <i>setAttribute(), getAttribute() y removeAttribute()</i>, y su utilización es directa <b>elemento.style.propiedad_CSS = "valor_de_atributo";</b>, algo a tomar en cuenta también es que propiedades descritas con separación entre guiones (-) estas serán llamadas en formato Camel-Case por ejemplo <b>background-color = backgroundColor</b>.
+    </p>
+    <p>
+        El atributo <b>classlist</b> hace referencia al manejo del atributo clase de los elementos, los cuales tienen algunos método muy importantes, tambien es un atributo que prescinde de métodos como <i>setAttribute(), getAttribute() y removeAttribute()</i>, y su utilización es directa <b>elemento.classlist.metodo_classlist();</b>.
+        <table>
+            <tr>
+                CLASES, CLASSLIST Y MÉTODOS DE CLASSLIST
+            </tr>
+            <tr>
+                <td>Métodos</td>
+                <td>Caracteríticas</td>
+            </tr>
+            <tr>
+                <td>add()</td>
+                <td>Añade una clase.</td>
+            </tr>
+            <tr>
+                <td>remove()</td>
+                <td>Remueve una clase.</td>
+            </tr>
+            <tr>
+                <td>item()</td>
+                <td>Devuelve la clase del índice especificado.</td>
+            </tr>
+            <tr>
+                <td>contains()</td>
+                <td>Verifica si ese elemento posee o no, la clase especificada.</td>
+            </tr>
+            <tr>
+                <td>replace()</td>
+                <td>Reemplaza una clase por otra.</td>
+            </tr>
+            <tr>
+                <td>toggle()</td>
+                <td>Si no tiene la clase especificada, la agrega, si ya la tiene, la elimina.</td>
+            </tr>
+        </table>
+    </p>
+
+     <p>
+        <table>
+            <tr>
+                OBTENCIÓN Y MODIFICACIÓN DE ELEMENTOS
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Característica</td>
+            </tr>
+            <tr>
+                <td>textContent</td>
+                <td>Devuelve el texto de cualquier nodo.</td>
+            </tr>
+            <tr>
+                <td>innerHTML</td>
+                <td>Devuelve el contenido HTML dentro de un elemento.</td>
+            </tr>
+            <tr>
+                <td>outerHTML</td>
+                <td>Devuelve el código HTML completo del elemento.</td>
+            </tr>
+        </table>
+     </p>
+
+     <p>
+        La <b>creación de elementos</b> consiste en crear código HTML que represente elementos que quisieramos establecer dinámicamente:
+        <ul>
+            <li><b>createElement():</b> Generalmento no recomendado porque por crear elementos con este método se vuelve a escribir todos los elementos en el DOM. Algunos detalles importantes es que las etiquetas que quisieramos crear siempre son en mayúsculas, <b>document.createElement("LI");</b>.</li>
+            <li><b>createTextNode():</b> Crea nodos del tipo texto, <b>elemento.createTextNode("texto");</b> otra manera de crear texto dentro de un nodo es <b>elemento.innerHTML = "texto";</b> con la diferencia que este último no cuenta con las propiedades de ser un objeto.</li>
+            <li><b>appendChild():</b> Esta función sirve para introducir un nodo dentro de otro, <b>elemento.appendChild(nodo_elemento);</b>.</li>
+            <li><b>createDocumentFragment();</b> Crea un fragmento de documento en blanco para poder agregar los nodos que deseemos y posteriormente con el fragmento agregarlo al documento principal.</li>
+        </ul>
+     </p>
+
+     <p>
+        La <b>obtención y modificación de childs</b> consiste en cpoder seleccionar elementos hijos dentro de un nodo, esto puede realizarse con los siguientes métodos:
+        <ul>
+            <li><b>firstChild:</b> Selecciona el primer elemento dentro de un nodo sin importar si existe espacios en blanco o espacios entre etiquetas porque igual los toma como nodos, <b>elemento.firstChild();</b>.</li>
+            <li><b>lastChild:</b> Selecciona el último elemento dentro de un nodo sin importar si existe espacios en blanco o espacios entre etiquetas porque igual los toma como nodos, <b>elemento.lastChild();</b>.</li>
+            <li><b>firstElementChild:</b> Selecciona el primer elemento dentro de un nodo, <b>elemento.firstElementChild;</b>.</li>
+            <li><b>lastElementChild;</b> Selecciona el último elemento dentro de un nodo, <b>elemento.lastElementChild;</b>.</li>
+            <li><b>childNodes:</b> Crea algo similar a un arreglo pero de nodos dentro de un nodo sin importar si existe espacios en blanco o espacios entre etiquetas porque igual los toma como nodos, se puede recorrer este "arreglo" incluso usando <i>forEach</i>, pero no podemos usar propiedades de arreglos porque no es un arreglo como tal.</li>
+            <li><b>children;</b> Crea algo similar a un arreglo pero de nodos dentro de un nodo solo toma nodos a etiquetas o elementos, se puede recorrer este "arreglo" incluso usando <i>forEach</i>, pero no podemos usar propiedades de arreglos porque no es un arreglo como tal.</li>
+        </ul>
+     </p>
+
+     <p>
+        <table>
+            <tr>
+                MÉTODOS DE CHILDS
+            </tr>
+            <tr>
+                <td>Método</td>
+                <td>Característica</td>
+            </tr>
+            <tr>
+                <td>replaceChild()</td>
+                <td>Reemplaza un nodo hijo con otro nodo, <b>nodo_padre.replaceChild(nodo_hijo_nuevo, nodo_hijo_antiguo);</b></td>
+            </tr>
+            <tr>
+                <td>removeChild()</td>
+                <td>Elimina un nodo hijo, <b>nodo_padre.removeChild(nodo_hijo_a_eliminar);</b></td>
+            </tr>
+            <tr>
+                <td>hasChildNodes()</td>
+                <td>Nos verifica si el nodo padre tiene nodos hijos y esto lo hace de manera booleana (true/false), cabe mencionar que un nodo no tiene nodo hijos cuando es una etiqueta vacia sin espacios en blanco.</td>
+            </tr>
+        </table>
+     </p>
+     
+     <p>
+        Existen <b>propiedades de parents (padres)</b> para seleccionar el nodo o elemento padre de un nodo hijo, <b>nodo_hijo.parentElement</b>, <b>nodo_hijo.parentNode</b> hace básicamente lo mismo que la anterior propiedad con la diferencia de que puede existir en algún caso en el que un nodo padre no necesariamente una etiqueta HTML, entonces en estos casos sería preferiblemente utilizar <b>nodo_hijo.parentNode</b>.
+     </p>
+
+     <p>
+        Tambien tenemos propiedades para <b>nodos hermanos (siblings)</b> con los cuales podemos recorrer nodos de un mismo nivel dentro de un nodo padre.
+        <table>
+            <tr>
+                PROPIEDADES DE SIBLINGS (HERMANOS)
+            </tr>
+            <tr>
+                <td>Propiedad</td>
+                <td>Características</td>
+            </tr>
+            <tr>
+                <td>nextSibling</td>
+                <td>Selecciona el nodo hermano siguiente, aunque este sea un texto en blanco o espacio entre etiquetas.</td>
+            </tr>
+            <tr>
+                <td>previousSibling</td>
+                <td>Selecciona el nodo hermano anterior, aunque este sea un texto en blanco o espacio entre etiquetas.</td>
+            </tr>
+            <tr>
+                <td>nextElementSibling</td>
+                <td>Selecciona el nodo o elemento hermano siguiente.</td>
+            </tr>
+            <tr>
+                <td>previousElementSibling</td>
+                <td>Selecciona el nodo o elemento hermano anterior.</td>
+            </tr>
+        </table>
+     </p>
+
+     <p>
+        Algunos métodos <b>extras</b> como <b>closest()</b> el cual selecciona el nodo contenedor ascendente mas cercano que coincida con nuestro selector, dado que el parámetro que recibe es un identificador del tipo clase, <b>closest(".nombre-de-clase")</b>.
+     </p>
 </body>
 </html>
