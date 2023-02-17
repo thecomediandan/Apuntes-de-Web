@@ -9,9 +9,34 @@
 }
 
 body{
-    background-image: linear-gradient(95deg, #fff, #9d6a96);
+    background-color: #000;
     box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: #000;
+}
+body::-webkit-scrollbar:vertical {
+    width:9px;
+}
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+} 
+body::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #654d72;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}
+
 h3{
     color: var(--color-secundario-two);
     font-size: 25px;
@@ -25,6 +50,14 @@ header{
     width: 95%;
     margin: auto;
     background-color: rgba(#fff, #fff, #fff, 0.5);
+    border-bottom: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    border-color: #fff;
+    border-style: dashed;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 0 40px 1px #fff;
 }
 .nav-menu-logo{
     background: linear-gradient( #9d6a96,#000);
@@ -120,7 +153,6 @@ h1{
 .subtitulo{
     display: flex;
     align-items: center;
-    height: 224px;
     min-height: 20%;
     width: 500px;
     margin-left: 5%;
@@ -136,7 +168,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     background-color: var(--color-blanco);
     background-image: url(../img/background-img-2.jpg);
     background-position-x: -300px;
@@ -145,6 +177,12 @@ nav{
     border-bottom-right-radius: 100px;
 }
 .nav{
+    position: sticky;
+    top: 0;
+    margin-top: -44px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     display: flex;
     min-width: 700px;
     flex-direction: row;
@@ -158,39 +196,127 @@ nav{
     text-shadow: 0 0 15px #e790bf;
 }
 .nav li{
+    display: flex;
     background: #0a2661;
-    opacity: 0.8;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    opacity: 95%;
     transition: all 0.5s;
+    align-items: center;
+}
+.nav-button-start{
+    border-bottom-left-radius: 20px;
+}
+.nav-button-end{
+    border-bottom-right-radius: 20px;
+}
+.li-separator{
+    height: 100%;
+    width: 2px;
+    font-size: 33px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: radial-gradient(20px,#fff, transparent);
+    opacity: 90%;
 }
 .nav li:hover{
-    background: linear-gradient(180deg,#9d6a96,#000);
+    background: radial-gradient(45px,#aa87bd,#654d72);
 }
 .nav li:nth-child(3){
-    background: linear-gradient(180deg,#654d72,#000);
-    border-bottom: 2px solid#e790bf;
+    background: radial-gradient(45px,#aa87bd,#654d72);
 }
-
 /* Estilos del Articulo */
 .container-menu{
     display: flex;
     justify-content: space-between;
 }
+
 .menu{
     width: 250px;
-    background-color: #654d72;
-    border-top-right-radius: 25px;
-    padding: 50px;
-    margin-top: 25px;
-}
-.list {
+    height: 100vh;
     position: sticky;
-    top: 0;
+    top: 50px;
+    background: linear-gradient(90deg,#000,#654d72);
+    border-top-right-radius: 25px;
+    margin-top: 25px;
+    overflow: hidden;
 }
+.menu:hover{
+    overflow-y: scroll;
+}
+/* Estilos de la barra scroll para .menu*/
+.menu::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.menu::-webkit-scrollbar:vertical {
+    width:8px;
+}
+.menu::-webkit-scrollbar-button:increment,.menu::-webkit-scrollbar-button {
+    display: none;
+} 
+.menu::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+.menu::-webkit-scrollbar-thumb {
+    background-color: #654d72;
+    border-radius: 20px;
+    border: 1px solid #f1f2f3;
+}
+.menu::-webkit-scrollbar-track {
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+
+.div-list-title1{
+    font-family: 'Source Code Pro', monospace;
+    color: #fff;
+    font-size: 15px;
+}
+.list{
+    margin-top: 20px;
+    min-width: 250px;
+    height: 126vh;
+}
+.list>li{
+    text-align: center;
+    padding: 8px 10px;
+}
+.list>li:hover{
+    background: radial-gradient(120px,#0a2661, transparent);
+}
+details li {
+    text-align: center;
+    padding: 8px 6px;
+    width: 85%;
+    margin: auto;
+}
+details li:hover {
+    background: radial-gradient(100px,#319ce4, transparent);
+}
+.list summary{
+    text-align: center;
+    padding: 8px 10px;
+}
+.list summary:hover{
+    background: radial-gradient(120px,#0a2661, transparent);
+}
+
+.li-separator2{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: radial-gradient(80px,#fff, transparent);
+}
+
+.div-list-title2{
+    color: #fff;
+    font-size: 12px;
+}
+
 .focus-menu{
     width: 250px;
-    background-color: #654d72;
+    height: 100vh;
+    position: sticky;
+    top: 50px;
+    background: linear-gradient(90deg,#654d72,#000);
     border-top-left-radius: 25px;
     padding: 50px;
     margin-top: 25px;
