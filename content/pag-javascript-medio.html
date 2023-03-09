@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Nivel Medio</title>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <section>
+            <h2>Introducción a Window</h2>
+            <p>Hereda las propiedades de EventTarget.</p>
+            <table>
+                <tr>
+                    <td>open()</td>
+                    <td>Carga un recurso en el contexto de un nuevo navegador o uno que ya existe.</td>
+                </tr>
+                <tr>
+                    <td>close()</td>
+                    <td>Cierra la centana actual o la ventana en la que se llamó.</td>
+                </tr>
+                <tr>
+                    <td>closed</td>
+                    <td>Indica si la ventana referenciada está cerrada o no.</td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Obtiene / establece el nombre del contexto de exploración de la ventana.</td>
+                </tr>
+                <tr>
+                    <td>stop()</td>
+                    <td>Detiene la carga de recursos en el contexto de navegación actual..</td>
+                </tr>
+                <tr>
+                    <td>alert()</td>
+                    <td>Muestra un cuadro de alerta con el contenido especificado y un botón Aceptar.</td>
+                </tr>
+                <tr>
+                    <td>print()</td>
+                    <td>Abre el cuadro de diálogo Imprimir para imprimir el documento actual.</td>
+                </tr>
+                <tr>
+                    <td>prompt()</td>
+                    <td>Abre un cuadro de diálogo con un mensaje que solicita al usuario un dato (String).</td>
+                </tr>
+                <tr>
+                    <td>confirm()</td>
+                    <td>Abre un cuadro de diálogo con un mensaje y dos botones: Aceptar y Cancelar.</td>
+                </tr>
+                <tr>
+                    Referencia al Screen:
+                </tr>
+                <tr>
+                    <td>screen</td>
+                    <td>Devuelve una referencia al objeto de pantalla asociado con la ventana.</td>
+                </tr>
+                <tr>
+                    <td>screenleft()</td>
+                    <td>Devuelve la distancia horizontal entre el borde izquierdo del navegador y el borde izquierdo de la pantalla.</td>
+                </tr>
+                <tr>
+                    <td>screentop()</td>
+                    <td>Devuelve la distancia vertical entre el borde superior del navegador y el borde superior de la pantalla.</td>
+                </tr>
+                <tr>
+                    <td>scrollX()</td>
+                    <td>Devuelve el número de píxeles que el documento se desplaza actualmente de manera horizontal.</td>
+                </tr>
+                <tr>
+                    <td>scrollY()</td>
+                    <td>Devuelve el número de píxeles que el documento se desplaza actualmente de manera vertical.</td>
+                </tr>
+                <tr>
+                    <td>scroll()</td>
+                    <td>Desplaza la ventana a un lugar particular en el documento. (con options y con posiciones)</td>
+                </tr>
+                <tr>
+                    Referencia a la Ventana:
+                </tr>
+                <tr>
+                    <td>minimize()</td>
+                    <td>Minimiza la ventana.</td>
+                </tr>
+                <tr>
+                    <td>resizeBy()</td>
+                    <td>Cambia el tamaño de la ventana actual en una cantidad específica.</td>
+                </tr>
+                <tr>
+                    <td>resizeTo()</td>
+                    <td>Redimensiona dinámicamente la ventana.</td>
+                </tr>
+                <tr>
+                    <td>moveBy()</td>
+                    <td>Mueve la ventana en una ubicación relativa.</td>
+                </tr>
+                <tr>
+                    <td>moveTo()</td>
+                    <td>Mueve la ventana en una ubicación absoluta.</td>
+                </tr>
+                <tr>
+                    <td>Objetos barprop</td>
+                    <td>Referencia todo lo que tiene que ver con la barra del navegador: location, menubar, personalbar, scrollbars, statusbar, toolbar.</td>
+                </tr>
+                <tr>
+                    Referencia a las locaciones de los archivos de la URL, dominio, path, etc.
+                </tr>
+                <tr>
+                    <td>window.location.href</td>
+                    <td>Devuelve el href (URL) de la página actual.</td>
+                </tr>
+                <tr>
+                    <td>window.location.hostname</td>
+                    <td>Devuelve el nombre de dominio del servidor actual.</td>
+                </tr>
+                <tr>
+                    <td>window.location.pathname</td>
+                    <td>Devuelve la ruta y el nombre de archivo de la página actual.</td>
+                </tr>
+                <tr>
+                    <td>window.location.protocol</td>
+                    <td>Devuelve el protocolo web utilizado (http o https).</td>
+                </tr>
+                <tr>
+                    <td>window.location.assign()</td>
+                    <td>Carga un nuevo documento.</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Herramienta de Inspección</h2>
+            <p>Se recomienda ampliamente conocer la herramienta de inspección que te ofrece el navegador de Google:
+                <ul>
+                    <li>Pestaña Elements</li>
+                    <li>Pestaña Resources</li>
+                    <li>Pestaña Network</li>
+                    <li>Pestaña Timeline/Performance</li>
+                    <li>Pestaña Cosole</li>
+                </ul>
+            </p>
+        </section>
+        <section class="eventos">
+            <h2>Eventos</h2>
+            <p>
+                <b>Eventos o Event Handlers</b> pueden ejecutarse de dos maneras diferentes, generalmente como atributo de un elemento Button en HTML, el atributo <b>onclick="codigo_javascript"</b> o como código de javascript en un archivo aparte:
+
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-1.png" alt="">
+                <img src="./img-js-mid/js-mid-2.png" alt="">
+            </div>
+            <p>
+                <b>Escucha de Eventos o Event Listeners</b>, es programar un evento que escuché el evento sobre el elemento como en el ejemplo de los botones y esto se logra a través de código Javascript. Este método no acepta funciones flechas escepto cuando introduces la función directamente en el parámetro, la función creada no debe tener ingreso de parámetros, solamente y únicamente se pueden pasar un parámetro del evento <b>(e)</b>, el cual dentro de la función podemos ver los atributos del mismo con <b>console.log(e)</b>, con el atributo <i>target</i> podemos ver la línea HTML doinde se ejecuta el evento <b>console.log(e.target)</b>.
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-3.png">
+            </div>            
+            <p>
+                <b>Fujo de Eventos o Flow Event</b>, es el orden de jerarquía en el que se ejecuta los eventos de un mismo tipo de elementos anidados, por defecto es el <i>Event Bumbling</i> que es el orden del más específico al menos específico, pero si agregamos un tercer parámetro en la función <b>addEventListener</b> booleano verdadero (true), podemos hacer que empiece por el último al más específico. Si queremos anular la propagación del evento, podemos agragr una línea de código en la función de entrada que haga referencia al evento de la siguiente manera <b>e.stopPropagation()</b>.
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-4.png">
+            </div> 
+            <p>
+                <h3>Eventos del Mouse</h3>
+                <table>
+                    <tr>
+                        <td>click</td>
+                        <td>Ocurre con un click.</td>
+                    </tr>
+                    <tr>
+                        <td>dblclick</td>
+                        <td>Ocurre con un doble click.</td>
+                    </tr>
+                    <tr>
+                        <td>mouseover</td>
+                        <td>Ocurre cuando el puntero se mueve sobre un elemento o sobre uno de sus hijos.</td>
+                    </tr>
+                    <tr>
+                        <td>mouseout</td>
+                        <td>Ocurre cuando se mueve el puntero fuera de un elemento o de sus elementos secundarios.</td>
+                    </tr>
+                    <tr>
+                        <td>contextmenu</td>
+                        <td>Ocurre con un click en el botón derecho en un elemento para abrir un menú contextual.</td>
+                    </tr>
+                    <tr>
+                        <td>mouseenter</td>
+                        <td>Ocurre cuando el puntero se mueve sobre un elemento. (Especialmente para Internet Explorer)</td>
+                    </tr>
+                    <tr>
+                        <td>mousemove</td>
+                        <td>Ocurre cuando el puntero se mueve mientras está sobre un elemento.</td>
+                    </tr>
+                    <tr>
+                        <td>mouseleave</td>
+                        <td>Ocurre cuando el puntero se mueve fuera de un elemento.</td>
+                    </tr>
+                    <tr>
+                        <td>mousedown</td>
+                        <td>Ocurre con un usuario apreta un botón del mouse sobre un elemento.</td>
+                    </tr>
+                    <tr>
+                        <td>mouseup</td>
+                        <td>Ocurre cuando un usuario suelta un botón del mouse sobre un elemento.</td>
+                    </tr>
+                </table>
+                <h3>Eventos del Teclado</h3>
+                <table>
+                    <tr>
+                        <td>keyup</td>
+                        <td>Ocurre cuando un tecla se deja de presionar.</td>
+                    </tr>
+                    <tr>
+                        <td>keydown</td>
+                        <td>Ocurre cuando una tecla se presiona.</td>
+                    </tr>
+                    <tr>
+                        <td>keypress</td>
+                        <td>Ocurre despues de que los dos eventos anteriores hayan concluido consecutivamente.</td>
+                    </tr>
+                </table>
+                <h3>Eventos de la interfaz</h3>
+                <table>
+                    <tr>
+                        <td>abort</td>
+                        <td>Ocurre cuando un elemento madre elimina a su hijo.</td>
+                    </tr>
+                        <tr>
+                        <td>error</td>
+                        <td>Ocurre cuando sucede un error durante la carga de un archivo multemedia.</td>
+                    </tr>
+                        <tr>
+                        <td>load</td>
+                        <td>Ocurre cuando un objeto se ha cargado.</td>
+                    </tr>
+                        <tr>
+                        <td>beforeunload</td>
+                        <td>Ocurre antes de que el documento se cierre.</td>
+                    </tr>
+                        <tr>
+                        <td>unload</td>
+                        <td>Ocurre una vez que se ha descargado el documento.</td>
+                    </tr>
+                        <tr>
+                        <td>resize</td>
+                        <td>Ocurre cuando se cambia el tamaño del documento.</td>
+                    </tr>
+                        <tr>
+                        <td>scroll</td>
+                        <td>Ocurre cuando se desplaza la barra de scroll.</td>
+                    </tr>
+                        <tr>
+                        <td>select</td>
+                        <td>Ocurre después de que el usuario sleccione el texto del elemento.</td>
+                    </tr>
+                </table>
+            </p>
+            <h3>Temporizadores o Timers</h3>
+            <table>
+                <tr>
+                    <td>setTimeOut()</td>
+                    <td>Es una función que recibe por parámetro generalmente una función, puede ser flecha anónima o no, un segundo parámetro es un número entero que son los milisegundos que queremos que espere antes de ejecutar la función en el parámetro.</td>
+                </tr>
+                <tr>
+                    <td>clearTimeOut()</td>
+                    <td>Es una función que elimina un setTimeOut(), si queremos podemos probar añadiendo a una variable un setTimeOut(), luego es variable lo ponemos como parámetro en la función clearTimeOut().</td>
+                </tr>
+                <tr>
+                    <td>setInterval()</td>
+                    <td>Es una función que recibe por parámetro generalmente una función, puede ser flecha anónima o no, un segundo parámetro es un número entero que son los milisegundos que queremos que espere antes de ejecutar la función en el parámetro indefinidamente.</td>
+                </tr>
+                <tr>
+                    <td>clearInterval()</td>
+                    <td>Es una función que elimina un setInterval(), si queremos podemos probar añadiendo a una variable un setInterval(), luego es variable lo ponemos como parámetro en la función clearInterval().</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Manejo de errores</h2>
+            <p>
+                <b>Estructura de control Switch</b>
+                <div class="img-sections">
+                    <img src="./img-js-mid/js-mid-5.png" alt="">
+                </div>
+                <b>Manejo de errores o Excepciones</b>
+                <p>
+                    Son errores que podemos encontrar con códigos que tienen que ver con flujos que no podemos controlar, por ejemplo la conexión con una base de datos, la carga de archivo, etc. Podemos ver estos errores en páginas como <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#expresiones_de_manejo_de_excepciones">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#expresiones_de_manejo_de_excepciones</a>
+                </p>
+                <div class="img-sections">
+                    <img src="./img-js-mid/js-mid-6.png" alt="">
+                </div>
+            </p>
+        </section>
+        <section>
+            <h2>Callbacks, Promise y Await/Async</h2>
+            <p>
+                Los <b>Callbacks</b> no son más que funciones dentro de otras funciones. 
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-7.png" alt="">
+            </div>
+            <p>
+                Las <b>promesas o Promise</b>, son un manejo mejorado de los Callbacks, cuando por ejemplo en los Callbacks anidamos condicionales para buscar errores o mostrar atributos necesitados esto puede hacerse muy moroso más que todo cuando se trata de clases u objetos. Las promesas cuentan con dos Callbacks uno llamados <b>Reject y Resolve</b>, que significan fracaso de una operación asíncrona y terminación de una operación asíncrona respectivamente, hay un tercer parámetro que es otro Callback que puede llamar otros tres Callbacks.
+            </p>
+            <p>Esto es el código ejemplo del uso de un callback:</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-8.png" alt="">
+            </div>
+            <p>Esto es el código ejemplo del uso de una promesa que contraste con el anterior ejemplo y ver las deiferencias:</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-9.png" alt="">
+            </div> 
+            <p>
+                Las promesas por defecto son funciones asíncronas, pero podemos tratarlas como síncronas con algunas modificaciones en el código. La palabra <b>async</b> es una palabra reservada para declarar una función de manera asíncrona, <b>await</b> es una palabra reservada que solo tiene validez con funciones asíncronas que retrasa el funcionamiento de una función esperando a que termine de ejecutarse por comppleto.
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-10.png" alt="">
+            </div> 
+        </section>
+        <section>
+            <h2>JSON, Fetch y Axio</h2>
+            <p>
+                Datos estructurados <b>JSON o Javascript Object Notation</b> es un formato del contenido de un archivo que es semejante a un objeto en Javascript con la diferencia que las claves están entre comillas y aparecen nuevos términos como <b>Serializar o Deserializar</b>, Serializar no es más que convertir el contenido JSON en un String y Deserializar es volver a un objecto del tipo JSON convirtiéndola. Para Serializar se utiliza una función llamada <b>JSON.stringify(objeto)</b> y para Deserializar se utiliza la función <b>JSON.parse(cadenaJSON)</b>.
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-15.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-16.png" alt="">
+            </div> 
+            <p>
+                <b>AJAX</b>, es lo que se usaba antes para conectarse con el protocolo HTTP haciendo uso de los objetos <b>XMLHttpRequest</b> para la mayoría de los navegadores y <b>ActiveXObject</b> para el navegador Internet Explorer de Microsoft y podemos ver un ejemplo de su uso:
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-11.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-12.png" alt="">
+            </div> 
+            <p>Otra forma:</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-14.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-13.png" alt="">
+            </div>
+            <p>
+                Para el método <i>post</i> utilizaremos una página de ayuda a la cual enviaremos un JSON y nos devolverá la misma información, la página es <a href="https://reqres.in/">https://reqres.in/</a> donde copiaremos uno de los ejemplos y el resultado que nos tiene que enviar, los únicos cambios que deberíamos hacer en el anterior código son: el tipo de estado que nos permite la conexión es <b>201</b> el cual es un valor de aceptación y lo ponemos como parte positiva en la conexión, solo mostraremos respuesta porque lña estructura JSON que nos devolvera será diferente, en vez de enviar un método <i>GET</i> enviaremos un método <i>POST</i>, ajustaremos el tipo de cabecera con <b>peticion,setRequestHeader("Content-type", "application/json;charset=UTF8");</b> existen varios tipos de cabeceras para distintas circunstancias para el ejemplo utilizaremos esta luego cambiaremos el <b>peticion.send</b> y enviaremos información de tipo JSON <b>peticion.send(JSON.stringify({"nombre": "morfeo", "tipo": "líder"}));</b> como la API recibe datos JSON serializados utilizamos el método <b>stringify</b>.
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-19.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-17.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-18.png" alt="">
+            </div>
+            <p>
+                <b>Fetch</b> es otra manera de trabajar con <b>XMLHttpRequest</b> de hecho es la más moderna, Fetch está basado en promesas y siempre nos devuelve una promesa con los datos encapsulados, para trabajar con esa promesa devuelta tenemos que trabajar con los siguientes métodos: <b>text(), json(), blob(), formData(), arrayBuffer(), etc</b>. Por defecto <b>fetch</b> esta configurado para usar el método <b>GET</b>. <span class="note">Nota: Al usar Fetch con async/await, es decir que fetch se encuentre dentro de una función asíncrona, con el prefijo await, este nos devuelve la data desencapsulada, es decir que con el dato resultante de Fetch podemos usar los métodos de json, blob, text, etc.</span>
+            </p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-20.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-25.png" alt="">
+            </div>
+            <p>Para usar el método <b>POST</b> hay algunos cambios y necesitaremos usar la misma página para probar el envío y recepción de datos.</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-21.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-27.png" alt="">
+            </div>
+            <p>Un ejemplo de uso del método de <b>blob()</b> de la promesa resultante al usar <b>fetch</b>, es para recursos multimedia en este ejemplo tenemos un elemento <i>img</i> en HTML con el nombre de clase <i>imagen</i> el cual seleccionamos con <i>querySelector</i>, al recibir la promesa después de consultar la ruta de una imagen utilizamos el método <b>blob()</b> para después setear una ruta de imágen abstracta. De esta manera podemos utilizar dinámicamente archivos multimedia.</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-22.png" alt="">
+            </div>
+            <p><b>Axios</b> es una versión mejorada de fetch la cual también nos devuelve una promesa solo que esta promesa no encapsula los datos y podemos consultarla con el método <b>data</b>, los encabezados se ponen automáticamente, para poder utilizar la librería <b>axios</b> tenemos que entrar a la siguiente página <a href="https://github.com/axios/axios">https://github.com/axios/axios</a> que es un repositorio de GitHub donde se encuentra la librería y podemos copiar el enlace del script en el apartado CDN <i>Using  jsDelivr CDN</i> que es recomendable introducirlo de primer elemento en el <i>body</i> para que se cargue sin problemas.</p>
+            <p>El script es parecido a este:</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-23.png" alt="">
+            </div>
+            <p>El ejemplo usando método <b>GET</b>.</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-24.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-25.png" alt="">
+            </div>
+            <p>El ejemplo usando método <b>POST</b>:</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-26.png" alt="">
+            </div>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-27.png" alt="">
+            </div>
+            <p>La otra manera de usar <b>POST</b>:</p>
+            <div class="img-sections">
+                <img src="./img-js-mid/js-mid-28.png" alt="">
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js-mid.js"></script>
+</body>
+</html>

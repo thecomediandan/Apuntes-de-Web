@@ -270,6 +270,10 @@ nav{
     color: #fff;
     font-size: 15px;
 }
+.div-list-title2{
+    color: #fff;
+    font-size: 14px;
+}
 .list{
     margin-top: 20px;
     min-width: 250px;
@@ -298,7 +302,6 @@ details li:hover {
 .list summary:hover{
     background: radial-gradient(120px,#0a2661, transparent);
 }
-
 .li-separator2{
     display: block;
     width: 100%;
@@ -306,21 +309,35 @@ details li:hover {
     background: radial-gradient(80px,#fff, transparent);
 }
 
-.div-list-title2{
-    color: #fff;
-    font-size: 12px;
-}
 
 .focus-menu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 250px;
     height: 100vh;
     position: sticky;
     top: 50px;
     background: linear-gradient(90deg,#654d72,#000);
     border-top-left-radius: 25px;
-    padding: 50px;
     margin-top: 25px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
 }
+.list-focus{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 10px;
+    width: 85%;
+    margin:auto;
+    margin-top: 10px;
+}
+.list-focus h4{
+    font-weight: bolder;
+    font-size: 15px;
+}
+
 article{
     background-color: rgba(#fff, #fff, #fff, 0.5);
     color: #242a40;
