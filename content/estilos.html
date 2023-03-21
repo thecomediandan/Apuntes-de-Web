@@ -19,17 +19,26 @@
         <header>
             <div class="nav-menu-logo">
                 <h1>
-                    DanyFylth
+                    ArdaDev
                 </h1>
                 <div class="nav-menu-logo_button">
                     <div class="mode-black-button">
                         <span class="title-switch">Modo Oscuro</span>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input class="cb" type="checkbox">
                             <span class="slider"></span>
-                          </label> 
+                        </label> 
                     </div>                    
-                    <i class="fa-solid fa-language"></i>
+                    <i class="fa-solid fa-language btn-idioma"></i>
+                    <div class="window-language">
+                        <div class="menu-language">
+                            <span>Seleccione un idioma</span>
+                            <ul>
+                                <li><i class="fa-solid fa-language"></i> <b>ES</b> Español</li>
+                                <li><i class="fa-solid fa-language"></i> <b>EN</b> Inglés</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <nav>
@@ -40,7 +49,7 @@
         </header>
         <div class="nav">
             <li class="nav-button-start">
-                <button class="nav-button">INICIO</button>
+                <button class="nav-button nav-button-inicio">INICIO</button>
             </li>
             <li>
                 <span class="li-separator"></span>
@@ -115,6 +124,316 @@
                     <p>El selector por elemento es cuando introducimos el nombre de la etiqueta <i>nombreEtiqueta{}</i>.</p>
                     <p>Selector por orden descendiente es cuando anteponemos un atributo o nombre de clase y especificamos otros elementos dentro para ser más específicos <i>elementoPadre elementoHijo ...{}</i>.</p>
                     <p>La pseudo-clases se activan poniendo ':' y el nombre de la pseudo-clase <i>nombreElemento:nombrePseudoClase{}</i>.</p>
+                    <table class="section-table table-1">
+                        <thead>
+                          <th style="width:20%">Selector</th>
+                          <th style="width:20%">Example</th>
+                          <th>Example description</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td><a>.<i>class</i></a></td>
+                          <td class="notranslate">.intro</td>
+                          <td>Selects all elements with class="intro"</td>
+                        </tr>
+                        <tr>
+                          <td><a>.class1.class2</a></td>
+                          <td class="notranslate">.name1.name2</td>
+                          <td>Selects all elements with both <em>name1</em> and <em>name2</em> set 
+                          within its class attribute</td>
+                        </tr>  
+                        <tr>
+                          <td><a>.class1 .class2</a></td>
+                          <td class="notranslate">.name1 .name2</td>
+                          <td>Selects all elements with <em>name2</em> that is a descendant of an 
+                          element with <em>name1</em></td>
+                        </tr>  
+                        <tr>
+                          <td><a>#<i>id</i></a></td>
+                          <td class="notranslate">#firstname</td>
+                          <td>Selects the element with id="firstname"</td>
+                        </tr>  <tr>
+                          <td><a>*</a></td>
+                          <td class="notranslate">*</td>
+                          <td>Selects all elements</td>
+                        </tr>
+                        <tr>
+                          <td><i><a>element</a></i></td>
+                          <td class="notranslate">p</td>
+                          <td>Selects all &lt;p&gt; elements</td>
+                        </tr>
+                        <tr>
+                          <td><i><a>element.class</a></i></td>
+                          <td class="notranslate">p.intro</td>
+                          <td>Selects all &lt;p&gt; elements with class="intro"</td>
+                        </tr>
+                        <tr>
+                          <td><i><a>element,element</a></i></td>
+                          <td class="notranslate">div, p</td>
+                          <td>Selects all &lt;div&gt; elements and all &lt;p&gt; elements</td>
+                        </tr>
+                        <tr>
+                          <td><a><i>element</i> <i>element</i></a></td>
+                          <td class="notranslate">div p</td>
+                          <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+                        </tr>
+                        <tr>
+                          <td><a><i>element</i>&gt;<i>element</i></a></td>
+                          <td class="notranslate">div &gt; p</td>
+                          <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a><i>element</i>+<i>element</i></a></td>
+                          <td class="notranslate">div + p</td>
+                          <td>Selects the first &lt;p&gt; element that is placed immediately after &lt;div&gt; elements</td>
+                        </tr>
+                        <tr>
+                          <td><a><i>element1</i>~<i>element2</i></a></td>
+                          <td>p ~ ul</td>
+                          <td>Selects every &lt;ul&gt; element that is preceded by a &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>]</a></td>
+                          <td class="notranslate">[target]</td>
+                          <td>Selects all elements with a target attribute</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>=<i>value</i>]</a></td>
+                          <td class="notranslate">[target="_blank"]</td>
+                          <td>Selects all elements with target="_blank"</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>~=<i>value</i>]</a></td>
+                          <td class="notranslate">[title~="flower"]</td>
+                          <td>Selects all elements with a title attribute containing the word "flower"</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>|=<i>value</i>]</a></td>
+                          <td class="notranslate">[lang|="en"]</td>
+                          <td>Selects all elements with a lang attribute value equal to "en" or 
+                          starting with "en-"</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>^=<i>value</i>]</a></td>
+                          <td>a[href^="https"]</td>
+                          <td>Selects every &lt;a&gt; element whose href attribute value begins with "https"</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>$=<i>value</i>]</a></td>
+                          <td>a[href$=".pdf"]</td>
+                          <td>Selects every &lt;a&gt; element whose href attribute value ends with ".pdf"</td>
+                        </tr>
+                        <tr>
+                          <td><a>[<i>attribute</i>*=<i>value</i>]</a></td>
+                          <td>a[href*="w3schools"]</td>
+                          <td>Selects every &lt;a&gt; element whose href attribute value contains the substring "w3schools"</td>
+                        </tr>
+                        <tr>
+                          <td><a>:active</a></td>
+                          <td class="notranslate">a:active</td>
+                          <td>Selects the active link</td>
+                        </tr>
+                        <tr>
+                          <td><a>::after</a></td>
+                          <td class="notranslate">p::after</td>
+                          <td>Insert something after the content of each &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a >::before</a></td>
+                          <td class="notranslate">p::before</td>
+                          <td>Insert something before&nbsp;the content of each &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:checked</a></td>
+                          <td>input:checked</td>
+                          <td>Selects every checked &lt;input&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:default</a></td>
+                          <td>input:default</td>
+                          <td>Selects the default &lt;input&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:disabled</a></td>
+                          <td>input:disabled</td>
+                          <td>Selects every disabled &lt;input&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:empty</a></td>
+                          <td>p:empty</td>
+                          <td>Selects every &lt;p&gt; element that has no children (including text nodes)</td>
+                        </tr>
+                        <tr>
+                          <td><a>:enabled</a></td>
+                          <td>input:enabled</td>
+                          <td>Selects every enabled &lt;input&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:first-child</a></td>
+                          <td class="notranslate">p:first-child</td>
+                          <td>Selects every &lt;p&gt; element that is the first child of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>::first-letter</a></td>
+                          <td class="notranslate">p::first-letter</td>
+                          <td>Selects the first letter of every &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>::first-line</a></td>
+                          <td class="notranslate">p::first-line</td>
+                          <td>Selects the first line of every &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:first-of-type</a></td>
+                          <td>p:first-of-type</td>
+                          <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:focus</a></td>
+                          <td class="notranslate">input:focus</td>
+                          <td>Selects the input element which has focus</td>
+                        </tr>
+                        <tr>
+                          <td><a>:fullscreen</a></td>
+                          <td class="notranslate">:fullscreen</td>
+                          <td>Selects the element that is in full-screen mode</td>
+                        </tr>
+                        <tr>
+                          <td><a>:hover</a></td>
+                          <td class="notranslate">a:hover</td>
+                          <td>Selects links on mouse over</td>
+                        </tr>
+                        <tr>
+                          <td><a>:in-range</a></td>
+                          <td class="notranslate">input:in-range</td>
+                          <td>Selects input elements with a value within a specified range</td>
+                        </tr>
+                        <tr>
+                          <td><a>:indeterminate</a></td>
+                          <td class="notranslate">input:indeterminate</td>
+                          <td>Selects input elements that are in an indeterminate state</td>
+                        </tr>
+                        <tr>
+                          <td><a>:invalid</a></td>
+                          <td class="notranslate">input:invalid</td>
+                          <td>Selects all input elements with an invalid value</td>
+                        </tr>
+                        <tr>
+                          <td><a>:lang(<i>language</i>)</a></td>
+                          <td class="notranslate">p:lang(it)</td>
+                          <td>Selects every &lt;p&gt; element with a lang attribute equal to "it" (Italian)</td>
+                        </tr>
+                        <tr>
+                          <td><a>:last-child</a></td>
+                          <td>p:last-child</td>
+                          <td>Selects every &lt;p&gt; element that is the last child of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:last-of-type</a></td>
+                          <td>p:last-of-type</td>
+                          <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:link</a></td>
+                          <td class="notranslate">a:link</td>
+                          <td>Selects all unvisited links</td>
+                        </tr>
+                        <tr>
+                          <td><a>::marker</a></td>
+                          <td>::marker</td>
+                          <td>Selects the markers of list items</td>
+                        </tr>
+                        <tr>
+                          <td><a>:not(<i>selector</i>)</a></td>
+                          <td>:not(p)</td>
+                          <td>Selects every element that is not a &lt;p&gt; element</td>
+                        </tr>
+                        <tr>
+                          <td><a>:nth-child(<i>n</i>)</a></td>
+                          <td>p:nth-child(2)</td>
+                          <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:nth-last-child(<i>n</i>)</a></td>
+                          <td>p:nth-last-child(2)</td>
+                          <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+                        </tr>
+                        <tr>
+                          <td><a>:nth-last-of-type(<i>n</i>)</a></td>
+                          <td>p:nth-last-of-type(2)</td>
+                          <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+                        </tr>
+                        <tr>
+                          <td><a>:nth-of-type(<i>n</i>)</a></td>
+                          <td>p:nth-of-type(2)</td>
+                          <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:only-of-type</a></td>
+                          <td>p:only-of-type</td>
+                          <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:only-child</a></td>
+                          <td>p:only-child</td>
+                          <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+                        </tr>
+                        <tr>
+                          <td><a>:optional</a></td>
+                          <td class="notranslate">input:optional</td>
+                          <td>Selects input elements with no "required" attribute</td>
+                        </tr>
+                        <tr>
+                          <td><a>:out-of-range</a></td>
+                          <td class="notranslate">input:out-of-range</td>
+                          <td>Selects input elements with a value outside a specified range</td>
+                        </tr>
+                        <tr>
+                          <td><a>::placeholder</a></td>
+                          <td class="notranslate">input::placeholder</td>
+                          <td>Selects input elements with the "placeholder" attribute specified</td>
+                        </tr>
+                        <tr>
+                          <td><a>:read-only</a></td>
+                          <td class="notranslate">input:read-only</td>
+                          <td>Selects input elements with the "readonly" attribute specified</td>
+                        </tr>
+                        <tr>
+                          <td><a>:read-write</a></td>
+                          <td class="notranslate">input:read-write</td>
+                          <td>Selects input elements with the "readonly" attribute NOT specified</td>
+                        </tr>
+                        <tr>
+                          <td><a>:required</a></td>
+                          <td class="notranslate">input:required</td>
+                          <td>Selects input elements with the "required" attribute specified</td>
+                        </tr>
+                        <tr>
+                          <td><a>:root</a></td>
+                          <td>:root</td>
+                          <td>Selects the document's root element</td>
+                        </tr>
+                        <tr>
+                          <td><a>::selection</a></td>
+                          <td>::selection</td>
+                          <td>Selects the portion of an element that is selected by a user</td>
+                        </tr>
+                        <tr>
+                          <td><a>:target</a></td>
+                          <td>#news:target </td>
+                          <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+                        </tr>
+                        <tr>
+                          <td><a>:valid</a></td>
+                          <td class="notranslate">input:valid</td>
+                          <td>Selects all input elements with a valid value</td>
+                        </tr>
+                        <tr>
+                          <td><a>:visited</a></td>
+                          <td class="notranslate">a:visited</td>
+                          <td>Selects all visited links</td>
+                        </tr>
+                      </tbody></table>
                 </section>
                 <section id="especificidad">
                     <h3>ESPECIFICIDAD</h3>
@@ -124,11 +443,103 @@
                 <section id="bem">
                     <h3>METODOLOGÍA BEM</h3>
                     <p>La metodología BEM es una convención para poder identificar elementos de la página HTML para tener una manera más ordenada al momento de usar los selectores en CSS. Algo importante es que se identifican los elementos por clases, entonces el nombre de clase del contenedor padre por ejemplo <i>class="contenedor-padre"</i> sería algo asi, en cambio del hijo sería algo asi <i>class="contenedor-padre__contendor-hijo"</i>, si nos basamos en esta lógica los contenedores "nietos" y los que le siguen sería algo asi <i>class="contenedor-padre__contendor-hijo-nieto"</i>, ahora si queremos diferenciar un grupo de elementos que llevan el mismo nombre de clase por ejemplo este <i>class="contenedor-padre__contendor-hijo-nieto"</i>, tenemos cuatro elementos igual y queremos seleccionar solo el primero entonces lo nombraríamos algo así <i>class="contenedor-padre__contendor-hijo-nieto--active"</i>, tambien hay otra manera, pero en la hoja de estilos <i>contenedor-padre__contendor-hijo-nieto:first-child{}</i>.</p>
+                    <iframe class="iframe-1" width="560" height="315" src="https://www.youtube.com/embed/NucZM0GMRi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </section>
                 <section id="medida">
                     <h3>UNIDADES DE MEDIDA</h3>
                     <p>La unidades de medidas que pueden ser en <b>%, cm, mm, rem, em, px, etc.</b> En este caso trataremos algunas, por ejemplo la medida relativa <b>em</b>, por defecto la mayoría de navegadores le da el valor de <b>16px</b> a una unidad <b>em</b>, pero este a su vez puede ser modificado si es parte de un contenedor padre que modifique en pixeles o cualquier unidad estática al atributo deseado, la unidad en <b>em</b> del atributo será igual a la unidad puesta en el contenedor padre del mismo atributo.</p>
-                    <p>El atributo <b>font-size</b> tamaño de letra, <b>font-family</b> es el tipo de letra si queremos personalizar otro tipo de fuentes podemos usar Google Fonts, se puede poner fuentes de respaldo usando comas y poniendo todos los tipos de fuentes posibles hasta que uno pueda encontrarse, <b>line-height</b> es la unidad del tamaño de letra, <b>font-weight</b> es el grosor del tipo de letra, algo como un bold.</p>         
+                    <p>El atributo <b>font-size</b> tamaño de letra, <b>font-family</b> es el tipo de letra si queremos personalizar otro tipo de fuentes podemos usar Google Fonts, se puede poner fuentes de respaldo usando comas y poniendo todos los tipos de fuentes posibles hasta que uno pueda encontrarse, <b>line-height</b> es la unidad del tamaño de letra, <b>font-weight</b> es el grosor del tipo de letra, algo como un bold. <a href="https://keepcoding.io/blog/unidades-de-medida-en-css/">https://keepcoding.io/blog/unidades-de-medida-en-css/</a></p>
+                    <p>Las unidades de medida absolutas son:</p>
+                    <table>
+                        <thead>
+                            <th style="width: 15%">Unidad</th>
+                            <th>Descripción</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a>in</a></td>
+                                <td>hace referencia a las pulgadas, que son iguales a 2.54cm.</td>
+                            </tr>
+                            <tr>
+                                <td><a>cm</a></td>
+                                <td>se refiere a los centímetros.</td>
+                            </tr>
+                            <tr>
+                                <td><a>mm</a></td>
+                                <td>hace referencia a los milímetros.</td>
+                            </tr>
+                            <tr>
+                                <td><a>q</a></td>
+                                <td>se refiere a un cuarto de la unidad mm. 1q=0.248mm.</td>
+                            </tr>
+                            <tr>
+                                <td><a>pt</a></td>
+                                <td>un punto es igual a 1/72 de una pulgada o 0.35mm.</td>
+                            </tr>
+                            <tr>
+                                <td><a>pc</a></td>
+                                <td>una pica es igual a 12 puntos, o sea 4.23mm.</td>
+                            </tr>
+                            <tr>
+                                <td><a>px</a></td>
+                                <td>esta etiqueta se refiere a los píxeles que, aunque son absolutos (0.26mm), también son relativos a la densidad de la pantalla.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Las unidades de medida relativas son:</p>
+                    <table>
+                        <thead>
+                            <th style="width: 15%">Unidad</th>
+                            <th>Descripción</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a>em</a></td>
+                                <td>Esta unidad es relativa al tamaño de letra o font size establecida en el navegador. Su nombre es em porque el tamaño de letra se basa en el tamaño de la letra eme. A menos que haya sido modificada por el usuario, normalmente este tamaño es de 16px.</td>
+                            </tr>
+                            <tr>
+                                <td><a>ex</a></td>
+                                <td>Esta unidad es relativa a la altura de la «x» del elemento. También se conoce por ser más o menos la mitad del tamaño de la fuente del navegador o 0.5em.</td>
+                            </tr>
+                            <tr>
+                                <td><a>ch</a></td>
+                                <td>Conocido en inglés como zero width, esta unidad de medida es relativa al tamaño del ancho del cero en la fuente del navegador.</td>
+                            </tr>
+                            <tr>
+                                <td><a>%</a></td>
+                                <td>Esta unidad es relativa al tamaño del elemento padre.</td>
+                            </tr>
+                            <tr>
+                                <td><a>rem</a></td>
+                                <td>La unidad rem o root em es similar a la unidad em, pero, en vez de tomar como base el tamaño de letra del navegador, la unidad em toma el tamaño base del documento HTML. Este tamaño se personaliza bajo la etiqueta :root {font-size}. De este modo, podemos usar rem para dimensionar nuestros elementos con un múltiplo del tamaño base.</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <p>Las unidades relativas del ViewPort</p>
+                    <table>
+                        <thead>
+                            <th style="width: 15%">Unidad</th>
+                            <th>Descripción</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a>vw</a></td>
+                                <td>Como sigla de la unidad en inglés viewport width, esta unidad es relativa al ancho del viewport.</td>
+                            </tr>
+                            <tr>
+                                <td><a>vh</a></td>
+                                <td>Como sigla de la unidad en inglés viewport height, esta unidad es relativa a la altura del viewport.</td>
+                            </tr>
+                            <tr>
+                                <td><a>vmin</a></td>
+                                <td>Esta unidad, también conocida como viewport minimum, es relativa al factor que sea más pequeño entre el ancho y al alto del viewport.</td>
+                            </tr>
+                            <tr>
+                                <td><a>vmax</a></td>
+                                <td>Esta unidad, conocida como viewport maximum, es relativa al factor que sea más grande entre el ancho y el alto del viewport. Junto con vmin, esta unidad puede ser muy útil si queremos que nuestros diseños sean flexibles y se adapten al tamaño visible de la página web.</td>
+                            </tr>
+                        </tbody>
+                    </table>          
                 </section>
                 <section id="reset">
                     <h3>RESET DE CSS</h3>
@@ -152,17 +563,20 @@
                     <h3 id="posicion">Posición de elementos</h3>
                     <p>La posición  de los elementos puede modificarse con las siguientes propiedades: STATIC, RELATIVE, ABSOLUTE, FIXED y STICKY. Siendo la posición <b>static</b> la por defecto.<br>
                     Al introducir el atributo de posición relativa <i>position: relative;</i> por defecto se activa el atributo <i>z-index</i> el cual nos pone un nivel sobre todos los otros elementos en el eje-z, el cual con los atributos <i>top, bottom, right y left</i> podemos mover el elemento sin que afecte a sus espacio asignado, es decir podremos mover todo el elemento por encima de los demás pero su espacio seguirá en su lugar.<br>
+                    <img src="../img/css-posiciones.jpg" style="margin: 20px 0px">
                     Al introducir el atributo de posición absoluta <i>position: absolute;</i> por defecto se activa el atributo <i>z-index</i> el cual nos pone un nivel sobre todos los otros elementos en el eje-z, el cual con los atributos <i>top, bottom, right y left</i> podemos mover el elemento afectando su espacio asignado, es decir podremos mover todo el elemento por encima de los demás pero su espacio perderá su lugar, en caso de que el elemento no se defina su ancho y altura, este se ajustara al contenido sin importar que sea un elemento en bloque. Si no se define <i>top, bottom, left o right</i> o el contenedor del elemento no esta posicionado entonces se tomará como punto de referencia el <b>viewport</b> para poder desplazar el elemento. <span>NOTA: para centrar horizontalmente podemos utilizar el atributo <i>margin: 50px auto;</i> por ejemplo, la transparencia podemos modificarla con el atributo <i>opacity</i> el cual se puede modificar a partir de 0 a 1.</span><br>
                     El atributo de posicion <i>fixed</i> sirve para fijar el contenedor y su sintaxis es <i>position: fixed;</i> y es parecido al posicionamiento <i>absolute</i> que pierde su espacio pero a su vez este que fijado en la pantalla.<br>
                     El atributo de posición <i>sticky</i> es como una mezcla del <b>relative</b> y <b>fixed</b>, porque puede conservar su espacio como el <b>relative</b> pero cuando pasa por el scroll este queda fijado como el <b>fixed</b>.</p>
                     <p>El atributo <i>display</i> es muy importante tambien para darle forma a los elementos de los cuales vimos <i>display: block;</i> que hace que el elemento se comporte como bloque, <i>display: inline;</i> que hace que los elementos se comporten como elementos en línea y solo se muestra el contenido y no el espacio del contenedor, <i>display: inline-block</i> que hace que un elemento sea como un bloque pero pueda estar en línea. Tambien tenemos los más importantes como el <b>flex</b> y <b>grid</b> que los veremos más adelante.</p>
                     <p>El atributo <i>overflow</i> nos ayuda a controlar el desbordamiento de texto de los contenedores o elementos con una barra de scroll, los valores son: <i>inherit</i> que es el valor por defecto que nos muestra el texto desbordado, <i>hidden</i> que nos oculta el valor desbordado, <i>auto</i> que nos oculta el texto desbordado pero además nos pone barras de scroll por si es necesario, <i>scroll</i> que nos pone la barra de scroll aunque no sea necesario.</p>
                     <p>El atributo <i>float</i> sirve para poder poner un elemento flotante y poder ajustarlo a uno de los lados, generalmente se utiliza para poder poner imágenes al lado de textos para que el texto se auto-ajuste a la imágen.</p>
+                    <img src="../img/css-float.png" style="margin: 20px 0px">
                 </section>
                 <section id="pseudo">
                     <h3>PSEUDO-ELEMENTOS Y PSEUDO-CLASES</h3>
                     <p>Los <b>Pseudo-elementos</b> son como funciones que podemos aplicar a lso elementos. Por ejemplo tenemos a <i>::first-line</i> que selecciona la primera linea de un elemento en bloque, <i>first-letter</i> que selecciona a la primera letra de un texto de un elemento, <i>::placeholder</i> que es un atributo generalmente en elementos del tipo <i>input</i> que nos permite personalizar el <i>placeholder</i> tomando en cuenta que son elementos en línea, <i>::selection</i> que personaliza la seleccion de los textos con el mouse, es decir el fondo o color del texto seleccionado, <i>elemento::before{}</i> es un pseudo-elemento en línea que modifica al elemento seleccionado y con el atributo <b>content</b> escribimos el texto que queramos que este antes del elemento seleccionado y <i>elemento::after{}</i> es lo mismo que <i>elemento::before{}</i> solo que funciona para modificar al final del elemento seleccionado.</p>
                     <p>Las <b>Pseudo-clases</b> son como funciones que escuchan ciertos eventos, algunos de ellos son: <i>::hover</i> que funciona cuando posicionamos el cursor del mouse encima del elemento seleccionado, <i>::visited</i> funciona cuando se visite links, <i>::active</i> funciona cuando mantenemos presionado o activo el elemento seleccionado</p>
+                    <img src="../img/css-pseudo.jpg" style="margin: 20px 0px">
                 </section>
                 <section id="imagenes">
                     <h3>PROPIEDADES PARA IMÁGENES</h3>
@@ -269,9 +683,10 @@
                     Para alinear en el <b>cross axis</b> osea en el eje <i>y</i>, se utilizan las siguientes propiedades, <b>align-items</b> que solo se aplica a la primera línea, pero este problema puede solucionarse si se combina con los valores de la propiedad <b>align-content</b>. <b>align-items</b> con sus valores <i>align-items: stretch;</i> que es valor por defecto, <i>align-items: center;</i> lo que hace es centrar los items tanto vertical y horizontalmente, <i>align-items: flex-end;</i> posiciona los items al final del contenedor, es decir abajo, <i>align-items: flex-start;</i> nos posiciona los elementos arriba, pero con la diferencia de que si no definimos la altura en los items este se ajustará al contenido, algo que no sucede con <i>align-items: stretch;</i> que hace que la altura se nos vaya hasta abajo donde nos permita el <b>cross axis</b>.<br>
                     <b>align-content</b> es el atributo que nos permitirá alinear los items de un contenedor flex, digamos que sirve generalmente para que se apliquen los cambios a todas las líneas de los cambios realizados con el atributo <b>align-items</b>, el valor <i>align-content: baseline;</i> sirve más que todo para solucionar problemas con el <i>flex-wrap: wrap-reverse;</i>.<br>
                     <i>Las propiedades de los items</i> bueno por ahora hemos estado dando propiedades a los contenedores flex, pero existen propiedades para los items en flex, (los <i>margins</i> en los items actuan diferente cuando introducimos valores <i>auto</i> porque consume todo el espacio) <i>align-self</i> que nos posiciona el item en dostintos lugares pero verticalmente (cross axis), <i>flex-grow</i> toma valores con números enteros lo que hace es repartir el espacio disponible dependendiendo del valor de <i>flex-grow</i> y en donde se lo esta dando, si el valor esta en el contenedor flex, el espacio se repartirá equitativamenteentre todos los items, pero si se le da a los items este se distribuirá debido al valor asignado.<br>
-                    La propiedad <b>flex-shrink</b> nos permite elegir cuanto más debe ceder uno o varios items cuando el espacio se haya terminado, es como el inverso de <i>flex-grow</i> que nos permitía agregar cuanto espacio disponible debería repartirse en uno o varios items, en este caso es cuanto espacio debería ceder uno o varios items cuando el espacion se haya terminado.<br>
+                    La propiedad <b>flex-shrink</b> nos permite elegir cuanto más debe ceder uno o varios items cuando el espacio se haya terminado, es como el inverso de <i>flex-grow</i> que nos permitía agregar cuanto espacio disponible debería repartirse en uno o varios items, en este caso es cuanto espacio debería ceder uno o varios items cuando el espacio se haya terminado.<br>
                     La propiedad <b>flex-basis</b> es como un width pero este es específico para items flex.<br>
                     La propiedad <b>order</b> es como el <i>z-index</i> solo que en el <i>main axis</i> o en el eje <i>x</i>, el valor más grande es el que se superpone a los menores.</p>
+                    <img src="../img/css-flexbox.png" style="margin: 20px 0px">
                 </section>
                 <section id="grid">
                     <h3>GRID</h3>
@@ -329,24 +744,32 @@
                 <section id="transiciones">
                     <h3>TRANSICIONES</h3>
                     <p>Las <b>transiciones</b> podemos tratarlas con la propiedad <b>transition</b> el cual el propio nombre es un acortador, pero tiene como valor a  otras propiedades como <i>transition-property</i> que tiene como valores <i>propierties, all y none</i>, propiedad porque seleccionamos una o varias propiedades al que queremos aplicar la transición o tiene algun cambio, como por ejemplo aplicando un <i>hover</i> a un cambio de el color del fondo por ejemplo, como propiedad seleccionariamos <i>background-color</i> pero podemos seleccionar más separando por comas, los otros valores como el <i>all</i> selecciona todas las propiedades del elemento lo cual no es recomendable porque consume recursos y <i>none</i> que no selecciona ninguna propiedad, <i>transition-duration</i> es la propiedad que indica cuanto tiempo dura la transición, los valores pueden ser en <i>s, ms, etc</i> que tengan que ver con el tiempo, <i>transition-delay</i> es el tiempo de retardo para despues aplicar la transición. <b>transition-timing-function</b> es la curva de velocidad de cambio en funcion de la duración de la transición, hay diferentes valores y tadas son diferentes en cuestión de velocidades de la transición no significa que se ejecuten en el mismo tiempo is nos que el cambio tiene un comportamiento diferente, pero tiene valores como <i>linear, ease, ease-in, ease-out, ease-in-out, steps(int, start|end), initial, inherit, etc.</i>. Tambien podemos utilizar diferentes tiempos de transicion para cada propiedad si seleccionamos varias propiedades como por ejemplo <i>transition-property: color, background;</i> y <i>transition-duration: 1s, 3s;</i>.</p>
+                    <img src="../img/css-transicion1.png" style="margin: 20px 0px">
+                    <img src="../img/css-transicion2.png" style="margin: 20px 0px">
                 </section>
                 <section id="animaciones">
                     <h3>ANIMACIONES</h3>
                     <p>Las <b>animaciones</b> podemos tratarlas como las transiciones pero antes de poder utilizarlas tenemos que utilizar la palabra reservada <b>@keyframes</b> seguido de un nombre de animación que decidamos por ejemplo <i>@keyframes animacionEjemplo{}</i> con esto agrupamos todo lo que queremos que haga la animación con sus diferentes etapas en un bloque de código, dentro de la animación podemos encontrar etapas como <i>from{}</i> y <i>to{}</i>, aunque estas pueden ser cambiadas por distintas etapas, un ejemplo <i>0%{} 50{} 100%{}</i> esto nos indicaría que en la línea de tiempo inicial 0% podemos hacer que algo cambie, lo mismo en las siguientes etapas. Para que la animación se efectúe podemos utilizar las siguientes propiedades en el elemento que queremos que lleve la animación, <b>animation-name</b> el valor es el nombre de la animación que previamente configuramos con <i>@keyframes</i>, <b>animation-duration</b> el valor es una medida de tiempo con el que queremos que dure toda la animación, <b>animation-delay</b> con esto hacemos que haya un retraso en el timepo antes de ajecutar la animación que tambien es una medida de tiempo, <b>animation-timing-function</b> básicamente son las mismas funcionalidades y valores que en las transiciones con la propiedad <b>transition-timing-function</b> tambien podemos utilizar un valor en <i>cubic-bezier(x1, y1, x2, y2)</i> ya que tratamos la misma curva de velocidad, <b>animation-iteration-count</b> el valor es un número entero que indique la cantidad de veces que queremos que se repita la animación, tambien tenemos el valor <i>infinite</i> para que se repita indefinidadmente, <b>animation-fill-mode</b> es una propiedad que ayuda a definir como debe empezar y terminar la annimación con sus valores <i>none, forwards, backwards, both, initial, inherit</i> que podemos utilizar, los cuals los má importantes son <i>forwards</i> el elemento se queda donde termina la animación, <i>both</i> la animación empieza como lo definimos en <i>@keyframes</i> en <i>from{}</i> o <i>0%{}</i>, <i>inherit</i> hereda el valor de su contenedor. <b>animation-direction</b> cambia el sentido de la animación con sus valores <i>normal, reverse, altarnate, alternate-reverse</i> que lo que hacen es por ejemplo <i>normal</i> tiene el sentido por defecto, <i>reverse</i> invierte el sentido de la animación contrario a lo que se tenía definido, <i>alternate</i> dependiendo de la cantidad de veces que configuramos la interación de la animación, <i>alternate-reverse</i> hace lo mismo que <i>alternate</i> solo que empieza del sentido opuesto.</p>
                     <p>La propiedad <b>transform</b> permite transformar un elemento seleccionado con las siguientes propiedades <i>transform: translateX(100px);</i> que trasladamos el elemento 100px a la derecha en el eje X, <i>transform: translateY(100px);</i> lo mismo que el anterior solo que en el eje Y, <i>transform: translate(100px, 100px);</i> es un acortador de las dos anteriores propiedades, <i>transform: scaleX(numero);</i> transforma el elemento y lo escala la cantidad de veces que el parámetro indica respecto al mismo elemento, <i>transform: scaleY(numero);</i> es lo mismo que el anterior pero en el eje Y, <i>transform: scale(numero);</i> es un acortador pero escala tanto en el eje X como el Y, <i>transform: skew(gradosDEG);</i> nos inclina el elemento dependiendo de los grados de inclinacion que le demos al parámetro.<br>
                     La propiedad <b>clip-path</b> nos permite deformar la forma del elemento por completo con valores como la función <i>polygon(n%, n%, n%, n%, ...)</i> para el cual generalmente se acuden a generadores como la página <a href="https://bennettfeely.com/clippy/">https://bennettfeely.com/clippy/</a>. El uso de generadores es muy común para facilitarte el trabajo al momento de la creación de páginas web, como generador de sombras, gradientes, etc. Algo como <a href="https://www.cssmatic.com/es/box-shadow">https://www.cssmatic.com/es/box-shadow</a>.<br></p>
+                    <img src="../img/css-animacion1.png" style="margin: 20px 0px">
+                    <img src="../img/css-animacion2.png" style="margin: auto; width: 60%">
                 </section>
                 <section id="background">
                     <h3>BACKGROUND</h3>
                     <p>La propiedad <b>background</b>, habíamos visto un poco de la propiedad, <i>background</i> así, es un acortador de varias propiedades como <i>background-image</i> que con valores como un directorio donde tengamos alojado una imagen o buscando una imagen de internet con la función <i>url(direccion)</i> podemos seleccionar una imagen como fondo del contenedor, <i>background-size</i> nos permite ajustar el fondo con medidas de tamaño o proporciones con valores como <i>background-size: medidaX medidaY;</i> o <i>background-size: medidaX;</i> tambien podemos usar algunos valores como en la propiedad <i>object-fit</i>, <i>backgroun-repeat</i> cuando una imagen no entra al contenedor los espacios en blanco se repiten con la misma imagen, con valores como <i>repeat, no-repeat</i>, <i>repeat</i> es por defecto, <i>no-repeat</i> la imagen no se repite pero se rella del color de fondo del contenedor, <i>background-clip</i> y <i>background-origin</i> ambas propiedades comparten los mismos valores <i>border-box, padding-box, content-box</i>, pero hacen cosas diferentes, <i>background-clip</i> recorta la imagen y la ajusta desde el borde con <i>border-box</i> que es el valor por defecto que empieza colocando la imagen desde el borde del contenedor, <i>content-box</i> que recorta la imagen y la ajusta respetando el padding si es que lo hay, <i>padding-box</i> que funciona igual que el <i>border-box</i>. <i>background-clip</i> recorta la imagen, <i>background-origin</i> crea la imagen a partir del borde. <i>background-position</i> sirve para posicionar la imagen o elemento del background con los valores <i>top, bottom, left, right</i>, podemos introducir dos valores uno para el eje X y otro para el eje Y. <b>background-attachment</b> esta propiedad con sus valores <i>scroll y fixed</i> definen el comportamiento de la imagen o elemento del background con respecto al scroll, el valor <i>scroll</i> que es el por defecto nos permite hacer un scroll moviendo el fondo, pero si ponemos el valor <i>fixed</i> la imagen se fija aunque hagamos scroll.</p>
+                    <img src="../img/css-background1.png" style="margin: auto; width: 60%;">
+                    <img src="../img/css-background2.jpg" style="margin: 20px 0px">
                 </section>
                 <section id="variables">
                     <h3>VARIABLES EN CSS</h3>
                     <p>Las <b>variables en CSS</b> pueden ser de dos tipos <i>globales y locales</i>, para crear una variable se utiliza el <b>--nombre-de-variable: valor;</b> y para utilizarlo <b>propiedad: var(--nombre-de-variable);</b>, para crear variables globales puede definirse en el bloque <b>:root{--variables: valores;...}</b> y utilizarlos en cualquier parte del archivo CSS, para las variables locales simplemente esta puede definirse en algun tipo de elemento y esta podrá ser utilizada en elementos del mismo tipo.</p>
+                    <img src="../img/css-variables.png" style="margin: auto; width: 60%;">
                 </section>
                 <section id="filter">
                     <h3>FILTER</h3>
-                    <p>La propiedad <b>filter</b> nos permite personalizar filtros a imágenes, con valores como funcion como <i>filter: blur(Npx);</i> que lo que hace es utilizar el filtro de desenfoque, <i>filter: brightness(1);</i> nos permite cambiar el brillo con valores en numeros enteros, el número 1 es por defecto, pero podemos dublicar su brillo con el valor <i>filter: brightness(2);</i>, <i>filter: contrast(1);</i> es casi igual que <i>brightness</i> la diferencia es que cambia el contraste de la imágen, <b>box-shadow: Npx Npx Npx #NNN;</b> es una propiedad que podemos usar en una imágen para darle un sombreado a los bordes de la imagen, <b>filter: drop-shadow(Npx Npx Npx #NNN);</b> si tenemos una imagen de tipo *png o *.svg con transparencia en el fondo, podemos obtener un sombreado de la imagen en si y no del cuadro de la imagen, <b>filter: grayscale(100%)</b> nos permite activar la escala a grises o ajustarlo, <b>filter: hue-rotate(gradosDEG);</b> lo que hace este filtro es que rota la gamma de colores, <b>filter: invert(100%);</b> invierte la gamma de colores, <b>filter: opacity(100%);</b> con esta propiedad manejamos la opacidad de la imagen, <b>filter: saturate(100%);</b> con este filtro personalizamos la saturación de la imágen, <b>filter: sepia(100%);</b> es el filtro que regula el filtro sepia de la imágen.</p>   
+                    <p>La propiedad <b>filter</b> nos permite personalizar filtros a imágenes, con valores como funcion como <i>filter: blur(Npx);</i> que lo que hace es utilizar el filtro de desenfoque, <i>filter: brightness(1);</i> nos permite cambiar el brillo con valores en numeros enteros, el número 1 es por defecto, pero podemos dublicar su brillo con el valor <i>filter: brightness(2);</i>, <i>filter: contrast(1);</i> es casi igual que <i>brightness</i> la diferencia es que cambia el contraste de la imágen, <b>box-shadow: Npx Npx Npx #NNN;</b> es una propiedad que podemos usar en una imágen para darle un sombreado a los bordes de la imagen, <b>filter: drop-shadow(Npx Npx Npx #NNN);</b> si tenemos una imagen de tipo *png o *.svg con transparencia en el fondo, podemos obtener un sombreado de la imagen en si y no del cuadro de la imagen, <b>filter: grayscale(100%)</b> nos permite activar la escala a grises o ajustarlo, <b>filter: hue-rotate(gradosDEG);</b> lo que hace este filtro es que rota la gamma de colores, <b>filter: invert(100%);</b> invierte la gamma de colores, <b>filter: opacity(100%);</b> con esta propiedad manejamos la opacidad de la imagen, <b>filter: saturate(100%);</b> con este filtro personalizamos la saturación de la imágen, <b>filter: sepia(100%);</b> es el filtro que regula el filtro sepia de la imágen.</p>
+                    <img src="../img/css-filter.png" style="margin: 20px auto; width: 100%;">
                 </section>
                 <section id="curiosas">
                     <h3>PROPIEDADES CURIOSAS</h3>
@@ -357,13 +780,34 @@
                 <div class="list-focus">
                     <h4>Material complementario</h4>
                     <div class="li-separator2"></div>
-                    <div class="content-introduccion">
-                        <div class="content-introduccion-enlaces">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quibusdam, nostrum necessitatibus quasi sunt ducimus asperiores molestiae! Voluptatum dolorem dignissimos dolorum debitis. Minima expedita ducimus tempore magnam, laudantium a. Deserunt.</p>
-                            <p><a href="#introduccion">https://www.google.com/</a></p>
+                    <div class="contenido-complementario">
+                        <div class="contenido-enlaces">
+                            <ul>
+                                <li>Archivo para el reseteo de CSS <a href="https://github.com/eduardofierropro/Reset-CSS">https://github.com/eduardofierropro/Reset-CSS</a></li>
+                                <li>Para las fuentes <a href="https://fonts.google.com/">https://fonts.google.com/</a></li>
+                                <li>Para la colorización <a href="https://webaim.org/resources/contrastchecker/">https://webaim.org/resources/contrastchecker/</a></li>
+                                <li>Para ayudarnos con el clip-path <a href="https://bennettfeely.com/clippy/">https://bennettfeely.com/clippy/</a></li>
+                                <li>Documentación de CSS <a href="https://developer.mozilla.org/es/docs/Web/CSS/position">https://developer.mozilla.org/es/docs/Web/CSS/position</a></li>
+                                <li>Página de explicación de Flexbox <a href="https://marina-ferreira.github.io/tutorials/css/flexbox/">https://marina-ferreira.github.io/tutorials/css/flexbox/</a></li>
+                                
+                                <li>Para ayudarnos con las unidades de medida <a href="https://keepcoding.io/blog/unidades-de-medida-en-css/">https://keepcoding.io/blog/unidades-de-medida-en-css/</a></li>
+                                <li>Para ayudarnos a sombrear y colocar gradientes a nuestros componentes <a href="https://www.cssmatic.com/es/box-shadow">https://www.cssmatic.com/es/box-shadow</a></li>
+                                <li>La w3schools, una documentación de CSS, pero esta parte es para selectores <a href="https://www.w3schools.com/cssref/css_selectors.asp">https://www.w3schools.com/cssref/css_selectors.asp</a></li>
+                                <li>Para personalizar la barra del Scroll <a href="https://www.campusmvp.es/recursos/post/como-personalizar-los-estilos-css-de-las-barras-de-scroll.aspx">https://www.campusmvp.es/recursos/post/como-personalizar-los-estilos-css-de-las-barras-de-scroll.aspx</a></li>
+                                <li>Para crear un Toggle Switch <a href="https://programacion.net/articulo/como_crear_un_toggle_switch_utilizando_css_1739">https://programacion.net/articulo/como_crear_un_toggle_switch_utilizando_css_1739</a></li>                         
+                                <li>Página de ayuda para crear estilos a elementos <a href="https://uiverse.io/liyaxu123/warm-eel-62">https://uiverse.io/liyaxu123/warm-eel-62</a></li>
+                                <li>Página de ayuda descargar elementos SVG <a href="https://undraw.co/search">https://undraw.co/search</a></li>
+                                <li>Página de ayuda descargar iconos e imágenes para nuestros diseños <a href="https://www.flaticon.es/">https://www.flaticon.es/</a></li>
+                                <li>Página de ayuda descargar elementos SVG <a href="https://undraw.co/search">https://undraw.co/search</a></li>
+                                <li>Página de ayuda descargar iconos através de un CDM <a href="https://fontawesome.com/">https://fontawesome.com/</a></li>
                         </div>
-                        <div class="content-introduccion-videos">
-                            <iframe width="100%" src="https://www.youtube.com/embed/sAFNd-xB9Ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="contenido-videos">
+                            <iframe width="100%" src="https://www.youtube.com/embed/Foieq2jTajE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/tUldrlfIGb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/NucZM0GMRi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/YglSzse9tEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/-eMxRBq4iZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/5c-3hFjEvTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -372,9 +816,183 @@
         <aside>
         </aside>
         <footer>
+            <h4>ARTÍCULOS RELACIONADOS</h4>
+            <div class="carousel">
+                <div class="carrusel-list" id="carrusel-list">
+
+                    <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">&lt;</button>
+
+                    <div class="carrusel-track" id="track">
+
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoHTML.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                      
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoCSS.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                     
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoJS.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                 
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoJava.png">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoAndroid.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                      
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoPython.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                     
+                    </div>
+                    
+                    <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">&gt;</button>
+                </div>
+            </div>
+            <h4>ALGUNOS TRABAJOS REALIZADOS</h4>
+            <div class="carrusel-proyectos">
+                <div class="slider2">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
     
+                        <div class="slide first">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+    
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div id="sobre-nosotros">
+                <div class="card-presentation">
+                    <div class="photo">
+                        <img src="../img/no-image.png">
+                        <h5>Dev. Daniel Quispe Kuno</h5>
+                        <h5>Ingeniería de Sistemas</h5>
+                    </div>
+                    <div class="presentation">
+                        <p>
+                            Estudiante de la Carrera de Informática en La Universidad Mayor de San Andrés con conocimientos en el área de desarrollo web y Android.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-footer">
+                <div class="description-final">
+                    <h6>ArdaDev</h6>
+                    <p>Desarrollando para hacer más fácil la vida e interacción entre nosotros. Por un sano acercamiento a la tecnología.</p>
+                </div>
+                <div class="description-skills">
+                    <h6>Habilidades</h6>
+                    <div class="list-skill">
+                        <div class="skill">
+                            <img src="../img/soft3.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft1.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft4.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft6.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft8.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft11.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-company">
+                    <h6>Sobre Nosotros</h6>
+                    <a href="#">Acerca de</a>
+                    <a href="#">Trabajos</a>
+                    <a href="#">Servicios/Procesos</a>
+                </div>
+                <div class="description-social">
+                    <h6>Contactos</h6>
+                    <div class="list-social">
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="li-separator2 separator-final"></div>
+            <div class="final">
+                <p>
+                    Todos los derechos reservados &copy; 2023 | <b>ArdaDev</b>
+                </p>
+            </div>
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/4b64eb3a04.js" crossorigin="anonymous"></script>
+    <script src="./estilos-js.js"></script>
 </body>
 </html>
