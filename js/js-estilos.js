@@ -149,3 +149,30 @@ setInterval(function(){
         counter = 1;
     }
 }, 5000);
+
+// Escucha del Scroll
+// Cuando estamos en el móvil debemos detectar que se ha movido el scroll
+// uns determinada distancia para poder ponerle un color de fondo y se note
+window.addEventListener('scroll', function() {
+    var navMenuLogo = document.querySelector(".nav-menu-logo");
+    if (window.matchMedia("(max-width: 850px)").matches) {
+        if (document.documentElement.scrollTop >= 100) {
+            navMenuLogo.setAttribute("style", "background: linear-gradient( var(--color-primario),var(--color-negro));")
+        }else{
+            navMenuLogo.setAttribute("style", "background: transparent;")
+        }
+    }
+});
+
+// La resolución ha cambiado
+window.addEventListener('resize', function() {
+  // La resolución de la pantalla ha cambiado
+  // debemos resetear el color de nav-logo por los cambios realizado en resoluciones
+  // de móviles
+    var navMenuLogo = document.querySelector(".nav-menu-logo");
+    if (window.matchMedia("(max-width: 850px)").matches) {
+        navMenuLogo.setAttribute("style", "background: transparent;")
+    }else{
+        navMenuLogo.setAttribute("style", "background: linear-gradient( var(--color-primario),var(--color-negro));")
+    }
+});

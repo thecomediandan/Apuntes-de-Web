@@ -55,7 +55,7 @@ header{
     width: 95%;
     height: 306.88px;
     margin: auto;
-    background-color: rgba(var(--color-blanco), var(--color-blanco), var(--color-blanco), 0.5);
+    
     border-bottom: 5px;
     border-left: 5px;
     border-right: 5px;
@@ -81,10 +81,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 166px;
+    width: 250px;
+}
+.mode-black-button > *{
+    margin-left: 20px;
 }
 .title-switch{
-    width: 100px;
+    width: 110px;
     text-align: center;
     font-family: var(--fuente-principal);
     font-weight: bold;
@@ -616,7 +619,7 @@ footer h4{
     display: flex;
     align-items: center;
     width: fit-content;
-    height: 304px;
+    /* height: 304px; */
     padding: 10px 0px;
     margin: 0px auto;
     max-width: 90vw;
@@ -983,4 +986,196 @@ footer h4{
 .menu-language ul li:hover{
     text-shadow: 0 0 15px var(--color-secundario);
     font-size: x-large;
+}
+
+@media (max-width: 1160px) {
+    .container-menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        justify-content: flex-start;
+    }
+
+    article{
+        max-width: calc(100% - 250px - 40px);
+        margin-left: 20px;
+    }
+
+    .focus-menu{
+        display: block;
+        width: 100%;
+        margin-left: 270px;
+    }
+    .list-focus h4 {
+        font-size: 20px;
+    }
+    .contenido-videos > iframe{
+        width: 90%;
+        height: 40vw;
+        margin: 40px;
+    }
+    .carousel{
+        height: 254px;
+    }    
+    .carrusel a img{
+        object-fit: contain;
+        height: 250px;
+        width: 250px;
+        transition: .3s ease-in-out;
+    }
+
+    .carrusel-proyectos{
+        height: 300px;
+    }
+    .slider2{
+        width: 600px;
+        height: 300px;
+    }
+    .slides{
+        width: 500%;
+        height: 300px;
+    }
+    /* .slide{
+        width: 20%;
+        transition: 2s;
+    } */
+    .slide img{
+        width: 600px;
+        height: 300px;
+    }
+    .navigation-manual{
+        width: 600px;
+        margin-top: -40px;
+    }
+    .navigation-auto{
+        width: 600px;
+        margin-top: 260px;
+    }
+
+    .card-presentation{
+        width: 50%;
+    }
+
+    .block-footer{
+        justify-content: center;
+    }
+    .block-footer > div {
+        min-width: 215px;
+    }
+}
+@media (max-width: 850px) {
+    .container-menu{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header{
+        width: 100%;
+        height: 185px;
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        margin-top: 80px;
+        background-color: transparent;
+        font-size: 23px;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .window-language .menu-language{
+        width: 50%;
+    }
+    nav{
+        height: auto;
+        width: 100%;
+        background: linear-gradient( var(--color-primario),var(--color-negro));
+    }
+    .nav-menu-logo{
+        position: fixed;
+        width: 100vw;
+        z-index: 20;
+        left: 0;
+        background: transparent;
+    }
+    .nav{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .title-switch{
+        display: none;
+    }
+    article{
+        max-width: calc(100% - 50px);
+        margin: 0;
+    }
+    .mode-black-button{
+        width: auto;
+    }
+    .nav-menu-logo_button{
+        width: auto;
+    }
+
+    .focus-menu{
+        display: block;
+        width: 100%;
+        margin-left: 25px;
+    }
+    .list-focus h4 {
+        font-size: 20px;
+    }
+    .contenido-videos > iframe{
+        width: 90%;
+        height: 40vw;
+        margin: 40px;
+    }
+    .carousel{
+        height: 204px;
+    }    
+    .carrusel a img{
+        object-fit: contain;
+        height: 200px;
+        width: 200px;
+        transition: .3s ease-in-out;
+    }
+
+    .carrusel-proyectos{
+        height: 200px;
+    }
+    .slider2{
+        width: 400px;
+        height: 200px;
+    }
+    .slides{
+        width: 500%;
+        height: 200px;
+    }
+    .slide img{
+        width: 400px;
+        height: 200px;
+    }
+    .navigation-manual{
+        width: 400px;
+        margin-top: -40px;
+    }
+    .navigation-auto{
+        width: 400px;
+        margin-top: 160px;
+    }
+
+    .card-presentation{
+        width: 60%;
+    }
+
+    .block-footer{
+        justify-content: center;
+    }
+    .block-footer > div {
+        min-width: 215px;
+    }
 }
