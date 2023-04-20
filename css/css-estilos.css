@@ -19,6 +19,10 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
+.fa-bars{
+    display: none;
+}
+
 body::-webkit-scrollbar {
     -webkit-appearance: none;
     background-color: var(--color-primario);
@@ -246,6 +250,7 @@ nav{
 }
 
 .menu{
+    display: block;
     width: 250px;
     height: calc(100vh - 50px);
     position: sticky;
@@ -300,6 +305,9 @@ nav{
     user-select: none;
 }
 .list>li:hover{
+    background: radial-gradient(120px,var(--color-primario), transparent);
+}
+.list .navegacion-movil>li:hover{
     background: radial-gradient(120px,var(--color-primario), transparent);
 }
 details li {
@@ -988,6 +996,10 @@ footer h4{
     font-size: x-large;
 }
 
+.navegacion-movil, .cerrar-navegacion-movil{
+    display: none;
+}
+
 @media (max-width: 1160px) {
     .container-menu{
         display: flex;
@@ -996,12 +1008,16 @@ footer h4{
         justify-content: space-around;
         justify-content: flex-start;
     }
-
+    .menu{
+        display: block;
+    }
     article{
         max-width: calc(100% - 250px - 40px);
         margin-left: 20px;
     }
-
+    .fa-bars{
+        display: none;
+    }
     .focus-menu{
         display: block;
         width: 100%;
@@ -1071,6 +1087,11 @@ footer h4{
         flex-wrap: wrap;
         justify-content: center;
     }
+    .fa-bars{
+        display: block;
+        font-size: 40px;
+    }
+
     header{
         width: 100%;
         height: 185px;
@@ -1087,7 +1108,7 @@ footer h4{
         margin-bottom: 20px;
     }
     .window-language .menu-language{
-        width: 50%;
+        width: 60%;
     }
     nav{
         height: auto;
@@ -1102,9 +1123,6 @@ footer h4{
         background: transparent;
     }
     .nav{
-        display: none;
-    }
-    .menu{
         display: none;
     }
     .title-switch{
@@ -1170,6 +1188,7 @@ footer h4{
 
     .card-presentation{
         width: 60%;
+        font-size: 12px;
     }
 
     .block-footer{
@@ -1177,5 +1196,75 @@ footer h4{
     }
     .block-footer > div {
         min-width: 215px;
+    }
+
+    table{
+        color: #000;
+        width: 100%;
+        font-size: 10px;
+        margin: 20px 0;
+        background-color: #929292;
+        border-radius: 20px;
+    }
+    section{
+        font-size: 12px;
+    }
+    .ejemplo-numero-1 {
+        width: 100%;
+    }
+    .ejemplo-aplicado-1 {
+        margin: 20px 0;
+        width: 100%;
+    }
+    .ejemplo-aplicado-1 > div{
+        width: 100%;
+    }
+
+    .navegacion-movil{
+        display: block;
+    }
+    
+    .navegacion-movil li a > i{
+        width: 25px;
+        font-size: 25px;
+        text-align: center;
+        margin: 0 15px;
+    }
+    .navegacion-movil li a{
+        padding: 12px;
+    }
+    .navegacion-movil li a span{
+        color: var(--color-secundario);
+        padding-bottom: 10px;
+    }
+    
+    @keyframes barridoMenu {
+        from{
+            transform: translateX(-250px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 40;
+        margin: 0;
+        height: 100vh;
+        display: none;
+        animation-name: barridoMenu;
+        animation-duration: 0.5s;
+    }
+    .cerrar-navegacion-movil{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 39;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.4);
+        display: none;
     }
 }
