@@ -161,6 +161,13 @@ window.addEventListener('scroll', function() {
         }else{
             navMenuLogo.setAttribute("style", "background: transparent;")
         }
+        if (document.documentElement.scrollTop >= 800) {
+            document.querySelector('.boton-arriba')
+            .setAttribute('style', 'display: block;');
+        }else{
+            document.querySelector('.boton-arriba')
+            .setAttribute('style', 'display: none;');
+        }
     }
 });
 
@@ -202,13 +209,15 @@ divCerrarMovil.addEventListener('click', ()=>{
     .setAttribute('style', 'display: none;');
 });
 
-var itemsListMenu = document.querySelector('.menu');
+var listItemMenu = document.querySelectorAll('.list li');
 
-itemsListMenu.addEventListener('click', ()=>{
-    if (window.matchMedia("(max-width: 850px)").matches) {
-        document.querySelector('.cerrar-navegacion-movil')
-        .setAttribute('style', 'display: none;');
-        document.querySelector('.menu')
-        .setAttribute('style', 'display: none;');
-    }
+listItemMenu.forEach(element => {
+    element.addEventListener('click', ()=>{
+        if (window.matchMedia("(max-width: 850px)").matches) {
+            document.querySelector('.cerrar-navegacion-movil')
+            .setAttribute('style', 'display: none;');
+            document.querySelector('.menu')
+            .setAttribute('style', 'display: none;');
+        }
+    })
 });

@@ -19,7 +19,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.fa-bars{
+.nav-menu-logo .fa-bars{
     display: none;
 }
 
@@ -1000,6 +1000,10 @@ footer h4{
     display: none;
 }
 
+.boton-arriba{
+    display: none;
+}
+
 @media (max-width: 1160px) {
     .container-menu{
         display: flex;
@@ -1007,6 +1011,9 @@ footer h4{
         flex-wrap: wrap;
         justify-content: space-around;
         justify-content: flex-start;
+    }
+    .nav-menu-logo .fa-bars{
+        display: none;
     }
     .menu{
         display: block;
@@ -1079,6 +1086,9 @@ footer h4{
     .block-footer > div {
         min-width: 215px;
     }
+    .boton-arriba{
+        display: none;
+    }
 }
 @media (max-width: 850px) {
     .container-menu{
@@ -1089,7 +1099,7 @@ footer h4{
     }
     .fa-bars{
         display: block;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     header{
@@ -1097,14 +1107,19 @@ footer h4{
         height: 185px;
     }
     h1{
-        font-size: 35px;
+        font-size: 25px;
+    }
+    .subtitulo{
+        margin: 0;
     }
     h2{
+        display: inline-block;
         margin-top: 80px;
         background-color: transparent;
-        font-size: 23px;
-        width: 80%;
+        font-size: 20px;
+        width: 100vw;
         text-align: center;
+        padding: 0;
         margin-bottom: 20px;
     }
     .window-language .menu-language{
@@ -1134,6 +1149,7 @@ footer h4{
     }
     .mode-black-button{
         width: auto;
+        transform: scale(0.8);
     }
     .nav-menu-logo_button{
         width: auto;
@@ -1266,5 +1282,38 @@ footer h4{
         height: 100vh;
         background-color: rgba(255, 255, 255, 0.4);
         display: none;
+    }
+
+    @keyframes kfBotonArriba {
+        0%{
+            transform: scale(0);
+        }
+        25%{
+            transform: rotateX(180deg) scale(0.5);
+        }
+        75%{
+            transform: rotateX(0deg) scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    .boton-arriba{
+        position: fixed;
+        z-index: 30;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--color-primario);
+        border-radius: 50%;
+        display: none;
+        animation: kfBotonArriba 0.7s;
+        /* animation-name: kfBotonArriba;
+        animation-duration: 0.7s; */
+
+    }
+    .fa-circle-up{
+        font-size: 40px;
+        color: var(--color-secundario);
     }
 }
