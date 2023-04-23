@@ -109,7 +109,7 @@ header{
 .switch {
     position: relative;
     display: inline-block;
-    width: 54px;
+    width: 32%;
     height: 28px;
   }
   
@@ -1004,6 +1004,10 @@ footer h4{
     display: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    /* Elementos a cambiar de color en modedark*/
+}
+
 @media (max-width: 1160px) {
     .container-menu{
         display: flex;
@@ -1125,6 +1129,12 @@ footer h4{
     .window-language .menu-language{
         width: 60%;
     }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 54px;
+        height: 28px;
+      }
     nav{
         height: auto;
         width: 100%;
