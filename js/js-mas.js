@@ -1,38 +1,30 @@
 "strict mode";
-// Script Principal, navegador
-// Verificamos si el navegador admite Service Worker
-if (navigator.serviceWorker) {
-    // Registramos el archivo que nos servirá de Service Worker
-    navigator.serviceWorker.register("nombreServiceWorker.js");
+// El uso de cookies puede ser diver generalmente lleva el formato de clave=valor;atributo;atributo...
+// Convertimos cantidad de dias a formato UTC
+const newFechaUTC = dias => {
+    let fecha = new Date();
+    fecha.setTime(fecha.getTime + dias*1000*60*60*24);
+    return fecha.toUTCString();
+}
+
+const crearCookie = (nombre, dias)=>{
+    expires = newFechaUTC(dias);
+    document.cookie = `${nombre};expires=${expires}`;
 };
-// Para enviarle un mensaje al Service Worker necesitamos saber si esta listo con el metodo ready el cual devuelve una promesa, el cual tiene una propiedad llamada active que contiene el metodo postMessage.
-navigator.serviceWorker.ready.then(
-    res => res.active.postMessage("Saludando al Service Worker.")
-);
-// Para que el navegador escuche los mensajes del Service Worker
-navigator.serviceWorker.addEventListener("message", e=>{
-    console.log("Mensaje recibido del Service Worker:");
-    console.log(e.data);
-});
 
-////////////////////////////////////////////////////////
-// Service Worker (nombreServiceWorker.js)
-// Para señalar el Service Worker se utiliza self algo como el this
-self.addEventListener("install", e=>{
-    console.log("Service Worker instalado.");
-});
+crearCookie("usuario=daniel","4");
 
-self.addEventListener("activate", ()=>{
-    console.log("Service Worker está activo.");
-});
-
-self.addEventListener("fetch", ()=>{
-    console.log("Service Worker interceptando peticion.");
-});
-
-self.addEventListener("message", e=>{
-    console.log("Mensaje recibido del navegador:");
-    console.log(e.data);
-    // Para enviar un mensaje desde el Service Worker, accedemos al metodo source
-    e.source.postMessage("Saludando al navegador.")
-});
+const obtenerCookie = cookieName =>{
+    let cookies = document.cookie;
+    cookies = cookies.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.startsWith(cookieName)) {
+            return cookie.split("=")[1];
+        }     
+    }
+    return "No hay cookies con ese nombre";
+}
+// Para eliminar una cookie debemos sobreescribir la cookie de las siguientes maneras:
+document.cookie = "usuario=daniel;max-age=0";
+crearCookie("usuario=daniel;max-age=0","4");
