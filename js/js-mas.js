@@ -1,30 +1,26 @@
 "strict mode";
-// El uso de cookies puede ser diver generalmente lleva el formato de clave=valor;atributo;atributo...
-// Convertimos cantidad de dias a formato UTC
-const newFechaUTC = dias => {
-    let fecha = new Date();
-    fecha.setTime(fecha.getTime + dias*1000*60*60*24);
-    return fecha.toUTCString();
-}
+// Aceleracion por hardmare GPU direct2D directRight
 
-const crearCookie = (nombre, dias)=>{
-    expires = newFechaUTC(dias);
-    document.cookie = `${nombre};expires=${expires}`;
-};
+const canvas = document.getElementById('canvas');
+const contexto = canvas.getContext("2d");
+// Los estilos se dan al inicio de poder graficarlas
+contexto.lineWidth = "6"; // Grosor de linea, solo para elementos stroke o de trazos de linea
+contexto.strokeStyle = "#000"; // Color de linea, solo para elementos stroke
+contexto.fillStyle = "#f00"; // Color de relleno para elementos fill
 
-crearCookie("usuario=daniel","4");
+contexto.strokeRect(30,50,400,200); // Trazo de un rectangulo, los primeros 2 parametros indican donde empieza el rectangulo, y los otros 2 son el ancho y la altura
+contexto.fillRect(10,20,400,200); // Relleno de rectangulo
 
-const obtenerCookie = cookieName =>{
-    let cookies = document.cookie;
-    cookies = cookies.split(";");
-    for (let i = 0; i < cookies.length; i++) {
-        let cookie = cookies[i].trim();
-        if (cookie.startsWith(cookieName)) {
-            return cookie.split("=")[1];
-        }     
-    }
-    return "No hay cookies con ese nombre";
-}
-// Para eliminar una cookie debemos sobreescribir la cookie de las siguientes maneras:
-document.cookie = "usuario=daniel;max-age=0";
-crearCookie("usuario=daniel;max-age=0","4");
+contexto.lineTo(80,300); // punto de untrazo que si se uno con otros genera un trazo mas personalizable
+contexto.lineTo(120,350);
+contexto.lineTo(100,400);
+contexto.lineTo(120,450);
+contexto.stroke(); // Nos permite generar el trazo siguiendo los puntos de lineTo o de algun elemento
+contexto.closePath(); // Cierra los trazos lineTo para que los siguientes lineTo comiencen en otro lugar
+contexto.beginPath(); // Indicamos el inicio de nuevos puntos para generar un nuevo trazo con lineTo
+contexto.lineTo(80,300);
+contexto.lineTo(80,200);
+contexto.stroke();
+
+contexto.arc(120,120,100,10,40); // grafica un circulo, los primeros 2 parametros son el punto central del circulo, el tercer parametro es el radio, y los otros 2 son el angulo de inicio y final
+contexto.stroke();
