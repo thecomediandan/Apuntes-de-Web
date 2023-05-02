@@ -1,51 +1,1565 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Code+Pro:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/css-html.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Apuntes de HTML5</title>
 </head>
+
 <body>
-    <header>
-        <nav>
+    <div class="container">
+        <header>
+            <div class="nav-menu-logo">
+                <i class="fa-solid fa-bars"></i>
+                <h1>
+                    ArdaDev
+                </h1>
+                <div class="nav-menu-logo_button">
+                    <div class="mode-black-button">
+                        <span class="title-switch">Modo Oscuro</span>
+                        <label class="switch">
+                            <input class="cb" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fa-solid fa-language btn-idioma"></i>
+                    </div>
 
-        </nav>
-    </header>
-    <article>
-        <section>
-            <p>En la etiqueta <b>&lt;HEAD&gt;</b> es la cabecera de toda la página y se pone todo lo que no se ve, enlaces a archivos CSS o configuraciones con etiquetas <b>&lt;meta&gt;</b>. Tambien va el título de la página y se la pone con la etiqueta <b>&lt;title&gt;</b> el cual se pone visible como título de una pestaña en cualquier navegador web. Con la etiqueta <b>&lt;link&gt;</b> podemos vincular archivos CSS pero tambien podemos seleccionar una imagen en formato icono para que aparezac al lado del título de nuestra página con los atributos de <i>rel="icon"</i> y con el <i>href</i> indicando la ruta de la imagen en formato <i>.ico</i>.</p>
-            <p>Los metadatos es la información de los datos que describen los recursos de todos los objetos e información. La etiqueta <b>&lt;meta&gt;</b> que va en la etiqueta <b>&lt;HEAD&gt;</b>, con el podemos establecer características de toda la página como por ejemplo con la codificación de la página, con el atributo <i>charset</i> con el valor <i>"utf-8"</i>. Para explicar las siguientes características los atributos serán <i>name</i> y <i>content</i>, en <i>name</i> irán los posibles funciones y en <i>content</i> sus valores, bien para <i>name</i> tenemos a <b>keywords</b> para palabras clave, description, author, <b>copyright</b> si la página tiene copyright, <b>robots</b> con valores index y noindex para definir si la página será indexada o no, es decir forme parte de la lista de resultados en el buscador, con <b>robots</b> y valores como follow y nofollow que tiene que ver con la parte del SEO. SEO es el proceso de optimizar el contenido en línea, de manera que un motor de búsqueda prefiera mostrarlo entre los primeros resultados para búsquedas de una determinada palabra clave.</p>
-        </section>
-        <section>
-            <p>La etiqueta <b>&lt;BODY&gt;</b> es el cuerpo de la página web en el cual va <small>TODO</small> el contenido de la página web.</p>
-            <p>El <b>HTML semántico</b> es la manera correcta de maquetar una página web, la etiqueta <b>&lt;header&gt;</b> y el <b>&lt;nav&gt;</b> van de la mano, el <b>&lt;nav&gt;</b> va dentro del <b>&lt;header&gt;</b> para la navegación de la página, generalmente es una lista no ordenada <b>&lt;ul&gt;</b> con todas las opciones de navegación con etiquetas como <b>&lt;a&gt;</b> que nos manda a otros archivos HTML, generalmente el <b>&lt;header&gt;</b> se mantiene en todas las páginas de navegación, el <b>&lt;article&gt;</b> que es toda la información que presenta la página se puede dividir en varias secciones y esto se logra con la etiqueta <b>&lt;section&gt;</b> generalmente cada sección tiene un título y un subtitulo con <b>&lt;h1&gt;</b>, <b>&lt;h2&gt;</b> y luego su contenido con algún contenedor. Para la parte de <i>artículos recomendados</i> se utiliza <b>&lt;aside&gt;</b> que generalmente va debajo del <b>&lt;article&gt;</b>. Para la parte del pie de página se utiliza la etiqueta <b>&lt;footer&gt;</b>, generalmente va información de la página.</p>
-            <p>La etiqueta <b>&lt;style&gt;</b> nos sirve para dar estilos pero generalmente se utiliza un archivo con formato .css y vincularlo con la página.</p>
-            <p>La etiqueta <b>&lt;script&gt;</b> sirve para vincular un archivo javascript con el atributo src ubicamos el origen del archivo.</p>
-            <p>La etiqueta <b>&lt;center&gt;</b> lo que hace es centrar elementos horizontalmente.</p>
-            <p>La etiqueta <b>&lt;div&gt;</b> sirve para agrupar contenidos para luego utilizarce usando CSS.</p>
-            <p>La etiqueta <b>&lt;span&gt;</b> sirve para agrupar contenidos en línea, como textos dentro de un párrafo para luego utilizarce usando CSS.</p>
-            <p>También pueden insertarse carácteres especiales como &lt; o &gt; por ejemplo, utilizados para estos apuntes, se puede ver muchos de ellos escribiendo el carácter <i>&</i> y ver las diversas opciones que nos muestra, en este caso con el editor de Visual Studio Code.</p>
-            <p>Los títulos se ponen con las etiquetas <b>&lt;h1&gt;</b>, <b>&lt;h2&gt;</b>, <b>&lt;h3&gt;</b>, <b>&lt;h4&gt;</b>, <b>&lt;h5&gt;</b>, <b>&lt;h6&gt;</b>. Solo debe existir un <b>&lt;h1&gt;</b> por el posicionamiento web por el concepto semántico, los demás son de uso ilimitado.</p>
-            <p><i><b>lorem</b></i> sirve para escribir textos random. Se puede multiplicar por un numero que es el numero de veces que se repetirá.
-            <br><br>
-            <i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur minus voluptas deleniti inventore esse incidunt unde labore dicta maxime alias sunt quam dignissimos, nihil hic ratione. Doloremque natus ab dicta.</i></p>
-            <p>Las etiquetas en línea <b>&lt;b&gt;</b> es negrita, <b>&lt;i&gt;</b> es itálica, <b>&lt;strike&gt;</b> es tachado y <b>&lt;small&gt;</b> es texto pequeño.</p>
-            <p>Existen etiquetas en línea y no, las que no son en línea se ajustan en toda la anchura del contenedor que la contiene.</p>
-            <p>La etiqueta <b>&lt;a&gt;</b> se usa para rutas, podemos enlazar a otros archivos <i>html</i> dentro de nuestro proyecto incluso navegando entre carpetas con <i>'/'</i> o para retroceder un nivel con <i>'../'</i>, o también podemos usar la etiqueta para introducir un enlace <i>http://</i> para dirijirnos a una página externa todo esto en el atributo <i>href</i>, y si queremos que un enlace se abra en una pestaña aparte utilizamos el atributo <i>target="_BLANK"</i>. También en el atributo <i>href</i> podemos colocar selectores como el <i>id</i> para moverse directamente utilizando un <i>#nombreID</i> hasta la etiqueta con dicho id, con propiedades de estilos como <i>scroll-behavior: smooth;</i> haremos que vaya lentamente hasta el objetivo.</p>
-            <p>La etiqueta <b>&lt;br&gt;</b> sirve para hacer saltos de línea y no tiene etiqueta de cierre.</p>
-            <p>La etiqueta <b>&lt;ol&gt;</b> sirve para abrir un listado ordenado por numeros que tiene que contener etiquetas <b>&lt;li&gt;</b> para determinar los elementos de una lista, si cambiamos la etiqueta <b>&lt;ol&gt;</b> por <b>&lt;ul&gt;</b> nos creara un listado con puntos.</p>
-            <p>La etiqueta <b>&lt;table&gt;</b> sirve para insertar tablas, se agrupan datos del mismo tipo en columnas, para insertar filas se utiliza <b>&lt;tr&gt;</b> y dentro de ellas van las columnas con la etiqueta <b>&lt;td&gt;</b>.</p>
-            <p>Con la etiqueta <b>&lt;img&gt;</b> podemos introducir una imagen con el atributo <i>src</i>, al cual introducimos la ruta de la imagen que puede ser de origen externo o local con los mismos tratamiento que de la etiqueta <b>&lt;a&gt;</b>, tambien con el atributo <i>alt</i> podemos definir que debemos mostrar en caso de no encontrar la imagen seleccionada en <i>src</i>, con el atributo <i>title</i> podemos poner un título a la imagen de modo que apuntando a la imagen con el <i>mouse</i> nos indique con un mensaje el título deseado.</p>
-            <p>La etiqueta <b>&lt;video&gt;</b> sirve para introducir un video mediante el atributo <i>src</i>, con el atributo <i>controls</i> nos muestra los controles necesarios para su reproducción.</p>
-            <p>Para la etiqueta <b>&lt;audio&gt;</b> es basicamente lo mismo que la etiqueta <b>&lt;video&gt;</b>.</p>
-            <p>Para crear formularios se utiliza la etiqueta <b>&lt;form&gt;</b>, dentro de esta contiene etiquetas como <b>&lt;input&gt;</b>, el cual consta de atributos como <i>name</i> que sirve como identificador para la parte del Back-End en captura de datos y <i>type</i> el cual puede ser <i>texto</i>, <i>password</i>, <i>mail</i>, <i>number</i>, <i>color</i>, <i>range</i> con atributos min y max que definen los rangos, <i>date</i> para fechas, <i>time</i> para la hora, <i>button</i> con un atributo <i>value</i> para poner el nombre al boton, <i>submit</i> es lo mismo que el tipo boton, la diferencia es que es un boton de envio de todo el formulario. Para los inputs existe el atributo <i>required</i> por ejemplo nos dice que es un requisito llenar los campos. <span class="notas-web">NOTA: Todas las validaciones se deberían de hacer por la parte del Back-End porque se pueden vulnerar estos requisitos modificando el código fuente y aún romper los requisitos</span>. Otra etiqueta de entrada de datos es el <b>&lt;textarea&gt;</b> el cual con el atributo <i>readonly</i> podemos hacer que el texto solo sea de lectura y tambien modificar ciertas cosas con otros atributos.</p>
-        </section>
-    </article>
-    <footer>
+                    <div class="window-language">
+                        <div class="menu-language">
+                            <span>Seleccione un idioma</span>
+                            <ul>
+                                <li><i class="fa-solid fa-language"></i> <b>ES</b> Español</li>
+                                <li><i class="fa-solid fa-language"></i> <b>EN</b> Inglés</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="subtitulo">
+                    <h2>Apuntes de programación web: HTML, CSS y JavaScript.</h2>
+                </div>
+            </nav>
+        </header>
+        <div class="nav">
+            <li class="nav-button-start">
+                <button class="nav-button nav-button-inicio">INICIO</button>
+            </li>
+            <li>
+                <span class="li-separator"></span>
+                <button class="nav-button">HTML5</button>
+            </li>
+            <li>
+                <span class="li-separator"></span>
+                <button class="nav-button">CSS</button>
+            </li>
+            <li>
+                <span class="li-separator"></span>
+                <button class="nav-button">JAVASCRIPT</button>
+            </li>
+            <li class="nav-button-end">
+                <span class="li-separator"></span>
+                <button class="nav-button">SOBRE NOSOTROS</button>
+            </li>
+        </div>
+        <div class="container-menu">
+            <div class="menu">
+                <div class="list">
+                    <div class="navegacion-movil">
+                        <li><a href="#"><i class="fa-solid fa-house"></i><span class="div-list-title1">INICIO</span></a>
+                        </li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-brands fa-html5"></i><span class="div-list-title1">HTML5</span></a>
+                        </li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-brands fa-css3-alt"></i><span
+                                    class="div-list-title1">CSS</span></a></li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-brands fa-square-js"></i><span
+                                    class="div-list-title1">JAVASCRIPT</span></a></li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-solid fa-user"></i><span class="div-list-title1">SOBRE
+                                    NOSOTROS</span></a></li>
+                    </div>
+                    <li><a href="#introduccion"><span class="div-list-title1">INTRODUCCIÓN</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#especificidad"><span class="div-list-title1">ESPECIFICIDAD</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#bem"><span class="div-list-title1">METODOLOGÍA BEM</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#medida"><span class="div-list-title1">UNIDADES DE MEDIDA</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#reset"><span class="div-list-title1">RESET DE CSS</span></a></li>
+                    <div class="li-separator2"></div>
+                    <details>
+                        <summary class="div-list-title1">ELEMENTOS EN LÍNEA Y EN BLOQUE</summary>
+                        <div class="li-separator2"></div>
+                        <li><a href="#linea-bloque"><span class="div-list-title2">Elementos en línea y en
+                                    bloque</span></a></li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#caja"><span class="div-list-title2">Propiedades de caja</span></a></li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#posicion"><span class="div-list-title2">Posición de elementos</span></a></li>
+                    </details>
+                    <div class="li-separator2"></div>
+                    <li><a href="#pseudo"><span class="div-list-title1">PSEUDO-ELEMENTOS Y PSEUDO-CLASES</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#imagenes"><span class="div-list-title1">PROPIEDADES PARA IMÁGENES</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#responsive"><span class="div-list-title1">RESPONSIVE DESIGN</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#flex"><span class="div-list-title1">FLEX</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#grid"><span class="div-list-title1">GRID</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#transiciones"><span class="div-list-title1">TRANSICIONES</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#animaciones"><span class="div-list-title1">ANIMACIONES</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#background"><span class="div-list-title1">BACKGROUND</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#variables"><span class="div-list-title1">VARIABLES EN CSS</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#filter"><span class="div-list-title1">FILTER</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#curiosas"><span class="div-list-title1">PROPIEDADES CURIOSAS</span></a></li>
+                </div>
+            </div>
+            <div class="cerrar-navegacion-movil">
+            </div>
+            <article>
+                <section id="introduccion">
+                    <h3>EN LA ETIQUETA HEAD</h3>
+                    <p>La etiqueta <b>&lt;HEAD&gt;</b> es la cabecera de toda la página y se pone todo lo que no se ve,
+                        enlaces a archivos CSS o configuraciones con etiquetas <b>&lt;meta&gt;</b>. Tambien va el título
+                        de la página y se la pone con la etiqueta <b>&lt;title&gt;</b> el cual se pone visible como
+                        título de una pestaña en cualquier navegador web. Con la etiqueta <b>&lt;link&gt;</b> podemos
+                        vincular archivos CSS pero tambien podemos seleccionar una imagen en formato icono para que
+                        aparezac al lado del título de nuestra página con los atributos de <i>rel="icon"</i> y con el
+                        <i>href</i> indicando la ruta de la imagen en formato <i>.ico</i>.
+                    </p>
+                    <table class="section-table table-1">
+                        <thead>
+                            <th style="width:20%">Categorías de contenido</th>
+                            <th style="width:20%">Ninguna</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a>Contenido permitido</a></td>
+                                <td class="notranslate">Si el elemento es un srcdoc de un &lt;iframe&gt; , o si la información de título está disponible desde un protocolo de nivel superior, cero o más elementos de metadatos. De otro modo, uno o más elementos de metadatos donde exactamente uno es &lt;title&gt;.</td>
+                            </tr>
+                            <tr>
+                                <td><a>Omisión de etiqueta</a></td>
+                                <td class="notranslate">La etiqueta de inicio puede ser omitida si lo primero dentro del elemento head es un elemento. La etiqueta de cierre puede ser omitida si lo primero después del elemento head no es un espacio o un comentario.</td>
+                            </tr>
+                            <tr>
+                                <td><a>Elementos padre permitidos</a></td>
+                                <td class="notranslate">Un elemento &lt;html&gt;, pues éste es su primer hijo.</td>
+                            </tr>
+                            <tr>
+                                <td><a>Interfaz DOM</a></td>
+                                <td class="notranslate">HTMLHeadElement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bloque-codigo">
+                        <pre ><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document title&lt;/title&gt;
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;
+    &lt;/head&gt;    
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
 
-    </footer>
-    <script src="js.js"></script>
+                    <p>Los metadatos es la información de los datos que describen los recursos de todos los objetos e
+                        información. La etiqueta <b>&lt;meta&gt;</b> que va en la etiqueta <b>&lt;HEAD&gt;</b>, con el
+                        podemos establecer características de toda la página como por ejemplo con la codificación de la
+                        página, con el atributo <i>charset</i> con el valor <i>"utf-8"</i>. Para explicar las siguientes
+                        características los atributos serán <i>name</i> y <i>content</i>, en <i>name</i> irán los
+                        posibles funciones y en <i>content</i> sus valores, bien para <i>name</i> tenemos a
+                        <b>keywords</b> para palabras clave, description, author, <b>copyright</b> si la página tiene
+                        copyright, <b>robots</b> con valores index y noindex para definir si la página será indexada o
+                        no, es decir forme parte de la lista de resultados en el buscador, con <b>robots</b> y valores
+                        como follow y nofollow que tiene que ver con la parte del SEO. SEO es el proceso de optimizar el
+                        contenido en línea, de manera que un motor de búsqueda prefiera mostrarlo entre los primeros
+                        resultados para búsquedas de una determinada palabra clave.
+                    </p>
+                    <table class="section-table table-1">
+                        <thead>
+                            <th style="width:20%">Atributo</th>
+                            <th style="width:30%">Descripción</th>
+                            <th style="width:20%">Valor</th>
+                        </thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a>Genéricos</a></td>
+                            </tr>
+                            <tr>
+                                <td><a>lang</a></td>
+                                <td class="notranslate">Información sobre el idioma del contenido del elemento y del valor de sus atributos.</td>
+                                <td class="notranslate">Un código de idioma. Por defecto: "desconocido". Lo fija el navegador.</td>
+                            </tr>
+                            <tr>
+                                <td><a>dir</a></td>
+                                <td class="notranslate">Indica la dirección de texto y tablas.</td>
+                                <td class="notranslate">Uno de los siguientes: 'ltr' o 'rtl'. Por defecto: En castellano 'ltr'. Lo fija el navegador.</td>
+                            </tr>
+                            <tr>
+                                <td><a>Específicos</a></td>
+                            </tr>
+                            <tr>
+                                <td><a>name</a></td>
+                                <td class="notranslate">Nombre al que se asocia la metainformación</td>
+                                <td class="notranslate">Un 'nombre'. Sensible a M/m. Por defecto: Lo fija el navegador.</td>
+                            </tr>
+                            <tr>
+                                <td><a>content</a></td>
+                                <td class="notranslate">Los datos que se quieren asociar a name.</td>
+                                <td class="notranslate">Texto. Sensible a M/m..</td>
+                            </tr>
+                            <tr>
+                                <td><a>http-equiv</a></td>
+                                <td class="notranslate">Aporta información sobre los encabezado de respuesta HTTP, puede usarse en lugar de name.</td>
+                                <td class="notranslate">Un 'nombre'. Por defecto: Lo fija el navegador.</td>
+                            </tr>
+                            <tr>
+                                <td><a>scheme</a></td>
+                                <td class="notranslate">Indica un esquema de interpretación para los metadatos.</td>
+                                <td class="notranslate">Texto. Sensible a M/m.. Por defecto: Lo fija el navegador..</td>
+                            </tr>
+                            <tr>
+                                <td><a>De transición</a></td>
+                            </tr>
+                            <tr>
+                                <td>No tiene.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="especificidad">
+                    <h3>EN LA ETIQUETA BODY</h3>
+                    <p>La etiqueta <b>&lt;BODY&gt;</b> es el cuerpo de la página web en el cual va <small>TODO</small>
+                        el contenido de la página web.</p>
+                    <p>El <b>HTML semántico</b> es la manera correcta de maquetar una página web, la etiqueta
+                        <b>&lt;header&gt;</b> y el <b>&lt;nav&gt;</b> van de la mano, el <b>&lt;nav&gt;</b> va dentro
+                        del <b>&lt;header&gt;</b> para la navegación de la página, generalmente es una lista no ordenada
+                        <b>&lt;ul&gt;</b> con todas las opciones de navegación con etiquetas como <b>&lt;a&gt;</b> que
+                        nos manda a otros archivos HTML, generalmente el <b>&lt;header&gt;</b> se mantiene en todas las
+                        páginas de navegación, el <b>&lt;article&gt;</b> que es parte de toda la información que presenta la
+                        página se puede dividir en varias secciones y esto se logra con la etiqueta
+                        <b>&lt;section&gt;</b> generalmente cada sección tiene un título y un subtitulo con
+                        <b>&lt;h1&gt;</b>, <b>&lt;h2&gt;</b> y luego su contenido con algún contenedor, la página puede tener varios
+                        artículos según lo requiera, generalmente los <b>&lt;article&gt;</b> van dentro de la etiqueta <b>&lt;main&gt;</b>.
+                        Para la parte de
+                        <i>artículos recomendados</i> o alguna parte adicional de la página se utiliza <b>&lt;aside&gt;</b> que generalmente
+                        va debajo del
+                        <b>&lt;article&gt;</b> o a su lado. Para la parte del pie de página se utiliza la etiqueta
+                        <b>&lt;footer&gt;</b>, generalmente va información de la página.
+                    </p>
+                    
+                    <img class="img-2" src="./../img/img-html/img1.png" alt="" srcset="">
+                    
+                    <p>La etiqueta <b>&lt;style&gt;</b> nos sirve para dar estilos pero generalmente se utiliza un
+                        archivo con formato .css y vincularlo con la página.</p>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;style type="text/css&gt;
+    p { color: red; }
+&lt;/style&gt;
+&lt;p&gt; Texto en rojo &lt;/p&gt;
+                        </code></pre>
+                    </div>
+                    <p>La etiqueta <b>&lt;script&gt;</b> sirve para vincular un archivo javascript con el atributo src
+                        ubicamos el origen del archivo. Generalmente va al final de la etiqueta <b>&lt;body&gt;</b></p>
+                        <div class="bloque-codigo">
+                            <pre><code>
+&lt;script src="javascript.js"&gt;&lt;/script&gt;
+                            </code></pre>
+                        </div>
+                    <p>La etiqueta <b>&lt;center&gt;</b> lo que hace es centrar elementos horizontalmente.</p>
+                    <p>La etiqueta <b>&lt;div&gt;</b> sirve para agrupar contenidos para luego utilizarce usando CSS.
+                    </p>
+                    <p>La etiqueta <b>&lt;span&gt;</b> sirve para agrupar contenidos en línea, como textos dentro de un
+                        párrafo para luego utilizarce usando CSS.</p>
+                    <p>También pueden insertarse carácteres especiales como '&lt;'' o '&gt;'' por ejemplo, utilizados para
+                        estos apuntes, son carácteres UNICODE, se puede ver muchos de ellos escribiendo el carácter <i>&</i> y ver las diversas
+                        opciones que nos muestra, en este caso con el editor de Visual Studio Code.</p>
+
+                        <table align="center" class="table-unicode" cellpadding="0&quot;" cellspacing="0">
+                            <tbody><tr>
+                            <td class="cell">
+                            <br>
+                            <div class="hd6">&nbsp;Tabla de ASCII estándar, nombres de entidades HTML, ISO 10646, ISO 8879, ISO 8859-1 romano 1<br>&nbsp;Soporte para browsers: todos los browsers</div>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>
+                            40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>
+                            </td>
+                            <td align="center">
+                            20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>
+                            28<br>29<br>2A<br>2B<br>2C<br>2D<br>2E<br>2F<br>
+                            </td>
+                            <td align="center">
+                             <br>!<br>"<br>#<br>$<br>%<br>&amp;<br>'<br>
+                            (<br>)<br>*<br>+<br>,<br>-<br>.<br>/<br>
+                            </td>
+                            <td>
+                            &amp;#32;<br>&amp;#33;<br>&amp;#34;<br>&amp;#35;<br>
+                            &amp;#36;<br>&amp;#37;<br>&amp;#38;<br>&amp;#39;<br>
+                            &amp;#40;<br>&amp;#41;<br>&amp;#42;<br>&amp;#43;<br>
+                            &amp;#44;<br>&amp;#45;<br>&amp;#46;<br>&amp;#47;<br>
+                            </td>
+                            <td>
+                            <br><br>&amp;quot;<br><br>
+                            <br><br>&amp;amp;<br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            espacio<br>signo de cierre de exclamación<br>comillas dobles<br>signo de número<br> signo de dólar<br>signo de porcentaje<br>signo "&amp;" / ampersand<br>comilla / apóstrofe<br> paréntesis izquierdo<br>paréntesis derecho<br>asterisco<br>signo de más / adición<br> coma<br>signo de menos / sustracción / guíon<br>punto<br>barra oblicua - barra de división<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>
+                            56<br>57<br>58<br>59<br>60<br>61<br>62<br>63<br>
+                            </td>
+                            <td align="center">
+                            30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>
+                            38<br>39<br>3A<br>3B<br>3C<br>3D<br>3E<br>3F<br>
+                            </td>
+                            <td align="center">
+                            0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>
+                            8<br>9<br>:<br>;<br>&lt;<br>=<br>&gt;<br>?<br>
+                            </td>
+                            <td>
+                            &amp;#48;<br>&amp;#49;<br>&amp;#50;<br>&amp;#51;<br>
+                            &amp;#52;<br>&amp;#53;<br>&amp;#54;<br>&amp;#55;<br>
+                            &amp;#56;<br>&amp;#57;<br>&amp;#58;<br>&amp;#59;<br>
+                            &amp;#60;<br>&amp;#61;<br>&amp;#62;<br>&amp;#63;<br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            &amp;lt;<br><br>&amp;gt;<br><br>
+                            </td>
+                            <td>
+                            cero<br>uno<br>dos<br>tres<br> cuatro<br>cinco<br>seis<br>siete<br> ocho<br>nueve<br>dos puntos<br>punto y coma<br> signo de menor que<br>signo de igual<br>signo de mayor que<br>signo de interrogación - cierre<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            64<br>65<br>66<br>67<br>68<br>69<br>70<br>71<br>
+                            72<br>73<br>74<br>75<br>76<br>77<br>78<br>79<br>
+                            </td>
+                            <td align="center">
+                            40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>
+                            48<br>49<br>4A<br>4B<br>4C<br>4D<br>4E<br>4F<br>
+                            </td>
+                            <td align="center">
+                            @<br>A<br>B<br>C<br>D<br>E<br>F<br>G<br>
+                            H<br>I<br>J<br>K<br>L<br>M<br>N<br>O<br>
+                            </td>
+                            <td>
+                            &amp;#64;<br>&amp;#65;<br>&amp;#66;<br>&amp;#67;<br>
+                            &amp;#68;<br>&amp;#69;<br>&amp;#70;<br>&amp;#71;<br>
+                            &amp;#72;<br>&amp;#73;<br>&amp;#74;<br>&amp;#75;<br>
+                            &amp;#76;<br>&amp;#77;<br>&amp;#78;<br>&amp;#79;<br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            símbolo arroba <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>
+                            88<br>89<br>90<br>91<br>92<br>93<br>94<br>95<br>
+                            </td>
+                            <td align="center">
+                            50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>
+                            58<br>59<br>5A<br>5B<br>5C<br>5D<br>5E<br>5F<br>
+                            </td>
+                            <td align="center">
+                            P<br>Q<br>R<br>S<br>T<br>U<br>V<br>W<br>
+                            X<br>Y<br>Z<br>[<br>\<br>]<br>^<br>_<br>
+                            </td>
+                            <td>
+                            &amp;#80;<br>&amp;#81;<br>&amp;#82;<br>&amp;#83;<br>
+                            &amp;#84;<br>&amp;#85;<br>&amp;#86;<br>&amp;#87;<br>
+                            &amp;#88;<br>&amp;#89;<br>&amp;#90;<br>&amp;#91;<br>
+                            &amp;#92;<br>&amp;#93;<br>&amp;#94;<br>&amp;#95;<br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br> <br><br><br><br> <br><br><br>corchete izquierdo<br> barra inversa<br>corchete derecho<br>signo de intercalación - acento circunflejo<br>signo de subrayado<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            96<br>97<br>98<br>99<br>100<br>101<br>102<br>103<br>
+                            104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>
+                            </td>
+                            <td align="center">
+                            60<br>61<br>62<br>63<br>64<br>65<br>66<br>67<br>
+                            68<br>69<br>6A<br>6B<br>6C<br>6D<br>6E<br>6F<br>
+                            </td>
+                            <td align="center">
+                            `<br>a<br>b<br>c<br>d<br>e<br>f<br>g<br>
+                            h<br>i<br>j<br>k<br>l<br>m<br>n<br>o<br>
+                            </td>
+                            <td>
+                            &amp;#96;<br>&amp;#97;<br>&amp;#98;<br>&amp;#99;<br>
+                            &amp;#100;<br>&amp;#101;<br>&amp;#102;<br>&amp;#103;<br>
+                            &amp;#104;<br>&amp;#105;<br>&amp;#106;<br>&amp;#107;<br>
+                            &amp;#108;<br>&amp;#109;<br>&amp;#110;<br>&amp;#111;<br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            acento grave<br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            112<br>113<br>114<br>115<br>116<br>117<br>118<br>119<br>
+                            120<br>121<br>122<br>123<br>124<br>125<br>126<br>127<br>
+                            </td>
+                            <td align="center">
+                            70<br>71<br>72<br>73<br>74<br>75<br>76<br>77<br>
+                            78<br>79<br>7A<br>7B<br>7C<br>7D<br>7E<br>7F<br>
+                            </td>
+                            <td align="center">
+                            p<br>q<br>r<br>s<br>t<br>u<br>v<br>w<br>
+                            x<br>y<br>z<br>{<br>|<br>}<br>~<br><br>
+                            </td>
+                            <td>
+                            &amp;#112;<br>&amp;#113;<br>&amp;#114;<br>&amp;#115;<br>
+                            &amp;#116;<br>&amp;#117;<br>&amp;#118;<br>&amp;#119;<br>
+                            &amp;#120;<br>&amp;#121;<br>&amp;#122;<br>&amp;#123;<br>
+                            &amp;#124;<br>&amp;#125;<br>&amp;#126;<br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br> <br><br><br><br> <br><br><br>llave de apertura - izquierda<br> barra vertical<br>llave de cierre - derecho<br>signo de equivalencia / tilde<br>(no definido en estándar HTML 4)<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            128<br>129<br>130<br>131<br>132<br>133<br>134<br>135<br>
+                            136<br>137<br>138<br>139<br>140<br>141<br>142<br>143<br>
+                            </td>
+                            <td align="center">
+                            80<br>81<br>82<br>83<br>84<br>85<br>86<br>87<br>
+                            88<br>89<br>8A<br>8B<br>8C<br>8D<br>8E<br>8F<br>
+                            </td>
+                            <td align="center">
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br> (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br> (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br> (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            144<br>145<br>146<br>147<br>148<br>149<br>150<br>151<br>
+                            152<br>153<br>154<br>155<br>156<br>157<br>158<br>159<br>
+                            </td>
+                            <td align="center">
+                            90<br>91<br>92<br>93<br>94<br>95<br>96<br>97<br>
+                            98<br>99<br>9A<br>9B<br>9C<br>9D<br>9E<br>9F<br>
+                            </td>
+                            <td align="center">
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            </td>
+                            <td>
+                            (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br> (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br> (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br> (no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>(no definido en estándar HTML 4)<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            160<br>161<br>162<br>163<br>164<br>165<br>166<br>167<br>
+                            168<br>169<br>170<br>171<br>172<br>173<br>174<br>175<br>
+                            </td>
+                            <td align="center">
+                            A0<br>A1<br>A2<br>A3<br>A4<br>A5<br>A6<br>A7<br>
+                            A8<br>A9<br>AA<br>AB<br>AC<br>AD<br>AE<br>AF<br>
+                            </td>
+                            <td align="center">
+                            &nbsp;<br>¡<br>¢<br>£<br>¤<br>¥<br>¦<br>§<br>
+                            ¨<br>©<br>ª<br>«<br>¬<br>­<br>®<br>¯<br>
+                            </td>
+                            <td>
+                            &amp;#160;<br>&amp;#161;<br>&amp;#162;<br>&amp;#163;<br>
+                            &amp;#164;<br>&amp;#165;<br>&amp;#166;<br>&amp;#167;<br>
+                            &amp;#168;<br>&amp;#169;<br>&amp;#170;<br>&amp;#171;<br>
+                            &amp;#172;<br>&amp;#173;<br>&amp;#174;<br>&amp;#175;<br>
+                            </td>
+                            <td>
+                            &amp;nbsp;<br>&amp;iexcl;<br>&amp;cent;<br>&amp;pound;<br>
+                            &amp;curren;<br>&amp;yen;<br>&amp;brvbar;<br>&amp;sect;<br>
+                            &amp;uml;<br>&amp;copy;<br>&amp;ordf;<br>&amp;laquo;<br>
+                            &amp;not;<br>&amp;shy;<br>&amp;reg;<br>&amp;macr;<br>
+                            </td>
+                            <td>
+                            espacio sin separación<br>signo de apertura de exclamación<br>signo de centavo<br>signo de Libra Esterlina<br> signo de divisa general<br>signo de yen<br>barra vertical partida<br>signo de sección<br> diéresis - umlaut<br>signo de derechos de autor - copyright<br>género feminino - indicador ordinal f.<br>comillas anguladas de apertura<br> signo de no - símbolo lógico<br>guión débil<br>signo de marca registrada<br>macrón - raya alta<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            176<br>177<br>178<br>179<br>180<br>181<br>182<br>183<br>
+                            184<br>185<br>186<br>187<br>188<br>189<br>190<br>191<br>
+                            </td>
+                            <td align="center">
+                            B0<br>B1<br>B2<br>B3<br>B4<br>B5<br>B6<br>B7<br>
+                            B8<br>B9<br>BA<br>BB<br>BC<br>BD<br>BE<br>BF<br>
+                            </td>
+                            <td align="center">
+                            °<br>±<br>²<br>³<br>´<br>µ<br>¶<br>·<br>
+                            ¸<br>¹<br>º<br>»<br>¼<br>½<br>¾<br>¿<br>
+                            </td>
+                            <td>
+                            &amp;#176;<br>&amp;#177;<br>&amp;#178;<br>&amp;#179;<br>
+                            &amp;#180;<br>&amp;#181;<br>&amp;#182;<br>&amp;#183;<br>
+                            &amp;#184;<br>&amp;#185;<br>&amp;#186;<br>&amp;#187;<br>
+                            &amp;#188;<br>&amp;#189;<br>&amp;#190;<br>&amp;#191;<br>
+                            </td>
+                            <td>
+                            &amp;deg;<br>&amp;plusmn;<br>&amp;sup2;<br>&amp;sup3;<br>
+                            &amp;acute;<br>&amp;micro;<br>&amp;para;<br>&amp;middot;<br>
+                            &amp;cedil;<br>&amp;sup1;<br>&amp;ordm;<br>&amp;raquo;<br>
+                            &amp;frac14;<br>&amp;frac12;<br>&amp;frac34;<br>&amp;iquest;<br>
+                            </td>
+                            <td>
+                            signo de grado<br>signo de más o menos<br>superíndice dos - cuadrado<br>superíndice tres - cúbico<br> acento agudo - agudo espaciado<br>signo de micro<br>signo de fin de párrafo<br>punto medio - coma Georgiana<br> cedilla<br>superíndice uno<br>género masculino - indicador ordinal m.<br>comillas anguladas de cierre<br> fracción un cuarto<br>fracción medio - mitad<br>fracción tres cuartos<br>signo de interrogación - apertura<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            192<br>193<br>194<br>195<br>196<br>197<br>198<br>199<br>
+                            200<br>201<br>202<br>203<br>204<br>205<br>206<br>207<br>
+                            </td>
+                            <td align="center">
+                            C0<br>C1<br>C2<br>C3<br>C4<br>C5<br>C6<br>C7<br>
+                            C8<br>C9<br>CA<br>CB<br>CC<br>CD<br>CE<br>CF<br>
+                            </td>
+                            <td align="center">
+                            À<br>Á<br>Â<br>Ã<br>Ä<br>Å<br>Æ<br>Ç<br>
+                            È<br>É<br>Ê<br>Ë<br>Ì<br>Í<br>Î<br>Ï<br>
+                            </td>
+                            <td>
+                            &amp;#192;<br>&amp;#193;<br>&amp;#194;<br>&amp;#195;<br>
+                            &amp;#196;<br>&amp;#197;<br>&amp;#198;<br>&amp;#199;<br>
+                            &amp;#200;<br>&amp;#201;<br>&amp;#202;<br>&amp;#203;<br>
+                            &amp;#204;<br>&amp;#205;<br>&amp;#206;<br>&amp;#207;<br>
+                            </td>
+                            <td>
+                            &amp;Agrave;<br>&amp;Aacute;<br>&amp;Acirc;<br>&amp;Atilde;<br>
+                            &amp;Auml;<br>&amp;Aring;<br>&amp;AElig;<br>&amp;Ccedil;<br>
+                            &amp;Egrave;<br>&amp;Eacute;<br>&amp;Ecirc;<br>&amp;Euml;<br>
+                            &amp;Igrave;<br>&amp;Iacute;<br>&amp;Icirc;<br>&amp;Iuml;<br>
+                            </td>
+                            <td>
+                            A mayúscula con acento grave<br>A mayúscula con acento agudo<br>A mayúscula con acento circunflejo<br>A mayúscula con tilde<br> A mayúscula con diéresis<br>A mayúscula con anillo<br>diptongo AE mayúscula (ligadura)<br>C cedilla mayúscula<br> E mayúscula con acento grave<br>E mayúscula con acento agudo<br>E mayúscula con acento circunflejo<br>E mayúscula con diéresis<br> I mayúscula con acento grave<br>I mayúscula con acento agudo<br>I mayúscula con acento circunflejo<br>I mayúscula con diéresis<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            208<br>209<br>210<br>211<br>212<br>213<br>214<br>215<br>
+                            216<br>217<br>218<br>219<br>220<br>221<br>222<br>223<br>
+                            </td>
+                            <td align="center">
+                            D0<br>D1<br>D2<br>D3<br>D4<br>D5<br>D6<br>D7<br>
+                            D8<br>D9<br>DA<br>DB<br>DC<br>DD<br>DE<br>DF<br>
+                            </td>
+                            <td align="center">
+                            Ð<br>Ñ<br>Ò<br>Ó<br>Ô<br>Õ<br>Ö<br>×<br>
+                            Ø<br>Ù<br>Ú<br>Û<br>Ü<br>Ý<br>Þ<br>ß<br>
+                            </td>
+                            <td>
+                            &amp;#208;<br>&amp;#209;<br>&amp;#210;<br>&amp;#211;<br>
+                            &amp;#212;<br>&amp;#213;<br>&amp;#214;<br>&amp;#215;<br>
+                            &amp;#216;<br>&amp;#217;<br>&amp;#218;<br>&amp;#219;<br>
+                            &amp;#220;<br>&amp;#221;<br>&amp;#222;<br>&amp;#223;<br>
+                            </td>
+                            <td>
+                            &amp;ETH;<br>&amp;Ntilde;<br>&amp;Ograve;<br>&amp;Oacute;<br>
+                            &amp;Ocirc;<br>&amp;Otilde;<br>&amp;Ouml;<br>&amp;times;<br>
+                            &amp;Oslash;<br>&amp;Ugrave;<br>&amp;Uacute;<br>&amp;Ucirc;<br>
+                            &amp;Uuml;<br>&amp;Yacute;<br>&amp;THORN;<br>&amp;szlig;<br>
+                            </td>
+                            <td>
+                            ETH islandesa mayúscula<br>N mayúscula con tilde - eñe mayúscula<br>O mayúscula con acento grave<br>O mayúscula con acento agudo<br> O mayúscula con acento circunflejo<br>O mayúscula con tilde<br>O mayúscula con diéresis<br>signo de multiplicación<br> O mayúscula with slash<br>U mayúscula con acento grave<br>U mayúscula con acento agudo<br>U mayúscula con acento circunflejo<br> U mayúscula con diéresis<br>Y mayúscula con acento agudo<br>THORN islandesa mayúscula<br>s minúscula (alemán) - Beta minúscula<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            224<br>225<br>226<br>227<br>228<br>229<br>230<br>231<br>
+                            232<br>233<br>234<br>235<br>236<br>237<br>238<br>239<br>
+                            </td>
+                            <td align="center">
+                            E0<br>E1<br>E2<br>E3<br>E4<br>E5<br>E6<br>E7<br>
+                            E8<br>E9<br>EA<br>EB<br>EC<br>ED<br>EE<br>EF<br>
+                            </td>
+                            <td align="center">
+                            à<br>á<br>â<br>ã<br>ä<br>å<br>æ<br>ç<br>
+                            è<br>é<br>ê<br>ë<br>ì<br>í<br>î<br>ï<br>
+                            </td>
+                            <td>
+                            &amp;#224;<br>&amp;#225;<br>&amp;#226;<br>&amp;#227;<br>
+                            &amp;#228;<br>&amp;#229;<br>&amp;#230;<br>&amp;#231;<br>
+                            &amp;#232;<br>&amp;#233;<br>&amp;#234;<br>&amp;#235;<br>
+                            &amp;#236;<br>&amp;#237;<br>&amp;#238;<br>&amp;#239;<br>
+                            </td>
+                            <td>
+                            &amp;agrave;<br>&amp;aacute;<br>&amp;acirc;<br>&amp;atilde;<br>
+                            &amp;auml;<br>&amp;aring;<br>&amp;aelig;<br>&amp;ccedil;<br>
+                            &amp;egrave;<br>&amp;eacute;<br>&amp;ecirc;<br>&amp;euml;<br>
+                            &amp;igrave;<br>&amp;iacute;<br>&amp;icirc;<br>&amp;iuml;<br>
+                            </td>
+                            <td>
+                            a minúscula con acento grave<br>a minúscula con acento agudo<br>a minúscula con acento circunflejo<br>a minúscula con tilde<br> a minúscula con diéresis<br>a minúscula con anillo<br>diptongo ae minúscula (ligadura)<br>c cedilla minúscula<br> e minúscula con acento grave<br>e minúscula con acento agudo<br>e minúscula con acento circunflejo<br>e minúscula con diéresis<br> i minúscula con acento grave<br>i minúscula con acento agudo<br>i minúscula con acento circunflejo<br>i minúscula con diéresis<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>ASCII</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            240<br>241<br>242<br>243<br>244<br>245<br>246<br>247<br>
+                            248<br>249<br>250<br>251<br>252<br>253<br>254<br>255<br>
+                            </td>
+                            <td align="center">
+                            F0<br>F1<br>F2<br>F3<br>F4<br>F5<br>F6<br>F7<br>
+                            F8<br>F9<br>FA<br>FB<br>FC<br>FD<br>FE<br>FF<br>
+                            </td>
+                            <td align="center">
+                            ð<br>ñ<br>ò<br>ó<br>ô<br>õ<br>ö<br>÷<br>
+                            ø<br>ù<br>ú<br>û<br>ü<br>ý<br>þ<br>ÿ<br>
+                            </td>
+                            <td>
+                            &amp;#240;<br>&amp;#241;<br>&amp;#242;<br>&amp;#243;<br>
+                            &amp;#244;<br>&amp;#245;<br>&amp;#246;<br>&amp;#247;<br>
+                            &amp;#248;<br>&amp;#249;<br>&amp;#250;<br>&amp;#251;<br>
+                            &amp;#252;<br>&amp;#253;<br>&amp;#254;<br>&amp;#255;<br>
+                            </td>
+                            <td>
+                            &amp;eth;<br>&amp;ntilde;<br>&amp;ograve;<br>&amp;oacute;<br>
+                            &amp;ocirc;<br>&amp;otilde;<br>&amp;ouml;<br>&amp;divide;<br>
+                            &amp;oslash;<br>&amp;ugrave;<br>&amp;uacute;<br>&amp;ucirc;<br>
+                            &amp;uuml;<br>&amp;yacute;<br>&amp;thorn;<br>&amp;yuml;<br>
+                            </td>
+                            <td>
+                            eth islandesa minúscula<br>eñe minúscula - n minúscula con tilde<br>o minúscula con acento grave<br>o minúscula con acento agudo<br> o minúscula con acento circunflejo<br>o minúscula con tilde<br>o minúscula con diéresis<br>signo de división <br> o barrada minúscula<br>u minúscula con acento grave<br>u minúscula con acento agudo<br>u minúscula con acento circunflejo<br> u minúscula con diéresis<br>y minúscula con acento agudo<br>thorn islandesa minúscula<br>y minúscula con diéresis<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <div class="hd6">&nbsp;HTML 4.01, ISO 10646, ISO 8879, alfabeto romano extendido A y B,<br>&nbsp;Soporte para browsers: Internet Explorer &gt; 4, Netscape &gt; 4</div>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0" class="e1">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>&nbsp;</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            338<br>339<br>352<br>353<br>376<br>402<br>
+                            </td>
+                            <td align="center">
+                            152<br>153<br>160<br>161<br>178<br>192<br>
+                            </td>
+                            <td align="center">
+                            Œ<br>œ<br>Š<br>š<br>Ÿ<br>ƒ<br>
+                            </td>
+                            <td>
+                            &amp;#338;<br>&amp;#339;<br>&amp;#352;<br>&amp;#353;<br>
+                            &amp;#376;<br>&amp;#402;<br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br>
+                            </td>
+                            <td>
+                            OE mayúscula (ligadura)<br>oe minúscula (ligadura)<br>S mayúscula con caron<br>s minúscula con caron - acento hacek<br> Y mayúscula con diéresis<br>f minúscula itálica - signo de función<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="cell">
+                            <br>
+                            <table align="CENTER" cellspacing="0" cellpadding="0" border="0">
+                            <tbody><tr>
+                            <td colspan="2" align="center"><b>&nbsp;</b></td>
+                            <td>&nbsp;</td>
+                            <td><b>HTML</b></td>
+                            <td><b>HTML</b></td>
+                            <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                            <td class="b3" align="center"><b>Dec</b></td>
+                            <td class="b3" align="center"><b>Hex</b></td>
+                            <td class="b9" align="center"><b>Símbolo</b></td>
+                            <td class="b8"><b>Numero</b></td>
+                            <td class="b9"><b>Nombre</b></td>
+                            <td class="d1"><b></b></td>
+                            </tr>
+                            <tr class="z1">
+                            <td colspan="6"><hr></td>
+                            </tr>
+                            <tr>
+                            <td align="center">
+                            8211<br>8212<br>8216<br>8217<br>8218<br>8220<br>8221<br>8222<br>
+                            8224<br>8225<br>8226<br>8230<br>8240<br>8364<br>8482<br>
+                            </td>
+                            <td align="center">
+                            2013<br>2014<br>2018<br>2019<br>201A<br>201C<br>201D<br>201E<br>
+                            2020<br>2021<br>2022<br>2026<br>2030<br>20AC<br>2122<br>
+                            </td>
+                            <td align="center">
+                            –<br>—<br>‘<br>’<br>‚<br>“<br>”<br>„<br>
+                            †<br>‡<br>•<br>…<br>‰<br>€<br>
+                            ™<br>
+                            </td>
+                            <td>
+                            &amp;#8211;<br>&amp;#8212;<br>&amp;#8216;<br>&amp;#8217;<br>
+                            &amp;#8218;<br>&amp;#8220;<br>&amp;#8221;<br>&amp;#8222;<br>
+                            &amp;#8224;<br>&amp;#8225;<br>&amp;#8226;<br>&amp;#8230;<br>
+                            &amp;#8240;<br>&amp;#8364;<br>&amp;#8482;<br>
+                            </td>
+                            <td>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br><br><br><br>
+                            <br>&amp;euro;<br><br>
+                            </td>
+                            <td>
+                            raya corta<br>raya larga<br>comilla izquierda - citación<br>comilla derecha - citación<br> comilla de citación - baja<br>comillas de citación - arriba izquierda<br>comillas de citación - arriba derecha<br>comillas de citación - abajo<br> cruz<br>doble cruz<br>viñeta - bullet<br>puntos suspensivos<br>signo de pro mil<br>signo de euro<br>signo de marca registrada - trade mark<br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+                            <br>
+                            </td>
+                            </tr>
+                            </tbody></table>
+
+                    <p>Los títulos se ponen con las etiquetas <b>&lt;h1&gt;</b>, <b>&lt;h2&gt;</b>, <b>&lt;h3&gt;</b>,
+                        <b>&lt;h4&gt;</b>, <b>&lt;h5&gt;</b>, <b>&lt;h6&gt;</b>. Solo debe existir un <b>&lt;h1&gt;</b>
+                        por el posicionamiento web por el concepto semántico, los demás son de uso ilimitado.
+                    </p>
+                    <img src="./../img/img-html/img2.jpg" class="img-2" alt="" srcset="">
+                    <p><i><b>lorem</b></i> sirve para escribir textos random. Se puede multiplicar por un numero que es
+                        el numero de veces que se repetirá.
+                        <br>
+                        <i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur minus voluptas deleniti
+                            inventore esse incidunt unde labore dicta maxime alias sunt quam dignissimos, nihil hic
+                            ratione. Doloremque natus ab dicta.</i><br>
+                    </p>
+                    <p>Las etiquetas en línea <b>&lt;b&gt;</b> es negrita, <b>&lt;i&gt;</b> es itálica,
+                        <b>&lt;strike&gt;</b> es tachado y <b>&lt;small&gt;</b> es texto pequeño.
+                    </p>
+                    <img src="./../img/img-html/img3.png" class="img" alt="" srcset="">
+                    <p>Existen etiquetas en línea y no, las que no son en línea se ajustan en toda la anchura del
+                        contenedor que la contiene.</p>
+                    <p>La etiqueta <b>&lt;a&gt;</b> se usa para rutas, podemos enlazar a otros archivos <i>html</i>
+                        dentro de nuestro proyecto incluso navegando entre carpetas con <i>'/'</i> o para retroceder un
+                        nivel con <i>'../'</i>, o también podemos usar la etiqueta para introducir un enlace
+                        <i>http://</i> para dirijirnos a una página externa todo esto en el atributo <i>href</i>, y si
+                        queremos que un enlace se abra en una pestaña aparte utilizamos el atributo
+                        <i>target="_BLANK"</i>. También en el atributo <i>href</i> podemos colocar selectores como el
+                        <i>id</i> para moverse directamente utilizando un <i>#nombreID</i> hasta la etiqueta con dicho
+                        id, con propiedades de estilos como <i>scroll-behavior: smooth;</i> haremos que vaya lentamente
+                        hasta el objetivo.
+                    </p>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;!-- anclaje a un archivo externo --&gt;
+&lt;a href="https://www.mozilla.com/"&gt;
+    Enlace externo
+&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;!-- enlace a un elemento en esta página con id="attr-href" --&gt;
+&lt;a href="#attr-href"&gt;
+    Descripción de enlaces de la misma página
+&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;!-- enlace a una dirección URL para abrirse en una nueva pestaña a través de una imagen --&gt;
+&lt;a href="https://developer.mozilla.org/en-US/" target="_blank"&gt;
+    &lt;img src="mdn_logo.png" alt="MDN logo" /&gt;
+&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;!-- enlace a una dirección de email a través de 'mailto' que abre la aplicación de correo del usuario  --&gt;
+&lt;a href="mailto:nowhere@mozilla.org"&gt;Enviar correo a nowhere&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;!-- enlace a un número telefónico a través de 'tel' que abre la aplicación de telefeno del usuario  --&gt;
+&lt;a href="tel:+491570156"&gt;+49 157 0156&lt;/a&gt;
+                        </code></pre>
+                    </div>
+                    <div class="bloque-codigo">
+                        <pre><code>
+// Script para configurar un enlace para capturar una imagen de un elemento &lt;canvas&gt; y poder descargarlo.
+var link = document.createElement('a');
+link.innerHTML = 'download image';
+
+link.addEventListener('click', function(ev) {
+    link.href = canvas.toDataURL();
+    link.download = "mypainting.png";
+}, false);
+
+document.body.appendChild(link);
+                        </code></pre>
+                    </div>
+                    <p>La etiqueta <b>&lt;br&gt;</b> sirve para hacer saltos de línea y no tiene etiqueta de cierre.</p>
+                    <p>La etiqueta <b>&lt;ol&gt;</b> sirve para abrir un listado ordenado por numeros que tiene que
+                        contener etiquetas <b>&lt;li&gt;</b> para determinar los elementos de una lista, si cambiamos la
+                        etiqueta <b>&lt;ol&gt;</b> por <b>&lt;ul&gt;</b> nos creara un listado con puntos.</p>
+                        <b>Lista ordenada.</b>
+                        <img src="./../img/img-html/img4.jpg" class="img" alt="" srcset="">
+                        <b>Lista no ordenada.</b>
+                        <img src="./../img/img-html/img5.jpg" class="img-2" alt="" srcset="">
+                        <b>Lista de definiciones.</b>
+                        <img src="./../img/img-html/img6.jpg" class="img-2" alt="" srcset="">
+                        <b>Listas anidadas.</b>
+                        <img src="./../img/img-html/img7.jpg" class="img-2" alt="" srcset="">
+                    <p>La etiqueta <b>&lt;table&gt;</b> sirve para insertar tablas, se agrupan datos del mismo tipo en
+                        columnas, para insertar filas se utiliza <b>&lt;tr&gt;</b> y dentro de ellas van las columnas
+                        con la etiqueta <b>&lt;td&gt;</b>.</p>
+                        <img src="./../img/img-html/img8.png" class="img-2" alt="" srcset="">
+                    <p>Con la etiqueta <b>&lt;img&gt;</b> podemos introducir una imagen con el atributo <i>src</i>, al
+                        cual introducimos la ruta de la imagen que puede ser de origen externo o local con los mismos
+                        tratamiento que de la etiqueta <b>&lt;a&gt;</b>, tambien con el atributo <i>alt</i> podemos
+                        definir que debemos mostrar en caso de no encontrar la imagen seleccionada en <i>src</i>, con el
+                        atributo <i>title</i> podemos poner un título a la imagen de modo que apuntando a la imagen con
+                        el <i>mouse</i> nos indique con un mensaje el título deseado.</p>
+
+                        <div class="bloque-codigo">
+                            <pre><code>
+&lt;!-- El descriptor 2x indica la densidad de pixel, si no se tiene ninguno por defecto es 1x. --&gt;
+
+&lt;img src="mdn-logo-sm.png" alt="MDN" srcset="mdn-logo-HD.png 2x"&gt;
+                            </code></pre>
+                        </div>
+                        <div class="bloque-codigo">
+                            <pre><code>
+&lt;!-- El atributosrc es ignorado en agentes de usuario que soportan srcset cuando usan descriptores 'w'. Cuando la condición de media (min-width: 600px) encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo). --&gt;
+
+&lt;img src="clock-demo-thumb-200.png" alt="Clock" srcset="clock-demo-thumb-200.png 200w, clock-demo-thumb-400.png 400w" sizes="(min-width: 600px) 200px, 50vw"&gt;
+                            </code></pre>
+                        </div>
+
+                    <p>La etiqueta <b>&lt;video&gt;</b> sirve para introducir un video mediante el atributo <i>src</i>,
+                        con el atributo <i>controls</i> nos muestra los controles necesarios para su reproducción.</p>
+                    <p>Para la etiqueta <b>&lt;audio&gt;</b> es basicamente lo mismo que la etiqueta
+                        <b>&lt;video&gt;</b>.
+                    </p>
+                    <div class="bloque-codigo">
+                        <pre><code>
+&lt;!-- Reproduce un vídeo, comenzando tan pronto como la recepción de video sea suficiente para permitir la reproducción sin pausas para descargar más. Mientras que el video comienza a reproducirse, se mostrará la imagen "posterimage.jpg" en su lugar. --&gt;
+
+&lt;video src="videofile.ogg" autoplay poster="posterimage.jpg"&gt;
+    Tu navegador no admite el elemento &lt;code&gt;video&lt;/code&gt;.
+&lt;/video&gt;
+
+&lt;!-- Otra forma. --&gt;
+
+&lt;video controls&gt;
+    &lt;source src="./../video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+                        </code></pre>
+                    </div>
+
+                    <p>Para crear formularios se utiliza la etiqueta <b>&lt;form&gt;</b>, dentro de esta contiene
+                        etiquetas como <b>&lt;input&gt;</b>, el cual consta de atributos como <i>name</i> que sirve como
+                        identificador para la parte del Back-End en captura de datos y <i>type</i> el cual puede ser
+                        <i>texto</i>, <i>password</i>, <i>mail</i>, <i>number</i>, <i>color</i>, <i>range</i> con
+                        atributos min y max que definen los rangos, <i>date</i> para fechas, <i>time</i> para la hora,
+                        <i>button</i> con un atributo <i>value</i> para poner el nombre al boton, <i>submit</i> es lo
+                        mismo que el tipo boton, la diferencia es que es un boton de envio de todo el formulario. Para
+                        los inputs existe el atributo <i>required</i> por ejemplo nos dice que es un requisito llenar
+                        los campos. <span class="notas-web">NOTA: Todas las validaciones se deberían de hacer por la
+                            parte del Back-End porque se pueden vulnerar estos requisitos modificando el código fuente y
+                            aún romper los requisitos</span>. Otra etiqueta de entrada de datos es el
+                        <b>&lt;textarea&gt;</b> el cual con el atributo <i>readonly</i> podemos hacer que el texto solo
+                        sea de lectura y tambien modificar ciertas cosas con otros atributos. Puede verse ejemplos en <a href="https://www.mclibre.org/consultar/htmlcss/html/html-formularios.html">https://www.mclibre.org/consultar/htmlcss/html/html-formularios.html</a>.
+                        <img src="./../img/img-html/img9.png" class="img" alt="" srcset="">
+                    </p>
+                </section>
+            </article>
+            <div class="focus-menu">
+                <div class="list-focus">
+                    <h4>Material complementario</h4>
+                    <div class="li-separator2"></div>
+                    <div class="contenido-complementario">
+                        <div class="contenido-enlaces">
+                            <ul>
+                                <li>Documentación de HTML <a
+                                        href="https://developer.mozilla.org/es/docs/Web/HTML">https://developer.mozilla.org/es/docs/Web/HTML</a>
+                                </li>
+                            </li>
+                        </div>
+                        <div class="contenido-videos">
+                            <iframe width="100%" src="https://www.youtube.com/embed/kN1XP-Bef7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h4>ARTÍCULOS RELACIONADOS</h4>
+            <div class="carousel">
+                <div class="carrusel-list" id="carrusel-list">
+
+                    <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+                        onclick="app.processingButton(event)">&lt;</button>
+
+                    <div class="carrusel-track" id="track">
+
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoHTML.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoCSS.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoJS.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoJava.png">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoAndroid.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="#">
+                                    <picture>
+                                        <img src="../img/logoPython.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+                        onclick="app.processingButton(event)">&gt;</button>
+                </div>
+            </div>
+            <h4>ALGUNOS TRABAJOS REALIZADOS</h4>
+            <div class="carrusel-proyectos">
+                <div class="slider2">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                        <div class="slide first">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="sobre-nosotros">
+                <div class="card-presentation">
+                    <div class="photo">
+                        <img src="../img/no-image.png">
+                        <h5>Dev. Daniel Quispe Kuno</h5>
+                        <h5>Ingeniero de Sistemas</h5>
+                    </div>
+                    <div class="presentation">
+                        <p>
+                            Estudiante de la Carrera de Informática en La Universidad Mayor de San Andrés con
+                            conocimientos en el área de desarrollo web y Android.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-footer">
+                <div class="description-final">
+                    <h6>ArdaDev</h6>
+                    <p>Desarrollando para hacer más fácil la vida e interacción entre nosotros. Por un sano acercamiento
+                        a la tecnología.</p>
+                </div>
+                <div class="description-skills">
+                    <h6>Habilidades</h6>
+                    <div class="list-skill">
+                        <div class="skill">
+                            <img src="../img/soft3.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft1.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft4.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft6.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft8.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft11.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-company">
+                    <h6>Sobre Nosotros</h6>
+                    <a href="#">Acerca de</a>
+                    <a href="#">Trabajos</a>
+                    <a href="#">Servicios/Procesos</a>
+                </div>
+                <div class="description-social">
+                    <h6>Contactos</h6>
+                    <div class="list-social">
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="li-separator2 separator-final"></div>
+            <div class="final">
+                <p>
+                    Todos los derechos reservados &copy; 2023 | <b>ArdaDev</b>
+                </p>
+            </div>
+            <div class="boton-arriba">
+                <a href="#"><i class="fa-sharp fa-regular fa-circle-up"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/4b64eb3a04.js" crossorigin="anonymous"></script>
+    <script src="../js/js-estilos.js"></script>
 </body>
+
 </html>
