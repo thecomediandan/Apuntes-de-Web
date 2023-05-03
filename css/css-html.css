@@ -263,7 +263,7 @@ nav{
 .nav li:hover{
     background: radial-gradient(45px,var(--color-secundario),var(--color-primario));
 }
-.nav li:nth-child(3){
+.nav li:nth-child(2){
     background: radial-gradient(45px,var(--color-secundario),var(--color-primario));
 }
 /* Estilos del Articulo */
