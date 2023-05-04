@@ -1,4 +1,2 @@
-{
-    "nombre" : "Daniel",
-    "instagram" : "@dannqk"
-}
+POO
+https://www.freecodecamp.org/espanol/news/programacion-orientada-a-objectos-en-javascript-explicado-con-ejemplos/
