@@ -1,7 +1,3 @@
-span {
-    color: red;
-    font-style: italic;
-}
-p{
-    text-align: justify;
+*::selection{
+    color: yellow;
 }

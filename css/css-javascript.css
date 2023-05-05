@@ -1,12 +1,14 @@
 :root{
-    --color-primario: #e5df27;
-    --color-secundario: #ffee00;
+    --color-primario: #ffee00;
+    --color-secundario: #000000;
     --color-blanco: #fff;
     --color-negro: #090909;
     --color-darkmode: #303030;
 
     --fuente-principal: 'Source Code Pro', monospace;
 }
+
+
 
 *::selection{
     background-color: var(--color-negro);
