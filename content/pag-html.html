@@ -59,15 +59,15 @@
             </li>
             <li>
                 <span class="li-separator"></span>
-                <button class="nav-button">HTML5</button>
+                <button class="nav-button nav-button-html">HTML5</button>
             </li>
             <li>
                 <span class="li-separator"></span>
-                <button class="nav-button">CSS</button>
+                <button class="nav-button nav-button-css">CSS</button>
             </li>
             <li>
                 <span class="li-separator"></span>
-                <button class="nav-button">JAVASCRIPT</button>
+                <button class="nav-button nav-button-js">JAVASCRIPT</button>
             </li>
             <li class="nav-button-end">
                 <span class="li-separator"></span>
@@ -1366,13 +1366,38 @@ document.body.appendChild(link);
                     <div class="contenido-complementario">
                         <div class="contenido-enlaces">
                             <ul>
-                                <li>Documentación de HTML <a
-                                        href="https://developer.mozilla.org/es/docs/Web/HTML">https://developer.mozilla.org/es/docs/Web/HTML</a>
+                                <li>Documentación de HTML <a href="https://developer.mozilla.org/es/docs/Web/HTML">https://developer.mozilla.org/es/docs/Web/HTML</a>
+                                </li>
+                                <li>Etiqueta Meta <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/meta">https://developer.mozilla.org/es/docs/Web/HTML/Element/meta</a>
+                                </li>
+                                <li>Etiquetas de Texto <a href="https://lenguajehtml.com/html/semantica/etiquetas-html-de-texto/">https://lenguajehtml.com/html/semantica/etiquetas-html-de-texto/</a>
+                                </li>
+                                <li>Caracteres Especiales <a href="http://personal.cimat.mx:8181/~amor/Academic/Books/Tutorial_HTML/caracteres.html">http://personal.cimat.mx:8181/~amor/Academic/Books/Tutorial_HTML/caracteres.html</a>
+                                </li>
+                                <li>Etiquetas de Listas <a href="https://www.hazunaweb.com/curso-de-html/listas/">https://www.hazunaweb.com/curso-de-html/listas/</a>
+                                </li>
+                                <li>Tablas <a href="https://www.htmlquick.com/es/tutorials/tables.html">https://www.htmlquick.com/es/tutorials/tables.html</a>
+                                </li>
+                                <li>Etiqueta Video <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/video">https://developer.mozilla.org/es/docs/Web/HTML/Element/video</a>
+                                </li>
+                                <li>Etiqueta de Imagen <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/img">https://developer.mozilla.org/es/docs/Web/HTML/Element/img</a>
+                                </li>
+                                <li>Formularios <a href="https://www.eniun.com/etiquetas-formularios-html5/">https://www.eniun.com/etiquetas-formularios-html5/</a>
                                 </li>
                             </li>
                         </div>
                         <div class="contenido-videos">
                             <iframe width="100%" src="https://www.youtube.com/embed/kN1XP-Bef7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/JIjbeQhPJfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/s3pC93LgP18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/tpCOfg1FgPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/U5Y5bIXMFGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/bYBoVAeCZL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/rVv9RCT1XS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/-gq0lTlOYu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/rKzZDrlvVXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/k0AXOYDu3so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/mrDHdOIPP7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -1383,41 +1408,40 @@ document.body.appendChild(link);
             <div class="carousel">
                 <div class="carrusel-list" id="carrusel-list">
 
-                    <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
-                        onclick="app.processingButton(event)">&lt;</button>
+                    <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">&lt;</button>
 
                     <div class="carrusel-track" id="track">
 
                         <div class="carrusel">
                             <div>
-                                <a href="#">
+                                <a href="./pag-estilos.html">
                                     <picture>
                                         <img src="../img/logoHTML.svg">
                                     </picture>
                                 </a>
                             </div>
-                        </div>
+                        </div>                      
                         <div class="carrusel">
                             <div>
-                                <a href="#">
+                                <a href="./pag-estilos.html">
                                     <picture>
                                         <img src="../img/logoCSS.svg">
                                     </picture>
                                 </a>
                             </div>
-                        </div>
+                        </div>                     
                         <div class="carrusel">
                             <div>
-                                <a href="#">
+                                <a href="./pag-javascript.html">
                                     <picture>
                                         <img src="../img/logoJS.svg">
                                     </picture>
                                 </a>
                             </div>
-                        </div>
+                        </div>                 
                         <div class="carrusel">
                             <div>
-                                <a href="#">
+                                <a href="">
                                     <picture>
                                         <img src="../img/logoJava.png">
                                     </picture>
@@ -1426,29 +1450,28 @@ document.body.appendChild(link);
                         </div>
                         <div class="carrusel">
                             <div>
-                                <a href="#">
+                                <a href="">
                                     <picture>
                                         <img src="../img/logoAndroid.svg">
                                     </picture>
                                 </a>
                             </div>
-                        </div>
+                        </div>                      
                         <div class="carrusel">
                             <div>
-                                <a href="#">
+                                <a href="">
                                     <picture>
                                         <img src="../img/logoPython.svg">
                                     </picture>
                                 </a>
                             </div>
-                        </div>
+                        </div>                     
                     </div>
-
-                    <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
-                        onclick="app.processingButton(event)">&gt;</button>
+                    
+                    <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">&gt;</button>
                 </div>
             </div>
-            <h4>ALGUNOS TRABAJOS REALIZADOS</h4>
+            <h4 id="trabajos-realizados">ALGUNOS TRABAJOS REALIZADOS</h4>
             <div class="carrusel-proyectos">
                 <div class="slider2">
                     <div class="slides">
@@ -1456,7 +1479,7 @@ document.body.appendChild(link);
                         <input type="radio" name="radio-btn" id="radio2">
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
-
+    
                         <div class="slide first">
                             <img src="../img/logoHTML.svg">
                         </div>
@@ -1469,7 +1492,7 @@ document.body.appendChild(link);
                         <div class="slide">
                             <img src="../img/logoHTML.svg">
                         </div>
-
+    
                         <div class="navigation-auto">
                             <div class="auto-btn1"></div>
                             <div class="auto-btn2"></div>
@@ -1484,31 +1507,29 @@ document.body.appendChild(link);
                         <label for="radio3" class="manual-btn"></label>
                         <label for="radio4" class="manual-btn"></label>
                     </div>
-
+    
                 </div>
             </div>
 
             <div id="sobre-nosotros">
                 <div class="card-presentation">
                     <div class="photo">
-                        <img src="../img/no-image.png">
+                        <img src="../img/foto-perfil.jpg">
                         <h5>Dev. Daniel Quispe Kuno</h5>
                         <h5>Ingeniero de Sistemas</h5>
                     </div>
                     <div class="presentation">
                         <p>
-                            Estudiante de la Carrera de Informática en La Universidad Mayor de San Andrés con
-                            conocimientos en el área de desarrollo web y Android.
+                            Estudiante de la Carrera de Informática en La Universidad Mayor de San Andrés con conocimientos en el área de desarrollo web y Android.
                         </p>
                     </div>
                 </div>
             </div>
-
+            
             <div class="block-footer">
                 <div class="description-final">
                     <h6>ArdaDev</h6>
-                    <p>Desarrollando para hacer más fácil la vida e interacción entre nosotros. Por un sano acercamiento
-                        a la tecnología.</p>
+                    <p>Desarrollando para hacer más fácil la vida e interacción entre nosotros. Por un sano acercamiento a la tecnología.</p>
                 </div>
                 <div class="description-skills">
                     <h6>Habilidades</h6>
@@ -1535,19 +1556,19 @@ document.body.appendChild(link);
                 </div>
                 <div class="description-company">
                     <h6>Sobre Nosotros</h6>
-                    <a href="#">Acerca de</a>
-                    <a href="#">Trabajos</a>
-                    <a href="#">Servicios/Procesos</a>
+                    <a href="#sobre-nosotros">Acerca de</a>
+                    <a href="#trabajos-realizados">Trabajos</a>
+                    <a href="">Servicios/Procesos</a>
                 </div>
                 <div class="description-social">
                     <h6>Contactos</h6>
                     <div class="list-social">
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -1559,7 +1580,7 @@ document.body.appendChild(link);
             </div>
             <div class="boton-arriba">
                 <a href="#"><i class="fa-sharp fa-regular fa-circle-up"></i></a>
-            </div>
+            </div>         
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/4b64eb3a04.js" crossorigin="anonymous"></script>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Source+Code+Pro:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Apuntes de programación Web</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-menu-logo">
+                <i class="fa-solid fa-bars"></i>
+                <h1>
+                    ArdaDev
+                </h1>
+                <div class="nav-menu-logo_button">
+                    <div class="mode-black-button">
+                        <span class="title-switch">Modo Oscuro</span>
+                        <label class="switch">
+                            <input class="cb" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fa-solid fa-language btn-idioma"></i>
+                    </div>
+
+                    <div class="window-language">
+                        <div class="menu-language">
+                            <span>Seleccione un idioma</span>
+                            <ul>
+                                <li><i class="fa-solid fa-language"></i> <b>ES</b> Español</li>
+                                <li><i class="fa-solid fa-language"></i> <b>EN</b> Inglés</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="subtitulo">
+                    <h2>Apuntes de programación web: HTML, CSS y JavaScript.</h2>
+                </div>
+            </nav>
+        </header>
+        <div class="nav">
+            <li class="nav-button-start">
+                <button class="nav-button nav-button-inicio">INICIO</button>
+            </li>
+            <li>
+                <span class="li-separator"></span>
+                <button class="nav-button nav-button-html">HTML5</button>
+            </li>
+            <li>
+                <span class="li-separator"></span>
+                <button class="nav-button nav-button-css">CSS</button>
+            </li>
+            <li>
+                <span class="li-separator"></span>
+                <button class="nav-button nav-button-js">JAVASCRIPT</button>
+            </li>
+            <li class="nav-button-end">
+                <span class="li-separator"></span>
+                <button class="nav-button">SOBRE NOSOTROS</button>
+            </li>
+        </div>
+        <div class="container-menu">
+            <div class="menu">
+                <div class="list">
+                    <div class="navegacion-movil">
+                        <li><a href="#"><i class="fa-solid fa-house"></i><span class="div-list-title1">INICIO</span></a>
+                        </li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-brands fa-html5"></i><span class="div-list-title1">HTML5</span></a>
+                        </li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-brands fa-css3-alt"></i><span
+                                    class="div-list-title1">CSS</span></a></li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-brands fa-square-js"></i><span
+                                    class="div-list-title1">JAVASCRIPT</span></a></li>
+                        <div class="li-separator2"></div>
+                        <li><a href="#"><i class="fa-solid fa-user"></i><span class="div-list-title1">SOBRE
+                                    NOSOTROS</span></a></li>
+                    </div>
+                    <li><a href="#int-html"><span class="div-list-title1">Introduccion HTML</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#int-css"><span class="div-list-title1">Introduccion CSS</span></a></li>
+                    <div class="li-separator2"></div>
+                    <li><a href="#int-javascript"><span class="div-list-title1">Introduccion Javascript</span></a></li>
+                </div>
+            </div>
+            <div class="cerrar-navegacion-movil">
+            </div>
+            <article>
+                <section id="int-html">
+                    <h3>HTML: Lenguaje de etiquetas de hipertexto</h3>
+                    <br>
+                    <p>
+                        HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, generalmente se utilizan otras tecnologías para describir la apariencia/presentación de una página web (CSS) o la funcionalidad/comportamiento (JavaScript).
+                    </p>
+                    <br>
+                    <p>
+                        "Hipertexto" hace referencia a los enlaces que conectan páginas web entre sí, ya sea dentro de un único sitio web o entre sitios web. Los enlaces son un aspecto fundamental de la Web. Al subir contenido a Internet y vincularlo a las páginas creadas por otras personas, te conviertes en un participante activo en la «World Wide Web» (Red Informática Mundial).
+                    </p>
+                    <br>
+                    <p>
+                        HTML utiliza "marcas" para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web. Las marcas HTML incluyen "elementos" especiales como <b>&lt;head>, &lt;title>, &lt;body>, &lt;header>, &lt;footer>, &lt;article>, &lt;section>, &lt;p>, &lt;div>, &lt;span>, &lt;img>, &lt;aside>, &lt;audio>, &lt;canvas>, &lt;datalist>, &lt;details>, &lt;embed>, &lt;nav>, &lt;output> (en-US), &lt;progress>, &lt;video>, &lt;ul>, &lt;ol>, &lt;li></b> y muchos otros.
+                    </p>
+                    <br>
+                    <p>
+                        Un elemento HTML se distingue de otro texto en un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por "&lt;" y ">". El nombre de un elemento dentro de una etiqueta no distingue entre mayúsculas y minúsculas. Es decir, se puede escribir en mayúsculas, minúsculas o una mezcla. Por ejemplo, la etiqueta <b>&lt;title></b> se puede escribir como <b>&lt;Title></b>, <b>&lt;TITLE></b> o de cualquier otra forma.
+                    </p>
+                    <br>
+                    <p>
+                        Los siguientes artículos pueden ayudarte a obtener más información sobre HTML.
+                    </p>
+                </section>
+                <section id="int-css">
+                    <h3>CSS</h3>
+                    <br>
+                    <p>
+                        Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML (en-US) (incluyendo varios lenguajes basados en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
+                    </p>
+                    <br>
+                    <p>
+                        CSS es uno de los lenguajes base de la Open Web y posee una especificación estandarizada por parte del W3C. Anteriormente , el desarrollo de varias partes de las especificaciones de CSS era realizado de manera sincrónica, lo que permitía el versionado de las recomendaciones. Probablemente habrás escuchado acerca de CSS1, CSS2.1, CSS3. Sin embargo, CSS4 nunca se ha lanzado como una versión oficial.
+                    </p>
+                    <br>
+                    <p>
+                        Desde CSS3, el alcance de las especificaciones se incrementó de forma significativa y el progreso de los diferentes módulos de CSS comenzó a mostrar varias diferencias, lo que hizo más efectivo desarrollar y publicar recomendaciones separadas por módulos. En vez de versionar las especificaciones de CSS, la W3C actualmente realiza una captura de las ultimas espcificaciones estables de CSS.
+                    </p>
+                </section>
+                <section id="int-javascript">
+                    <h3>Javascript</h3>
+                    <br>
+                    <p>
+                        JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en acerca de JavaScript.
+                    </p>
+                    <br>
+                    <p>
+                        Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes que son específicas de las páginas web u otros entornos host. Para información acerca de APIs específicas para páginas Web, consulta APIs Web y DOM.
+                    </p>
+                    <br>
+                    <p>
+                        El estándar para JavaScript es ECMAScript (ECMA-262) y la especificación de la API para la Internacionalización de ECMAScript (ECMA-402). La documentación en MDN está basada enteramente en las últimas versiones preliminares de ECMA-262 y ECMA-402. Y en algunos casos donde algunas propuestas para nuevas funciones para ECMAScript ya hayan sido implementadas en los navegadores, la documentación y algunos artículos de MDN pueden hacer uso de algunas de estas funciones.
+                    </p>
+                    <br>
+                    <p>
+                        No confundas JavaScript con el lenguaje de programación Java. Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
+                    </p>
+                </section>
+            </article>
+            <div class="focus-menu">
+                <div class="list-focus">
+                    <h4>Material complementario</h4>
+                    <div class="li-separator2"></div>
+                    <div class="contenido-complementario">
+                        <div class="contenido-enlaces">
+                            <ul>
+                                <li>HTML <a href="https://developer.mozilla.org/es/docs/Web/HTML">https://developer.mozilla.org/es/docs/Web/HTML.</a>
+                                </li>
+                                <li>CSS <a href="https://developer.mozilla.org/es/docs/Web/CSS">https://developer.mozilla.org/es/docs/Web/CSS.</a>
+                                </li>
+                                <li>Javascript <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">https://developer.mozilla.org/es/docs/Web/JavaScript.</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contenido-videos">
+                            <iframe width="100%" src="https://www.youtube.com/embed/kN1XP-Bef7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/OWKXEJN67FE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/z95mZVUcJ-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/xOinGb2MZSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="100%" src="https://www.youtube.com/embed/EbMi1Qj4rVE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h4>ARTÍCULOS RELACIONADOS</h4>
+            <div class="carousel">
+                <div class="carrusel-list" id="carrusel-list">
+
+                    <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">&lt;</button>
+
+                    <div class="carrusel-track" id="track">
+
+                        <div class="carrusel">
+                            <div>
+                                <a href="./pag-estilos.html">
+                                    <picture>
+                                        <img src="../img/logoHTML.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                      
+                        <div class="carrusel">
+                            <div>
+                                <a href="./pag-estilos.html">
+                                    <picture>
+                                        <img src="../img/logoCSS.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                     
+                        <div class="carrusel">
+                            <div>
+                                <a href="./pag-javascript.html">
+                                    <picture>
+                                        <img src="../img/logoJS.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                 
+                        <div class="carrusel">
+                            <div>
+                                <a href="">
+                                    <picture>
+                                        <img src="../img/logoJava.png">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carrusel">
+                            <div>
+                                <a href="">
+                                    <picture>
+                                        <img src="../img/logoAndroid.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                      
+                        <div class="carrusel">
+                            <div>
+                                <a href="">
+                                    <picture>
+                                        <img src="../img/logoPython.svg">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>                     
+                    </div>
+                    
+                    <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">&gt;</button>
+                </div>
+            </div>
+            <h4 id="trabajos-realizados">ALGUNOS TRABAJOS REALIZADOS</h4>
+            <div class="carrusel-proyectos">
+                <div class="slider2">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+    
+                        <div class="slide first">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/logoHTML.svg">
+                        </div>
+    
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div id="sobre-nosotros">
+                <div class="card-presentation">
+                    <div class="photo">
+                        <img src="./img/foto-perfil.jpg">
+                        <h5>Dev. Daniel Quispe Kuno</h5>
+                        <h5>Ingeniero de Sistemas</h5>
+                    </div>
+                    <div class="presentation">
+                        <p>
+                            Estudiante de la Carrera de Informática en La Universidad Mayor de San Andrés con conocimientos en el área de desarrollo web y Android.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block-footer">
+                <div class="description-final">
+                    <h6>ArdaDev</h6>
+                    <p>Desarrollando para hacer más fácil la vida e interacción entre nosotros. Por un sano acercamiento a la tecnología.</p>
+                </div>
+                <div class="description-skills">
+                    <h6>Habilidades</h6>
+                    <div class="list-skill">
+                        <div class="skill">
+                            <img src="../img/soft3.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft1.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft4.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft6.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft8.png">
+                        </div>
+                        <div class="skill">
+                            <img src="../img/soft11.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-company">
+                    <h6>Sobre Nosotros</h6>
+                    <a href="#sobre-nosotros">Acerca de</a>
+                    <a href="#trabajos-realizados">Trabajos</a>
+                    <a href="">Servicios/Procesos</a>
+                </div>
+                <div class="description-social">
+                    <h6>Contactos</h6>
+                    <div class="list-social">
+                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="li-separator2 separator-final"></div>
+            <div class="final">
+                <p>
+                    Todos los derechos reservados &copy; 2023 | <b>ArdaDev</b>
+                </p>
+            </div>
+            <div class="boton-arriba">
+                <a href="#"><i class="fa-sharp fa-regular fa-circle-up"></i></a>
+            </div>         
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/4b64eb3a04.js" crossorigin="anonymous"></script>
+    <script src="../js/js-estilos.js"></script>
+</body>
+
+</html>
