@@ -1,6 +1,6 @@
 :root{
     --color-primario: #ffee00;
-    --color-secundario: #000000;
+    --color-secundario: #e2bd07;
     --color-blanco: #fff;
     --color-negro: #090909;
     --color-darkmode: #303030;
@@ -238,6 +238,7 @@ nav{
     font-weight: bold;
     font-size: 15px;
     text-shadow: 0 0 15px var(--color-secundario);
+    color: var(--color-negro);
 }
 .nav li{
     display: flex;
@@ -265,7 +266,7 @@ nav{
 .nav li:hover{
     background: radial-gradient(45px,var(--color-secundario),var(--color-primario));
 }
-.nav li:nth-child(2){
+.nav li:nth-child(4){
     background: radial-gradient(45px,var(--color-secundario),var(--color-primario));
 }
 /* Estilos del Articulo */
@@ -389,6 +390,7 @@ details li:hover {
 .list-focus h4{
     font-weight: bolder;
     font-size: 15px;
+    color: var(--color-negro);
 }
 .list-focus .li-separator2{
     margin: 10px;
@@ -632,7 +634,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg,#000,var(--color-primario));
+    background: linear-gradient(180deg,var(--color-negro),var(--color-primario),var(--color-negro));
 }
 
 footer h4{
@@ -839,9 +841,11 @@ footer h4{
 }
 .card-presentation .photo h5:nth-child(2){
     font-size: x-large;
+    color: var(--color-blanco);
+    font-weight: bold;
 }
 .card-presentation .photo h5:last-child{
-    color: var(--color-secundario);
+    color: var(--color-darkmode);
     font-weight: bold;
 }
 .card-presentation .photo img{
@@ -853,7 +857,7 @@ footer h4{
     margin-bottom: 20px;
 }
 .presentation{
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-weight: bold;
     width: 80%;
     margin-bottom: 40px;
