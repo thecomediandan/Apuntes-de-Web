@@ -402,7 +402,7 @@
                 <section id="funciones">
                     <h3>Funciones</h3>
                     <p>
-                        Las <b>funciones</b> en Javascript se pueden representar de dos maneras diferentes y sirven para optimizar el código. La forma de usar las funciones es por ejemplo <i><b>function</b> nombre_de_la_funcion(parametros_si_se_quiere){código; <b>return</b> valor_de_retorno_si_se_quiere;}</i> y se puede llamar a ala función de la siguiente manera <i><b>nombre_de_la_funcion(parametros_si_se_necesita);</b></i>, otra manera de crear una función es creando una variable <i><b>const nombre_de_la_funcion = function(parametros_si_se_quiere){código; return valor_de_retorno_si_se_quiere;};</b></i> y se la llama de la misma manera. <i>Las funciones flechas</i> son otra manera de crear funciones como por ejemplo <b>const nombre_de_la_funcion = (parametros_si_se_necesita) -&gt; {código; return valor_de_retorno_si_se_quiere;};</b>, algunas característicaespeciales pueden ser que si lleva un solo parámetro no necesita paréntesis, también si lleva una sola línea de código no es necesario las llaves y el valor de retorno es automático a la variable a la cual inicializamos como función.
+                        Las <b>funciones</b> en Javascript se pueden representar de dos maneras diferentes y sirven para optimizar el código. La forma de usar las funciones es por ejemplo function nombre_de_la_funcion(parametros_si_se_quiere){código; return valor_de_retorno_si_se_quiere;} y se puede llamar a ala función de la siguiente manera nombre_de_la_funcion(parametros_si_se_necesita);, otra manera de crear una función es creando una variable const nombre_de_la_funcion = function(parametros_si_se_quiere){código; return valor_de_retorno_si_se_quiere;}; y se la llama de la misma manera. <i>Las funciones flechas</i> son otra manera de crear funciones como por ejemplo const nombre_de_la_funcion = (parametros_si_se_necesita) -&gt; {código; return valor_de_retorno_si_se_quiere;};, algunas característicaespeciales pueden ser que si lleva un solo parámetro no necesita paréntesis, también si lleva una sola línea de código no es necesario las llaves y el valor de retorno es automático a la variable a la cual inicializamos como función.
                     </p>
                     <img src="./../img/img-js/img15.png" class="img-2">
                 </section>
@@ -830,15 +830,13 @@
                 </section>
 
                 <section id="valores-atributos">
-                    <p>
-                        <table>
-                            <thead>
-                                <h3>MÉTODOS PARA DEFINIR, OBTENER Y ELIMINAR VALORES DE ATRIBUTOS</h3>
-                            </thead>
-                            <tr>
-                                <td>Método</td>
-                                <td>Característica</td>
-                            </tr>
+                    <h3>MÉTODOS PARA DEFINIR, OBTENER Y ELIMINAR VALORES DE ATRIBUTOS</h3>
+                    <table>
+                        <thead>
+                            <th>Método</th>
+                            <th>Característica</th>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>setAttribute()</td>
                                 <td>Modifica el valor de un atributo. <b>elemento_seleccionado.setAttribute("nombre_de_atributo", "valor_a_modificar");</b></td>
@@ -851,8 +849,8 @@
                                 <td>removeAttribute()</td>
                                 <td>Remueve el valor de un atributo. <b>elemento_seleccionado.removeAttribute("nombre_de_atributo");</b></td>
                             </tr>
-                        </table>
-                    </p>
+                        </tbody>
+                    </table>
                 </section>
 
                 <section id="atributos-globales">
@@ -860,44 +858,43 @@
                     <p>
                         <table>
                             <thead>
-                                <h2>Atributos Globales</h2>
+                                <th>Método</th>
+                                <th>Característica</th>
                             </thead>
-                            <tr>
-                                <td>Método</td>
-                                <td>Característica</td>
-                            </tr>
-                            <tr>
-                                <td>class</td>
-                                <td>Lista de clases del elemento separadas por espacios.</td>
-                            </tr>
-                            <tr>
-                                <td>contenteditable</td>
-                                <td>Indica si el elemento puede ser modificable por el usuario (bool).</td>
-                            </tr>
-                            <tr>
-                                <td>dir</td>
-                                <td>Indica la direccionalidad del texto. con valores <i>ltr</i> dirección izquierda, <i>rtl</i> dirección derecha.</td>
-                            </tr>
-                            <tr>
-                                <td>hidden</td>
-                                <td>Indica si el elemento aún no es, o ya no es relevante. sus valores son booleanas (true/false), desaparece o no dependiendo del valor al elemento.</td>
-                            </tr>
-                            <tr>
-                                <td>id</td>
-                                <td>Define un identificador único.</td>
-                            </tr>
-                            <tr>
-                                <td>style</td>
-                                <td>Contiene declaraciones de estilo CSS para ser aplicadas al elemento.</td>
-                            </tr>
-                            <tr>
-                                <td>tabindex</td>
-                                <td>Indica si el elemento puede obtener un focus de input. Su valor son número que indican el orden en que se irá dando el focus mientras presionemos la tecla TAB.</td>
-                            </tr>
-                            <tr>
-                                <td>title</td>
-                                <td>Contiene un texto con información relacionada al elemento al que pertenece.</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>class</td>
+                                    <td>Lista de clases del elemento separadas por espacios.</td>
+                                </tr>
+                                <tr>
+                                    <td>contenteditable</td>
+                                    <td>Indica si el elemento puede ser modificable por el usuario (bool).</td>
+                                </tr>
+                                <tr>
+                                    <td>dir</td>
+                                    <td>Indica la direccionalidad del texto. con valores <i>ltr</i> dirección izquierda, <i>rtl</i> dirección derecha.</td>
+                                </tr>
+                                <tr>
+                                    <td>hidden</td>
+                                    <td>Indica si el elemento aún no es, o ya no es relevante. sus valores son booleanas (true/false), desaparece o no dependiendo del valor al elemento.</td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>Define un identificador único.</td>
+                                </tr>
+                                <tr>
+                                    <td>style</td>
+                                    <td>Contiene declaraciones de estilo CSS para ser aplicadas al elemento.</td>
+                                </tr>
+                                <tr>
+                                    <td>tabindex</td>
+                                    <td>Indica si el elemento puede obtener un focus de input. Su valor son número que indican el orden en que se irá dando el focus mientras presionemos la tecla TAB.</td>
+                                </tr>
+                                <tr>
+                                    <td>title</td>
+                                    <td>Contiene un texto con información relacionada al elemento al que pertenece.</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </p>
                     <p>
@@ -924,36 +921,35 @@
                         El atributo <b>classlist</b> hace referencia al manejo del atributo clase de los elementos, los cuales tienen algunos método muy importantes, tambien es un atributo que prescinde de métodos como <i>setAttribute(), getAttribute() y removeAttribute()</i>, y su utilización es directa <b>elemento.classlist.metodo_classlist();</b>.
                         <table>
                             <thead>
-                                <h2>MÉTODOS DE CLASSLIST</h2>
+                                <th>Métodos</th>
+                                <th>Caracteríticas</th>
                             </thead>
-                            <tr>
-                                <td>Métodos</td>
-                                <td>Caracteríticas</td>
-                            </tr>
-                            <tr>
-                                <td>add()</td>
-                                <td>Añade una clase.</td>
-                            </tr>
-                            <tr>
-                                <td>remove()</td>
-                                <td>Remueve una clase.</td>
-                            </tr>
-                            <tr>
-                                <td>item()</td>
-                                <td>Devuelve la clase del índice especificado.</td>
-                            </tr>
-                            <tr>
-                                <td>contains()</td>
-                                <td>Verifica si ese elemento posee o no, la clase especificada.</td>
-                            </tr>
-                            <tr>
-                                <td>replace()</td>
-                                <td>Reemplaza una clase por otra.</td>
-                            </tr>
-                            <tr>
-                                <td>toggle()</td>
-                                <td>Si no tiene la clase especificada, la agrega, si ya la tiene, la elimina.</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>add()</td>
+                                    <td>Añade una clase.</td>
+                                </tr>
+                                <tr>
+                                    <td>remove()</td>
+                                    <td>Remueve una clase.</td>
+                                </tr>
+                                <tr>
+                                    <td>item()</td>
+                                    <td>Devuelve la clase del índice especificado.</td>
+                                </tr>
+                                <tr>
+                                    <td>contains()</td>
+                                    <td>Verifica si ese elemento posee o no, la clase especificada.</td>
+                                </tr>
+                                <tr>
+                                    <td>replace()</td>
+                                    <td>Reemplaza una clase por otra.</td>
+                                </tr>
+                                <tr>
+                                    <td>toggle()</td>
+                                    <td>Si no tiene la clase especificada, la agrega, si ya la tiene, la elimina.</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </p>
                 </section>
@@ -1039,29 +1035,27 @@
                         
                         <table>
                             <thead>
-                                <br>
-                                <h2>PROPIEDADES DE SIBLINGS (HERMANOS)</h2>
+                                <th>Propiedad</th>
+                                <th>Características</th>
                             </thead>
-                            <tr>
-                                <td>Propiedad</td>
-                                <td>Características</td>
-                            </tr>
-                            <tr>
-                                <td>nextSibling</td>
-                                <td>Selecciona el nodo hermano siguiente, aunque este sea un texto en blanco o espacio entre etiquetas.</td>
-                            </tr>
-                            <tr>
-                                <td>previousSibling</td>
-                                <td>Selecciona el nodo hermano anterior, aunque este sea un texto en blanco o espacio entre etiquetas.</td>
-                            </tr>
-                            <tr>
-                                <td>nextElementSibling</td>
-                                <td>Selecciona el nodo o elemento hermano siguiente.</td>
-                            </tr>
-                            <tr>
-                                <td>previousElementSibling</td>
-                                <td>Selecciona el nodo o elemento hermano anterior.</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>nextSibling</td>
+                                    <td>Selecciona el nodo hermano siguiente, aunque este sea un texto en blanco o espacio entre etiquetas.</td>
+                                </tr>
+                                <tr>
+                                    <td>previousSibling</td>
+                                    <td>Selecciona el nodo hermano anterior, aunque este sea un texto en blanco o espacio entre etiquetas.</td>
+                                </tr>
+                                <tr>
+                                    <td>nextElementSibling</td>
+                                    <td>Selecciona el nodo o elemento hermano siguiente.</td>
+                                </tr>
+                                <tr>
+                                    <td>previousElementSibling</td>
+                                    <td>Selecciona el nodo o elemento hermano anterior.</td>
+                                </tr>
+                            </tbody>
                         </table>
                      </p>
                      <p>
@@ -1348,7 +1342,7 @@
                         </div>
                         <b>Manejo de errores o Excepciones</b>
                         <p>
-                            Son errores que podemos encontrar con códigos que tienen que ver con flujos que no podemos controlar, por ejemplo la conexión con una base de datos, la carga de archivo, etc. Podemos ver estos errores en páginas como <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#expresiones_de_manejo_de_excepciones">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#expresiones_de_manejo_de_excepciones</a>
+                            Son errores que podemos encontrar con códigos que tienen que ver con flujos que no podemos controlar, por ejemplo la conexión con una base de datos, la carga de archivo, etc. Podemos ver estos errores en páginas como las que se encontraran en la parte de Material Complementario.
                         </p>
                         <div class="img-sections">
                             <img src="./../img/img-js-mid/js-mid-6.png" class="img">

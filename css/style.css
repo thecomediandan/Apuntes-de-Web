@@ -192,10 +192,9 @@ h1{
 }
 .subtitulo{
     display: flex;
-    align-items: center;
     min-height: 20%;
-    width: 500px;
-    margin-left: 5%;
+    width: 100%;
+    margin: auto;
 }
 h2{
     font-size: 30px;
@@ -1145,7 +1144,7 @@ footer h4{
         margin-top: 80px;
         background-color: transparent;
         font-size: 20px;
-        width: 100vw;
+        width: 100%;
         text-align: center;
         padding: 0;
         margin-bottom: 20px;
@@ -1191,7 +1190,7 @@ footer h4{
 
     .focus-menu{
         display: block;
-        width: 100%;
+        width: 80%;
         margin-left: 25px;
     }
     .list-focus h4 {
@@ -1204,6 +1203,9 @@ footer h4{
     }
     .carousel{
         height: 204px;
+    }
+    .carrusel {
+        width: 200px;
     }    
     .carrusel a img{
         object-fit: contain;
@@ -1216,7 +1218,7 @@ footer h4{
         height: 200px;
     }
     .slider2{
-        width: 400px;
+        width: 80%;
         height: 200px;
     }
     .slides{
@@ -1224,15 +1226,15 @@ footer h4{
         height: 200px;
     }
     .slide img{
-        width: 400px;
+        width: 80%;
         height: 200px;
     }
     .navigation-manual{
-        width: 400px;
+        width: 80%;
         margin-top: -40px;
     }
     .navigation-auto{
-        width: 400px;
+        width: 80%;
         margin-top: 160px;
     }
 
@@ -1349,5 +1351,9 @@ footer h4{
     .fa-circle-up{
         font-size: 40px;
         color: var(--color-secundario);
+    }
+
+    .final > p{
+        text-align: center;
     }
 }
