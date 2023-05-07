@@ -30,7 +30,7 @@ pre{
 }
 code{
     display: block;
-    width: fit-content;
+    width: inherit;
 }
 td > table{
     width: 100%;
@@ -1038,6 +1038,10 @@ footer h4{
 .boton-arriba{
     display: none;
 }
+.cb {
+    border: none;
+}
+
 
 @media (prefers-color-scheme: dark) {
     /* Elementos a cambiar de color en modedark*/
@@ -1265,7 +1269,7 @@ footer h4{
 
     table{
         color: #000;
-        width: 100%;
+        width: inherit;
         font-size: 10px;
         margin: 20px 0;
         background-color: #929292;
