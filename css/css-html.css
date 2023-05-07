@@ -1028,6 +1028,7 @@ footer h4{
 }
 .cb {
     border: none;
+    outline: none;
 }
 
 
@@ -1122,6 +1123,9 @@ footer h4{
     }
 }
 @media (max-width: 850px) {
+    .container{
+        overflow-x: hidden;
+    }
     .container-menu{
         display: flex;
         flex-direction: row;

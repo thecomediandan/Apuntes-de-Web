@@ -1028,8 +1028,8 @@ footer h4{
 }
 .cb {
     border: none;
+    outline: none;
 }
-
 @media (prefers-color-scheme: dark) {
     /* Elementos a cambiar de color en modedark*/
 }
@@ -1121,6 +1121,9 @@ footer h4{
     }
 }
 @media (max-width: 850px) {
+    .container{
+        overflow-x: hidden;
+    }
     .container-menu{
         display: flex;
         flex-direction: row;
