@@ -1003,10 +1003,6 @@ footer h4{
 .boton-arriba{
     display: none;
 }
-.cb {
-    border: none;
-    outline: none;
-}
 
 @media (prefers-color-scheme: dark) {
     /* Elementos a cambiar de color en modedark*/
@@ -1210,7 +1206,8 @@ footer h4{
         height: 200px;
     }
     .slide img{
-        width: 400px;
+        margin: auto;
+        width: 80%;
         height: 200px;
     }
     .navigation-manual{
