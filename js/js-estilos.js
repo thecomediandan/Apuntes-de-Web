@@ -1,9 +1,5 @@
 
 const checkBox = document.querySelector(".cb");
-const botonInicio =document.querySelector(".nav-button-inicio");
-const botonHTML =document.querySelector(".nav-button-html");
-const botonCSS =document.querySelector(".nav-button-css");
-const botonJS =document.querySelector(".nav-button-js");
 const botonNosotros =document.querySelector(".nav-button-end .nav-button");
 const lan = document.querySelector(".btn-idioma");
 const vtnLan = document.querySelector(".window-language");
@@ -26,18 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //        behavior: "smooth"
 //    });
 //});
-botonInicio.addEventListener('click', function(){
-    window.location.href="./../index.html";
-});
-botonHTML.addEventListener('click', function(){
-    window.location.href="./../content/pag-html.html";
-});
-botonCSS.addEventListener('click', function(){
-    window.location.href="./../content/pag-estilos.html";
-});
-botonJS.addEventListener('click', function(){
-    window.location.href="./../content/pag-javascript.html";
-});
+
 botonNosotros.addEventListener('click', function(){
     const seccionNosotros = document.getElementById("sobre-nosotros");
     seccionNosotros.scrollIntoView({
