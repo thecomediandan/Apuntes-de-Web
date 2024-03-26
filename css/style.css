@@ -109,7 +109,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 250px;
+    width: 190px;
 }
 .mode-black-button > *{
     margin-left: 20px;
@@ -863,6 +863,7 @@ footer h4{
     display: flex;
     flex-wrap: wrap;
     font-family: var(--fuente-principal);
+    padding-top: 3rem;
     margin-bottom: 60px;
 }
 .block-footer a:hover{

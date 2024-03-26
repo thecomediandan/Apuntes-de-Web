@@ -69,7 +69,7 @@ body::-webkit-scrollbar:horizontal {
     height: 12px;
 }
 body::-webkit-scrollbar-thumb {
-    background-color: var(--color-primario);
+    background-color: var(--color-darkmode);
     border-radius: 20px;
     border: 1px solid var(--color-blanco);
 }
@@ -117,7 +117,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 250px;
+    width: 190px;
 }
 .mode-black-button > *{
     margin-left: 20px;
@@ -876,10 +876,14 @@ footer h4{
     display: flex;
     flex-wrap: wrap;
     font-family: var(--fuente-principal);
+    margin-top: 3rem;
     margin-bottom: 60px;
 }
 .block-footer a:hover{
     text-shadow: 0 0 15px var(--color-secundario);
+}
+.block-footer a {
+    color: var(--color-blanco);
 }
 .description-final{
     width: 25%;

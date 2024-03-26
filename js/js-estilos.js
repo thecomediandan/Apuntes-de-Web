@@ -1,9 +1,9 @@
 
 const checkBox = document.querySelector(".cb");
 const botonNosotros =document.querySelector(".nav-button-end .nav-button");
-const lan = document.querySelector(".btn-idioma");
-const vtnLan = document.querySelector(".window-language");
-const vtnLanMenu = document.querySelector(".window-language .menu-language");
+// const lan = document.querySelector(".btn-idioma");
+// const vtnLan = document.querySelector(".window-language");
+// const vtnLanMenu = document.querySelector(".window-language .menu-language");
 
 // Para establecer la página hacía arriba cada vez que se cargue.
 // Forma 1:
@@ -32,26 +32,26 @@ botonNosotros.addEventListener('click', function(){
 });
 
 // Evento del botón de Idioma
-function lanClickeado(){
-    vtnLan.setAttribute('style', 'display: flex');
-}
-lan.addEventListener('click', lanClickeado);
+// function lanClickeado(){
+//     vtnLan.setAttribute('style', 'display: flex');
+// }
+// lan.addEventListener('click', lanClickeado);
 
-var flagWindowLanguage = false;
-function ocultarWindowLan(){
-    vtnLan.setAttribute('style', 'display: none');
-}
-vtnLanMenu.addEventListener('mouseout', function(){
-    flagWindowLanguage = true;
-});
-vtnLanMenu.addEventListener('mouseover', function(){
-    flagWindowLanguage = false;
-});
-vtnLan.addEventListener('click', function(){
-    if (flagWindowLanguage) {
-        ocultarWindowLan();
-    };
-});
+// var flagWindowLanguage = false;
+// function ocultarWindowLan(){
+//     vtnLan.setAttribute('style', 'display: none');
+// }
+// vtnLanMenu.addEventListener('mouseout', function(){
+//     flagWindowLanguage = true;
+// });
+// vtnLanMenu.addEventListener('mouseover', function(){
+//     flagWindowLanguage = false;
+// });
+// vtnLan.addEventListener('click', function(){
+//     if (flagWindowLanguage) {
+//         ocultarWindowLan();
+//     };
+// });
 
 // Eventos de el tema oscuro
 function checkBoxClickeado(){
@@ -142,14 +142,14 @@ let nextAction = (leftPosition, trackWidth, listWidth, carruselWidth, track) => 
 
 //Funcionalidade del carrusel de proyectos realizados
 
-var counter = 1;
-setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if (counter > 4) {
-        counter = 1;
-    }
-}, 5000);
+// var counter = 1;
+// setInterval(function(){
+//     document.getElementById('radio' + counter).checked = true;
+//     counter++;
+//     if (counter > 4) {
+//         counter = 1;
+//     }
+// }, 5000);
 
 // Escucha del Scroll
 // Cuando estamos en el móvil debemos detectar que se ha movido el scroll
